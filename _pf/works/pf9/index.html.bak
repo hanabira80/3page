@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>중앙일보</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+*{margin:0;padding:0}
+a{text-decoration:none}
+img{vertical-align:top;border:0;}
+.clear{clear:both}
+label {margin-right:20px;}
+input {font-size:13px}
+/********************************/
+#container {
+	margin:auto;
+	max-width:1440px
+}
+/********************************/
+#header {
+	height:540px;
+}
+#slider {
+	position:relative;
+	height:500px;
+	overflow:hidden;	
+}
+#menu {
+	position:relative;
+	bottom:0;
+	height:40px;
+	background:black;
+	color:white;
+	padding-left:50px
+}
+/********************************/
+#mark {
+	position:absolute;
+	left:20px;
+	top:5px;
+	width:118px;
+	height:38px;
+	background:url(images/top_logo.png)	
+}
+#nav {
+	position:absolute;
+	right:0;
+	top:0;
+	height:40px;	
+}
+#nav div {
+	float:left;
+	margin:20px;
+}
+#nav a {
+	color:white;
+	text-shadow:2px 2px 3px black;
+}
+#nav a:hover {
+	color:#e6186d
+}
+
+
+#next {
+	position:absolute;
+	right:20px;
+	top:50%;
+	margin-top:-50px;
+	width:60px;
+	height:100px;
+	background:url(images/arrow_keyvisual.png) right;
+	cursor:pointer;	
+}
+#prev {
+	position:absolute;
+	left:20px;
+	top:50%;
+	margin-top:-50px;
+	width:60px;
+	height:100px;
+	background:url(images/arrow_keyvisual.png) left;
+	cursor:pointer;	
+}
+/********************************/
+#slider_bg {
+	position:absolute;
+	right:0;
+	left:0;
+	background:url(images/keyvisual_gradient.png);
+	height:200px;
+}
+
+
+#slider_inner {
+	position:absolute;
+	width:800%;
+	height:500px;
+}
+#slide01 {
+	background-image:url(images/Key-Visual-Guide-01.jpg);
+	background-position:center top;
+	background-size:cover;
+	width:12.5%;
+	float:left;
+	height:500px;
+}
+#slide02 {
+	background-image:url(images/Key-Visual-Guide-02.jpg);
+	background-position:center top;
+	background-size:cover;
+	width:12.5%;
+	float:left;
+	height:500px;
+}
+#slide03 {
+	background-image:url(images/Key-Visual-Guide-03.jpg);
+	background-position:center top;
+	background-size:cover;
+	width:12.5%;
+	float:left;
+	height:500px;
+}
+#slide04 {
+	background-image:url(images/Key-Visual-Guide-04.jpg);
+	background-position:center top;
+	background-size:cover;
+	width:12.5%;
+	float:left;
+	height:500px;
+}
+#slide05 {
+	background-image:url(images/Key-Visual-Guide-05.jpg);
+	background-position:center top;
+	background-size:cover;
+	width:12.5%;
+	float:left;
+	height:500px;
+}
+#slide06 {
+	background-image:url(images/Key-Visual-Guide-06.jpg);
+	background-position:center top;
+	background-size:cover;
+	width:12.5%;
+	float:left;
+	height:500px;
+}
+#slide07 {
+	background-image:url(images/Key-Visual-Guide-07.jpg);
+	background-position:center top;
+	background-size:cover;
+	width:12.5%;
+	float:left;
+	height:500px;
+}
+#slide08 {
+	background-image:url(images/Key-Visual-Guide-08.jpg);
+	background-position:center top;
+	background-size:cover;
+	width:12.5%;
+	float:left;
+	height:500px;
+}
+/********************************/
+.slide_tx {
+	position:relative;
+	width:110px;
+	height:45px;
+	overflow:hidden;
+	top:30%;
+	left:5%;
+}
+.slide_tx_inner {
+	position:absolute;
+	width:700%;
+	height:45px;
+}
+/********************************/
+.article_container {
+	clear:both;
+}
+.article {
+	float:left;
+	margin-left:80px;
+	margin-top:30px;
+	
+}
+/********************************/
+
+
+</style>
+
+<script src="scripts/jquery.js"></script>
+
+<script>
+	$(document).ready(function(){
+		
+		var sn = 0;
+		
+		$("#next").click(function(){
+			
+			sn++;
+				
+			$("#slider_inner").stop().animate({
+				left:sn*-100+"%"
+				}, function(){
+				
+				$(".slide_tx_inner").stop().animate({
+					left:-110*sn
+				
+				});
+			
+			});
+			
+			
+			
+		});
+	$("#prev").click(function(){
+			
+			sn--;
+			
+			$("#slider_inner").stop().animate({
+				left:sn*-100+"%"
+				}, function(){
+				
+				$(".slide_tx_inner").stop().animate({
+					left:-110*sn
+				});
+			
+			});
+			
+			
+			
+		});
+			});
+</script>
+</head>
+
+
+<body>
+<div id="container">
+	<div id="header">
+    	<div id="slider">
+        	<div id="slider_inner">
+            		<div id="slide01">
+                	<div class="slide_tx">
+                    	<div class="slide_tx_inner">
+                        <img src="images/keyvisual_logos.png">
+                        </div>
+                    </div>
+                </div>
+                
+				<div id="slide02">
+                	<div class="slide_tx">
+                    	<div class="slide_tx_inner">
+                        <img src="images/keyvisual_logos.png">
+                        </div>
+                     </div>
+                </div>
+                
+				<div id="slide03">
+                	<div class="slide_tx">
+                    	<div class="slide_tx_inner">
+                        <img src="images/keyvisual_logos.png">
+                        </div>
+                    </div>
+                </div>
+                
+				<div id="slide04">
+                	<div class="slide_tx">
+                    	<div class="slide_tx_inner">
+                        <img src="images/keyvisual_logos.png">
+                        </div>
+                    </div>
+                </div>
+                
+				<div id="slide05">
+                	<div class="slide_tx">
+                    	<div class="slide_tx_inner">
+                        <img src="images/keyvisual_logos.png">
+                        </div>
+                    </div>
+                </div>
+                
+				<div id="slide06">
+                	<div class="slide_tx">
+                    	<div class="slide_tx_inner">
+                        <img src="images/keyvisual_logos.png">
+                        </div>
+                    </div>
+                </div>
+                
+				<div id="slide07">
+                	<div class="slide_tx">
+                    	<div class="slide_tx_inner">
+                        <img src="images/keyvisual_logos.png">
+                        </div>
+                    </div>
+                </div>
+                
+				<div id="slide08">
+                	<div class="slide_tx">
+                    	<div class="slide_tx_inner">
+                        <img src="images/keyvisual_logos.png">
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+			<div id="slider_bg">
+			</div>
+
+			<div id="next"></div>
+			<div id="prev"></div>
+
+			<a href="#">
+			<div id="mark">
+			</div>
+			</a>
+
+			<div id="nav">
+				<div><a href="#">매거진</a></div>
+				<div><a href="#">이벤트</a></div>
+				<div><a href="#">검색</a></div>
+				<div><a href="#">정기구독</a></div>
+				<div><a href="#">회원가입</a></div>
+				<div><a href="#">로그인</a></div>
+			</div>
+		</div>  
+
+		<div id="menu">
+		<input type="checkbox" name="checkboxG1" id="checkboxG1" class="css-checkbox" /><label for="checkboxG1" class="css-label">ceci</label>
+        </div>
+    </div>
+
+    <div id="section">
+   	  <div class="article_container">
+      	<div class="article">
+        <a href="#">
+        <img src="images/article01.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article02.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article03.jpg">
+        </a>
+        </div>
+      </div>
+      <div class="article_container">
+      	<div class="article">
+        <a href="#">
+        <img src="images/article04.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article05.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article06.jpg">
+        </a>
+        </div>
+      </div>
+      <div class="article_container">
+      	<div class="article">
+        <a href="#">
+        <img src="images/article07.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article08.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article09.jpg">
+        </a>
+        </div>
+      </div>
+      <div class="article_container">
+      	<div class="article">
+        <a href="#">
+        <img src="images/article10.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article11.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article12.jpg">
+        </a>
+        </div>
+      </div>
+      <div class="article_container">
+      	<div class="article">
+        <a href="#">
+        <img src="images/article13.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article14.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article15.jpg">
+        </a>
+        </div>
+      </div>
+      <div class="article_container">
+      	<div class="article">
+        <a href="#">
+        <img src="images/article16.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article17.jpg">
+        </a>
+        </div>
+        <div class="article">
+        <a href="#">
+        <img src="images/article18.jpg">
+        </a>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+    	<div id="foot01"></div>
+        <div id="foot02"></div>
+        <div id="foot03"></div>
+        <div id="foot04"></div>
+    </div>
+</div>
+</body>
+</html>

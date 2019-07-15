@@ -1,0 +1,694 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>에오스</title>
+<style>
+*{margin:0;padding:0}
+
+
+body {
+	background:#292a2d;	
+}
+/**************************************/
+#header {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:25px;
+	background:url(images/gnb_hangame_bg.gif);
+}
+
+#header_nav {
+	margin:auto	
+}
+/**************************************/
+#logo {
+	width:100px;
+	height:25px;
+	background:url(images/gnb_top_txt_mpoker.gif);
+	float:left;
+}
+/**************************************/
+#header_nav_set {
+	float:right;	
+}
+/**************************************/
+#nav_bar {
+	width:10px;
+	height:25px;
+	background:url(images/gnb_top_txt_mpoker.gif) -1130px 0;
+	float:left;		
+}
+/**************************************/
+#ag {
+	width:80px;
+	height:25px;
+	background:url(images/gnb_top_txt_mpoker.gif) -190px 0;
+	float:left;	
+}
+
+#ag:hover {
+	background:url(images/gnb_top_txt_mpoker.gif) -290px 0;
+}
+
+#porker {
+	width:120px;
+	height:25px;
+	background:url(images/gnb_top_txt_mpoker.gif) -1010px 0;
+	float:left;	
+}
+
+#hg {
+	width:70px;
+	height:25px;
+	background:url(images/gnb_top_txt_mpoker.gif) -400px 0;
+	float:left;	
+}
+
+#login {
+	width:47px;
+	height:20px;
+	background:url(images/gnb_btn_login.gif);
+	float:left;	
+	margin-top:3px
+}
+
+#toast {
+	width:80px;
+	height:25px;
+	background:url(images/gnb_top_txt_mpoker.gif) -1140px 0;
+	float:left;	
+}
+/**************************************/
+#content {
+	position:absolute;
+	top:25px;
+	left:0;
+	right:0;
+	height:1320px;
+}
+/**************************************/
+#bl {
+	position:absolute;
+	top:0;
+	right:50%;
+	margin-right:490px;
+	height:725px;
+	width:460px;
+	background:url(images/bg_main_l1.jpg)
+}
+/**************************************/
+#bc {
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-490px;
+	height:725px;
+	width:980px;
+	background:url(images/bg_main_c1.jpg)
+}
+/**************************************/
+#content_header {
+	height:145px;
+	position:relative;
+}
+
+#content_header_logo {
+	position:absolute;
+	top:29px;
+	left:0;
+	width:186px;
+	height:87px;
+	background:url(images/logo.png); 
+}
+
+#content_header_nav {
+	position:absolute;
+	top:0;
+	left:250px;
+	width:600px;
+	height:145px;	
+}
+/**************************************/
+#content_header_nav_title {
+	position:absolute;
+	top:50px;
+	left:0px;
+	width:600px;
+	height:20px;
+	opacity:1;
+	-webkit-transition:1s;
+}
+.nav_title {
+	width:100px;
+	height:20px;
+	background:url(images/sp_gnb_v4.png) no-repeat;
+	float:left;
+}
+#news_ti {
+	background-position:20px 0
+}
+#inf_ti {
+	background-position:-90px 0
+}
+#cmt_ti {
+	background-position:-190px 0
+}
+#rank_ti {
+	background-position:-280px 0;
+}
+#down_ti {
+	background-position:-380px 0
+}
+#ctum_ti {
+	background-position:-490px 0
+}
+#content_header_nav:hover  #content_header_nav_sub{
+	opacity:1;
+	height:105px;
+	-webkit-transition:1s;
+}
+#content_header_nav:hover  #content_header_nav_title{
+	opacity:0;
+	height:0px;
+	-webkit-transition:1s;
+}
+/**************************************/
+.ns {
+	float:left;
+	width:100px	
+}
+#content_header_nav_sub {
+	position:absolute;
+	top:20px;
+	left:0px;
+	width:600px;
+	height:0px;
+	opacity:0;
+	-webkit-transition:1s;
+}
+.nav_sub {
+	width:100px;
+	height:15px;
+	background:url(images/sp_gnb_v4.png) no-repeat;
+	float:left;	
+}
+#news01 {
+	background-position:0 -25px	
+}
+#news01:hover {
+	background-position:0 -225px;
+	background-color:rgba(0,0,0,0.5)
+}
+#news02 {
+	background-position:0 -50px;
+}
+#news02:hover {
+	background-position:0 -250px;
+	background-color:rgba(0,0,0,0.5)	
+}
+#news03 {
+	background-position:0 -75px;
+}
+#news03:hover {
+	background-position:0 -275px;
+	background-color:rgba(0,0,0,0.5)	
+}
+#news04 {
+	background-position:0 -100px;
+}
+#news04:hover {
+	background-position:0 -300px;
+	background-color:rgba(0,0,0,0.5)	
+}
+
+#inf01 {
+	background-position:-100px -25px	
+}
+#inf01:hover {
+	background-position:-100px -225px;
+	background-color:rgba(0,0,0,0.5)
+}
+#inf02 {
+	background-position:-100px -50px	
+}
+#inf02:hover {
+	background-position:-100px -250px;
+	background-color:rgba(0,0,0,0.5)
+}
+#inf03 {
+	background-position:-100px -75px	
+}
+#inf03:hover {
+	background-position:-100px -275px;
+	background-color:rgba(0,0,0,0.5)
+}
+#inf04 {
+	background-position:-100px -100px	
+}
+#inf04:hover {
+	background-position:-100px -300px;
+	background-color:rgba(0,0,0,0.5)
+}
+#inf05 {
+	background-position:-100px -125px	
+}
+#inf05:hover {
+	background-position:-100px -325px;
+	background-color:rgba(0,0,0,0.5)
+}
+#inf06 {
+	background-position:-100px -150px	
+}
+#inf06:hover {
+	background-position:-100px -350px;
+	background-color:rgba(0,0,0,0.5)
+}
+#inf07 {
+	background-position:-100px -175px	
+}
+#inf07:hover {
+	background-position:-100px -375px;
+	background-color:rgba(0,0,0,0.5)
+}
+
+#cmt01 {
+	background-position:-200px -25px	
+}
+#cmt01:hover {
+	background-position:-200px -225px;
+	background-color:rgba(0,0,0,0.5)
+}
+#cmt02 {
+	background-position:-200px -50px	
+}
+#cmt02:hover {
+	background-position:-200px -250px;
+	background-color:rgba(0,0,0,0.5)
+}
+#cmt03 {
+	background-position:-200px -75px	
+}
+#cmt03:hover {
+	background-position:-200px -275px;
+	background-color:rgba(0,0,0,0.5)
+}
+#cmt04 {
+	background-position:-200px -100px	
+}
+#cmt04:hover {
+	background-position:-200px -300px;
+	background-color:rgba(0,0,0,0.5)
+}
+
+#rank01 {
+	background-position:-300px -25px	
+}
+#rank01:hover {
+	background-position:-300px -225px;
+	background-color:rgba(0,0,0,0.5)
+}
+#rank02 {
+	background-position:-300px -50px	
+}
+#rank02:hover {
+	background-position:-300px -250px;
+	background-color:rgba(0,0,0,0.5)
+}
+
+#down01 {
+	background-position:-400px -25px	
+}
+#down01:hover {
+	background-position:-400px -225px;
+	background-color:rgba(0,0,0,0.5)
+}
+#down02 {
+	background-position:-400px -50px	
+}
+#down02:hover {
+	background-position:-400px -250px;
+	background-color:rgba(0,0,0,0.5)
+}
+#down03 {
+	background-position:-400px -75px	
+}
+#down03:hover {
+	background-position:-400px -275px;
+	background-color:rgba(0,0,0,0.5)
+}
+#down04 {
+	background-position:-400px -100px	
+}
+#down04:hover {
+	background-position:-400px -300px;
+	background-color:rgba(0,0,0,0.5)
+}
+
+#ctum01 {
+	background-position:-500px -25px	
+}
+#ctum01:hover {
+	background-position:-500px -225px;
+	background-color:rgba(0,0,0,0.5)
+}
+#ctum02 {
+	background-position:-500px -50px	
+}
+#ctum02:hover {
+	background-position:-500px -250px;
+	background-color:rgba(0,0,0,0.5)
+}
+#ctum03 {
+	background-position:-500px -75px	
+}
+#ctum03:hover {
+	background-position:-500px -275px;
+	background-color:rgba(0,0,0,0.5)
+}
+#ctum04 {
+	background-position:-500px -100px	
+}
+#ctum04:hover {
+	background-position:-500px -300px;
+	background-color:rgba(0,0,0,0.5)
+}
+#ctum05 {
+	background-position:-500px -125px	
+}
+#ctum05:hover {
+	background-position:-500px -325px;
+	background-color:rgba(0,0,0,0.5)
+}
+#ctum06 {
+	background-position:-500px -150px	
+}
+#ctum06:hover {
+	background-position:-500px -350px;
+	background-color:rgba(0,0,0,0.5)
+}
+#ctum07 {
+	background-position:-500px -175px	
+}
+#ctum07:hover {
+	background-position:-500px -375px;
+	background-color:rgba(0,0,0,0.5)
+}
+/**************************************/
+#section_main {
+	position:relative;
+	height:300px;
+}
+/**************************************/
+#slider {
+	position: relative;
+	width: 740px;
+	height: 300px;
+	background: url(images/20140529_comeback_main.jpg);
+}
+ 
+.slide {
+	position: absolute;
+}
+/**************************************/
+#luncher {
+	position:absolute;
+	width:240px;
+	height:135px;
+	left:740px;
+	top:0px;
+	background:url(images/bg_launcher.jpg)
+}
+#login {
+	position:absolute;
+	width:240px;
+	height:165px;
+	top:133px;
+	left:740px;
+	background:url(images/bg_loginbox.gif)
+}
+/**************************************/
+#section_up {
+	position:relative;
+}
+/**************************************/
+#section_middle {
+	position:relative;
+}
+/**************************************/
+#section_down {
+	position:relative;
+}
+/**************************************/
+#br {
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:490px;
+	height:725px;
+	width:460px;
+	background:url(images/bg_main_r1.jpg)
+}
+
+
+/**************************************/
+#footer_up {
+	position:absolute;
+	top:1345px;
+	left:0;
+	right:0;
+	height:225px;
+	background:#202123;
+}
+
+#footer_down {
+	position:absolute;
+	top:1570px;
+	left:0;
+	right:0;
+	height:20px;
+	height:240px;
+	background:#0e0e0e;
+	margin-bottom:20px;
+}
+
+ 
+</style>
+<script src="scripts/jquery.js"></script>
+<script>
+ $(document).ready(function(){
+
+  var sn = 3;
+  
+  $("#slider").click(function(){
+  
+   $(".slide").eq(sn).animate({
+    opacity: 0
+   }, function() {
+    if (sn == 0) {
+     $(".slide").css("opacity", "1");
+     sn = 3;   
+    } else {
+     sn--;
+    }
+   });
+  
+  });
+  
+ });
+</script>
+</head>
+
+<body>
+ 
+
+
+
+</style>
+</head>
+
+<body>
+<div id="header">
+	<div id="header_nav">
+            <a href="#">
+            <div id="logo">
+            </div>
+            </a>
+		<div id="header_nav_set">
+            <a href="#">
+            <div id="ag">
+            </div>
+            </a>
+			<div id="nav_bar">
+            </div>
+            <a href="#">
+            <div id="porker">
+            </div>
+            </a>
+            <div id="nav_bar">
+            </div>
+            <a href="#">
+            <div id="hg">
+            </div>
+            </a>
+            <div id="nav_bar">
+            </div>
+            <a href="#">
+            <div id="login">
+            </div>
+            </a>
+            <div id="nav_bar">
+            </div>
+            <a href="#">
+            <div id="toast">
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="content">
+
+    	<div id="bl"></div>
+        <div id="bc">
+        	<div id="content_header">
+            	<a href="#">
+            	<div id="content_header_logo">
+                </div>
+                </a>
+               
+               	<div id="content_header_nav">
+                    <div id="content_header_nav_title">
+                    	<div id="news_ti" class="nav_title"></div>
+                        <div id="inf_ti" class="nav_title"></div>
+                        <div id="cmt_ti" class="nav_title"></div>
+                        <div id="rank_ti" class="nav_title"></div>
+                        <div id="down_ti" class="nav_title"></div>
+                        <div id="ctum_ti" class="nav_title"></div>
+                    </div>
+                    
+                	<div id="content_header_nav_sub">
+                    	<div id="news" class="ns">
+                        	<a href="#">
+                            <div id="news01" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="news02" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="news03" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="news04" class="nav_sub"></div>
+                            </a>
+                        </div>
+                        <div id="inf" class="ns">
+                        	<a href="#">
+                            <div id="inf01" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="inf02" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="inf03" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="inf04" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="inf05" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="inf06" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="inf07" class="nav_sub"></div>
+                            </a>
+                        </div>
+                        <div id="cmt" class="ns">
+                        	<a href="#">
+                            <div id="cmt01" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="cmt02" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="cmt03" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="cmt04" class="nav_sub"></div>
+                            </a>
+                        </div>
+                        <div id="rank" class="ns">
+                        	<a href="#">
+                            <div id="rank01" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="rank02" class="nav_sub"></div>
+                            </a>
+                        </div>
+                        <div id="down" class="ns">
+                        	<a href="#">
+                            <div id="down01" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="down02" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="down03" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="down04" class="nav_sub"></div>
+                            </a>
+                        </div>
+                        <div id="ctum" class="ns">
+                        	<a href="#">
+                            <div id="ctum01" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="ctum02" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="ctum03" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="ctum04" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="ctum05" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="ctum06" class="nav_sub"></div>
+                            </a>
+                            <a href="#">
+                            <div id="ctum07" class="nav_sub"></div>
+                            </a>
+                        </div>
+                    </div>
+               	</div>
+			</div>
+			<div id="section_main">
+				<div id="slider">
+					<div class="slide"><img src="images/20140515_report_main.jpg" /></div>
+					<div class="slide"><img src="images/20140528_buff_main.jpg" /></div>
+					<div class="slide"><img src="images/20140528_surtcey_main.jpg" /></div>
+					<div class="slide"><img src="images/20140529_comeback_main.jpg" /></div>
+				</div>
+				<div id="luncher"></div>
+				<div id="login"></div>
+				
+			</div>
+			<div id="section_up"></div>
+			<div id="section_middle"></div>
+			<div id="section_down"></div>
+        </div>
+        <div id="br"></div>
+	
+</div>
+<div id="footer_up"></div>
+<div id="footer_down"></div>
+
+
+</body>
+</html>

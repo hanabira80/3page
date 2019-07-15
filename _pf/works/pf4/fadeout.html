@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>slider</title>
+<style>
+ img {
+  border: 0;
+  vertical-align: top;
+ }
+ #slider {
+  position: relative;
+  width: 740px;
+  height: 300px;
+  background: yellow;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: url(images/20140529_comeback_main.jpg);
+ }
+ 
+ .slide {
+  position: absolute;
+ }
+
+ 
+</style>
+<script src="scripts/jquery.js"></script>
+<script>
+ $(document).ready(function(){
+
+  var sn = 3;
+  
+  $("#slider").click(function(){
+  
+   $(".slide").eq(sn).animate({
+    opacity: 0
+   }, function() {
+    if (sn == 0) {
+     $(".slide").css("opacity", "1");
+     sn = 3;   
+    } else {
+     sn--;
+    }
+   });
+  
+  });
+  
+ });
+</script>
+</head>
+
+<body>
+<div id="slider">
+     <div class="slide"><img src="images/20140515_report_main.jpg" /></div>
+     <div class="slide"><img src="images/20140528_buff_main.jpg" /></div>
+     <div class="slide"><img src="images/20140528_surtcey_main.jpg" /></div>
+     <div class="slide"><img src="images/20140529_comeback_main.jpg" /></div>
+</div>
+</body>
+</html>
+[출처] 에오스 fadeout 슬라이더 (하이미디어컴퓨터학원 노원점 공식카페) |작성자 콘디쌤

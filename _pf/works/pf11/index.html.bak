@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>티월드</title>
+  <style>
+	*{margin:0;padding:0}
+	img {vertical-align:top;border:0;}
+	a {text-decoration:none}
+	.left{float:left}
+	.right{float:right}
+	.clear{clear:both}
+	@-webkit-keyframes animation{
+	0%{background:url(images/20131025173002_file0.jpg)}
+	25%{background:url(images/20140521112639_file0.jpg)}
+	50%{background:url(images/20140219001731_file0.jpg)}
+	75%{background:url(images/20140523110405_file0.gif)}
+	100%{background:url(images/20131025173002_file0.jpg)}
+	}
+	.ani {width:1050px;height:430px;-webkit-animation:animation 7s infinite}
+	li {list-style:none}
+
+
+	#line01 {
+		border-bottom:1px solid lightgray;
+	}
+	#line01_inline, #header, #head-down,#content,#footer {
+		width:1050px;
+		margin:auto;
+	}
+	
+	#line01_inline {
+		height:30px
+	}
+	
+	#en, #ko {
+		padding:5px;
+		}
+	
+	
+	#en a {
+		color:gray;
+		font-size:11px;
+		font-weight:900;
+	
+	}
+	
+	#ko a {
+		color:gray;
+		font-size:11px;
+		font-weight:900;
+		padding-left:10px;
+		border-left:1px solid lightgray;
+	}
+	
+	#header {
+		height:100px;
+	}
+	#mark {
+		background:url(images/logo.png);
+		width:200px;
+		height:46px;
+		margin-top:25px;		
+	}
+	#sbox {
+		width:450px;
+		height:50px;
+		background:url(images/common.png);
+		background-position:0 -25px;
+		margin:30px 0px 0px 80px
+	}
+	form {
+		display:block;
+		margin:7px 0px 0px 30px
+	}
+	input {
+		font-size:1.5em
+	}
+	#glass {
+		width:20px;
+		height:20px;
+		background:url(images/common.png);
+		margin:12px 30px
+	}
+	
+	#line02 {
+		 border-bottom:1px solid lightgray;
+		 border-top:1px solid lightgray;
+		 height:50px;
+		 position:relative;
+		 	
+	}
+	
+	#menu01 {
+		width:105px;
+		height:50px;
+		background:url(images/gnb.png);
+		background-position:0 top;
+	}
+	
+	#menu01:hover {
+		background-position:0 bottom	
+	}
+	#menu02 {
+		width:105px;
+		height:50px;
+		background:url(images/gnb.png);
+		background-position:-106px top;
+	}
+	
+	#menu02:hover {
+		background-position:-106px bottom	
+	}
+	#menu03 {
+		width:111px;
+		height:50px;
+		background:url(images/gnb.png);
+		background-position:-212px top;
+	}
+	
+	#menu03:hover {
+		background-position:-212px bottom	
+	}
+
+	#menu04 {
+		width:95px;
+		height:50px;
+		background:url(images/gnb.png);
+		background-position:-324px top;
+	}
+	
+	#menu04:hover {
+		background-position:-324px bottom	
+	}
+	#menu05 {
+		width:204px;
+		height:50px;
+		background:url(images/gnb.png);
+		background-position:-419px top;
+	}
+	
+	#menu05:hover {
+		background-position:-419px bottom	
+	}
+	#menu06 {
+		width:108px;
+		height:50px;
+		background:url(images/gnb.png);
+		background-position:-623px top;
+	}
+	
+	#menu06:hover {
+		background-position:-623px bottom	
+	}
+	
+	
+	#wrap {
+		height:1710px;
+		background:#e9e9e9;	
+	}
+	#content {
+		position:relative;	
+	}
+	#pop {
+		position:absolute;
+		top:-113px;
+		right:0;
+		width:265px;
+		height:113px;
+		background:url(images/top_bnr1.png);
+	}
+	#article01 {
+		height:440px;
+		/******* 화면축소 이미지 깨짐 문제****/
+	}
+	#in {
+		height:430px
+		}
+	#article02 {
+		height:60px;
+		border-bottom-right-radius:10px;
+		border-bottom-left-radius:10px;
+	}
+	#article03 {
+		margin-top:10px;
+	}
+	#article03>div {
+		width:255px;
+		height:420px;
+		margin-right:10px;
+		border-radius:10px;
+	}
+	#article03>div:last-child {
+		margin-right:0;
+		margin-bottom:10px;	
+	}
+	#star {
+		width:75px;
+		height:15px;
+		background:url(images/ico_star.png);
+		margin:10px 0px
+	}
+	#instar {
+		width:68px;
+		height:15px;
+		background:url(images/ico_star.png);
+		background-position:-75px 0;
+	}
+
+	#article03 p {
+		width:20px;
+		height:15px;
+		font-size:10px;
+		font-weight:600;
+		margin:10px 20px
+	}
+	#phonesub01 {
+		height:35px;
+		background:white;
+		border-top-right-radius:10px;
+		border-top-left-radius:10px;
+	}
+
+	#phonesub02 {
+		height:275px;
+		text-align:center;
+		background:white;
+		padding-top:25px
+	}
+	#phonesub03 {
+		height:85px;
+		text-align:center;
+		background:white;
+		border-bottom-right-radius:10px;
+		border-bottom-left-radius:10px;
+	}
+	#phonesub3>img {
+		margin-top:5px
+	}
+
+	#phone04 {
+		position:relative
+	}
+	#good {
+		position:absolute;
+		top:-10px;
+		width:68px;
+		height:81px;
+		background:url(images/ico_good.png);
+	}
+	
+	#article04 {
+		height:60px;
+		border-radius:10px;
+		margin-bottom:10px;
+	}
+	#bord01 {
+		width:785px;
+		height:320px;
+		border-radius:10px;
+		margin-right:10px;		
+	}
+	#bord02 {
+		width:255px;
+		height:320px;
+		border-radius:10px;
+		margin-bottom:10px;
+	}
+
+	#article06>div {
+		width:255px;
+		height:320px;
+		margin-right:10px;
+		border-radius:10px;
+	}
+	#article06>div:last-child {
+		margin-right:0;
+		margin-bottom:50px;	
+	}
+
+
+	
+	#footer {
+		background:white;
+		margin-bottom:30px
+
+	}
+	
+	#foot-up {
+		height:280px;	
+	}
+	#foot-up>div {
+		width:148px;
+		height:190px;
+		border-right:1px solid lightgray;
+		background:white;
+		margin-top:40px;
+	}
+	#foot-up>div:last-child {
+		border-right:0
+	}
+	
+
+	#foot-up ul {
+		margin:0px 0px 0px 15px
+	}
+	#foot-up ul>a {
+		color:black;
+		font-weight:700
+	}
+	#foot-up li {
+		margin-top:10px
+	}
+
+	#foot-up li a {
+		color:gray;
+		font-size:12px
+	}
+
+
+
+	#foot-down {
+		height:42px;
+		background:url(images/common.png);
+		background-position:0 -658px
+	}
+	#foot-tail {
+		height:130px;	
+	}
+	
+	#foot-t01 {
+		width:200px;
+		height:130px;
+	}
+	#logo {
+		width:140px;
+		height:30px;
+		background:url(images/logo.png);
+		background-position:0 -50px;
+		margin:30px
+	}
+	#foot-t02 {
+		width:850px;
+				
+	}
+	#person {
+		width:660px;
+		height:65px;
+		background:url(images/common.png);
+		background-position:0 -495px;
+	}
+	#foot-sub01 {
+		position:relative
+	}
+	#acodian {
+		width:190px;
+		height:65px;
+		background:url(images/common.png);
+		background-position:0 -240px;
+	}
+	#acodian:active {
+		width:190px;
+		height:210px;
+		background:url(images/common.png);
+		background-position:200px -460px;
+		position:absolute
+	}
+	#copy {
+		width:590px;
+		height:25px;
+		background:url(images/common.png);
+		background-position:0 -560px;
+	}
+	#sns {
+		width:590px;
+		height:40px;
+		background:url(images/f_sns.png)no-repeat;
+	}
+	#kcsi {
+		width:260px;
+		height:65px;
+		background:url(images/common.png);
+		background-position:20px -590px;
+	}
+	
+	#aside {
+		width:70px;
+		height:1782px;
+		position:absolute;
+		right:0;
+		top:0;
+		z-index:50;
+	}
+	#a01 {
+		width:70px;
+		height:50px;
+		background:#ff7a00;
+		background:url(images/floater.png)
+	}
+	
+	#a02{
+		width:70px;
+		height:1690px;
+		background:#7c6257;
+		padding-top:20px
+	}
+
+	#asub01 {
+		width:70px;
+		height:25px;
+		background:url(images/floater.png);
+		background-position:10px -95px;
+/*************마진 패딩 문제 *******/
+		
+	}
+	#asub02 {
+		width:70px;
+		height:35px;
+		background:url(images/floater.png);
+		background-position:10px -150px;
+		margin-top:20px
+	}
+	#asub02:hover {
+		background-position:-90px -150px;
+	}
+
+	#asub03 {
+		width:70px;
+		height:75px;
+		background:url(images/floater.png);
+		background-position:0px -800px;
+		margin-top:20px
+
+	}
+	#asub04 {
+		width:70px;
+		height:80px;
+		background:url(images/floater.png);
+		background-position:0px -700px;
+		margin-top:20px
+	}
+	#asub04:hover {
+		background-position:100px -700px;
+	}
+
+
+	
+  </style>
+ </head>
+
+ 
+ 
+ <body>
+ <div id="line01">
+	<div id="line01_inline">
+		<div id="ko" class="right">
+        <a href="#">
+		한국어
+        </a>
+		</div>
+        <strong></strong><div id="en" class="right">
+        <a href="#">
+        ENGLISH
+        </a>
+		</div>
+		
+	</div>
+ </div>
+
+ <div id="header">
+	<div id="head-up">
+		<a href="#">
+		<div id="mark" class="left">
+		</div>
+		</a>
+		<div id="search" class="left">
+        	<div id="sbox" class="clear">
+				<form class="left">
+				<input type="text">
+				</form>
+				<a href="">
+				<div id="glass" class="right">
+				</div>
+				</a>
+			</div>
+		</div>
+	</div>
+ </div>
+ <div id="line02">
+  
+  	<div id="aside">
+    	<a href="#">
+		<div id="a01">
+		</div>
+		</a>
+
+        <div id="a02">
+		
+		<a href="#">
+		<div id="asub01">
+		</div>
+		</a>
+
+		<a href="#">
+		<div id="asub02">
+		</div>
+		</a>
+
+		<a href="#">
+		<div id="asub03">
+		</div>
+		</a>
+
+		<a href="#">
+		<div id="asub04">
+		</div>
+		</a>
+
+		</div>
+	</div>
+	
+    <div id="head-down" class="clear">
+    
+            <a href="#">
+			<div id="menu01" class="left">
+			</div>
+			</a>
+			
+			<a href="#">
+            <div id="menu02" class="left">
+            </div>
+			</a>
+			
+			<a href="#">
+            <div id="menu03" class="left">
+            </div>
+			</a>
+			
+			<a href="#">
+            <div id="menu04" class="left">
+            </div>
+			</a>
+            
+			<a href="#">
+			<div id="menu05" class="left">
+            </div>
+			</a>
+
+			<a href="#">
+            <div id="menu06" class="left">
+            </div>
+			</a>
+            
+	 </div>
+ </div>
+<div id="wrap">
+ <div id="content">
+ 	<a href="#">
+	<div id="pop">
+    </div>
+	</a>
+    <div id="article01">
+		<div id="in" class="ani">
+		</div>
+    </div>
+    <div id="article02">
+	<img src="images/tit_phone_hn.png"/>
+    </div>
+    <div id="article03">
+    	<div id="phone01" class="left">
+        	<div id="phonesub01">
+				<P class="right">0
+				</p>
+				<div id="star" class="right">
+				</div>
+				
+            </div>
+            <div id="phonesub02" class="clear">
+			<img src="images/SSIL_Main.jpg">
+            </div>
+			<div id="phonesub03">
+			<img src="images/price01.jpg">
+            </div>
+        </div>
+        <div id="phone02" class="left">
+            <div id="phonesub01">
+				<P class="right">0
+				</p>
+				<div id="star" class="right">
+				</div>
+				
+            </div>
+            <div id="phonesub02" class="clear">
+			<img src="images/SSIJ_Main.jpg">
+            </div>
+			<div id="phonesub03">
+			<img src="images/price02.jpg">
+            </div>
+        </div>
+        <div id="phone03" class="left">
+            <div id="phonesub01">
+				<P class="right">0
+				</p>
+				<div id="star" class="right">
+				</div>
+				
+            </div>
+            <div id="phonesub02" class="clear">
+			<img src="images/LGH2_Main.jpg">
+            </div>
+			<div id="phonesub03">
+			<img src="images/price03.jpg">
+            </div>
+        </div>
+        <div id="phone04" class="left">
+			<div id="good">
+			</div>
+            <div id="phonesub01">
+				<P class="right">10
+				</p>
+				<div id="star" class="right">
+					<div id="instar">
+					</div>
+				</div>
+				
+            </div>
+            <div id="phonesub02" class="clear">
+			<img src="images/PTY3_Main.jpg">
+            </div>
+			<div id="phonesub03">
+			<img src="images/price04.jpg">
+            </div>
+        </div>
+    </div>
+    <div id="article04"  class="clear">
+	<img src="images/tit_package.png"/>
+    </div>
+    <div id="article05">
+    	<div id="bord01" class="left">
+		<img src="images/flights_sale_513.jpg"/>
+        </div>
+        <div id="bord02" class="left">
+		<img src="images/pack_bnr5.jpg"/>
+        </div>
+    </div>
+    <div id="article06"  class="clear">
+    	<div id="bord03" class="left">
+		<img src="images/pack_bnr3.jpg"/>
+        </div>
+        <div id="bord04" class="left">
+		<img src="images/pack_bnr4.jpg"/>
+        </div>
+        <div id="bord05" class="left">
+		<img src="images/pack_bnr2.jpg"/>
+        </div>
+        <div id="bord06" class="left">
+			<div id="bord06-01">
+			<img src="images/mbnr_live_chat.gif"/>
+			</div>
+			<div id="bord06-02">
+			<img src="images/mbnr_tgift_free.gif"/>
+			</div>
+			<div id="bord06-03">
+			<img src="images/mbnr_dvc_sale.gif"/>
+			</div>
+        </div>
+    </div>
+    
+    
+    
+ </div>
+ </div>
+
+ <div id="footer" class="clear">
+
+	
+	<div id="foot-up">
+		<div id="foot-u01" class="left">
+			<ul><a href="#">맞춤샾</a>
+				<li><a href="#">휴대폰</a></li>
+				<li><a href="#">요금제</a></li>
+				<li><a href="#">T기프트</a></li>
+			
+			</ul>
+		</div>
+		<div id="foot-u02" class="left">
+			<ul><a href="#">패키지샾</a>
+				<li><a href="#">핫팩</a></li>
+				<li><a href="#">눝팩</a></li>
+				<li><a href="#">Ting팩</a></li>
+				<li><a href="#">孝팩</a></li>
+				<li><a href="#">알뜰팩</a></li>
+			</ul>
+		</div>
+		<div id="foot-u03" class="left">
+			<ul><a href="#">태블릿샾</a>
+				<li><a href="#">태블릿샾</a></li>
+				
+			</ul>
+		</div>
+		<div id="foot-u04" class="left">
+			<ul><a href="#">이벤트</a>
+				<li><a href="#">이벤트</a></li>
+			
+			</ul>
+		</div>
+		<div id="foot-u05" class="left">
+			<ul><a href="#">외산/중고기기</a>
+				<li><a href="#">외산/중고기기</a></li>
+			
+			</ul>
+		</div>
+		<div id="foot-u06" class="left">
+			<ul><a href="#">이용안내</a>
+				<li><a href="#">이용가이드</a></li>
+				<li><a href="#">프리미엄혜택</a></li>
+				<li><a href="#">구매안내</a></li>
+				<li><a href="#">자주찾는질문</a></li>
+				<li><a href="#">상담/문의</a></li>
+				<li><a href="#">공지사항</a></li>
+			</ul>
+		</div>
+		<div id="foot-u07" class="left">
+			<ul><a href="#">마이페이지</a>
+				<li><a href="#">가입정보</a></li>
+				<li><a href="#">쇼핑내역</a></li>
+				<li><a href="#">내가 찜한 팩</a></li>
+				<li><a href="#">내가 쓴 글</a></li>
+				
+			</ul>
+		</div>
+	</div>
+	<div id="foot-down" class="clear">
+	</div>
+    <div id="foot-tail" class="clear">
+    	<div id="foot-t01" class="left">
+			<div id="logo">
+			</div>
+        </div>
+        <div id="foot-t02" class="left">
+			<div id="foot-sub01" class="clear">
+				<div id="person" class="left">
+				</div>
+				<a href="#acodian">
+				<div id="acodian" class="left">
+				</div>
+				</a>
+			</div>
+			<div id="foot-sub02" class="clear">
+				<div id="copysns" class="left">
+					<div id="copy">
+					</div>
+					<div id="sns">
+					</div>
+				</div>
+				<div id="kcsi" class="left">
+				</div>
+			</div>
+        </div>
+    </div>
+	
+ </div>
+
+ </body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>NHN Ent</title>
+<style>
+*{margin:0;padding:0}
+.left {float:left}
+
+#header {
+	height:75px;
+	background:#181818;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:100;
+}
+#logo {
+	width:120px;
+	height:50px;
+	position:absolute;
+	left:50px;
+	top:15px;
+	background-image:url(images/sp_common_v3.png);
+}
+#nav {
+	position:absolute;
+	right:30px;
+	top:25px;
+	height:25px;
+}
+/******************************/
+.menu {
+	color:white;
+	margin-right:20px;
+	font-weight:900;
+}
+.menu:hover {
+	color:red;
+}
+#menu6 {
+	color:red;	
+}
+#menu6:hover {
+	color:white;	
+}
+#menu7 {
+	color:white;	
+}
+#menu7:hover {
+	color:red;	
+}
+/******************************/
+#menu5 {
+	padding-right:20px;
+	border-right:1px solid gray;
+	margin-right:0	
+}
+/******************************/
+.lan {
+	font-size:12px;
+	font-weight:900;
+	margin-left:20px;
+	margin-top:2px
+}
+
+/******************************/
+.section {
+	background-size:cover;
+	background-position: center top;
+	position: relative;
+}
+#section1 {
+	background-image:url(images/bg_m1.jpg)	
+}
+#section2 {
+	background-image:url(images/bg_m2.jpg)	
+}
+#section3 {
+	background-image:url(images/bg_m3.jpg)	
+}
+#section4 {
+	background-image:url(images/bg_m4.jpg)	
+}
+#section5 {
+	background-image:url(images/bg_m5.jpg)	
+}
+#section6 {
+	background-image:url(images/bg_m6.jpg)	
+}
+/******************************/
+#section7 {
+	position:relative;
+	height:500px;
+	background:url(images/section7_bg.jpg)
+}
+#stock {
+	position:absolute;
+	left:50px;
+	top:0px;
+	height:204px;	
+}
+#ci {
+	position:absolute;
+	left:50px;
+	top:204px;
+	height:296px;
+}
+#stock_in {
+	height:102px;
+	margin-top:38px;	
+}
+
+#ci_in {
+	height:128px;
+	margin-top:86px;
+}
+.sec_logo {
+	width:126px;
+	font-size:30px;
+	font-weight:900	
+}
+.sec_title {
+	width:392px;
+}
+.sec_aticle {
+	width:610px;
+}
+
+#stock_title_img {
+	background:url(images/stock_num.jpg);
+	width:272px;
+	height:102px;
+	margin-left:60px;
+}
+#ci_title_img {
+	background:url(images/sp_common_v3.png);
+	background-position:0 -150px;
+	width:200px;
+	height:78px;
+	margin-left:96px
+}
+
+
+#ci_aticle1 {
+	width:230px;
+	height:27px;
+	background:url(images/sp_common_v3.png);
+	background-position:0 -230px;
+	margin-bottom:15px;
+}
+#ci_aticle2 {
+	margin-bottom:10px;
+	color:#848488
+}
+#ci_aticle3 {
+	width:114px;
+	height:22px;
+	background:url(images/sp_common_v3.png);
+	background-position:0 -255px
+}
+table {
+	border-collapse:collapse;
+	
+}
+td {
+	width:150px;
+	height:50px;
+	text-align:center;
+}
+.td_up {
+	background:#fbfbfb;
+	font-weight:900;
+	color:#313133;
+	border-top:2px solid #444547;
+
+}
+.td_down {
+	background:#f1f0f0;
+	font-weight:900;
+	color:#87868b;
+	border-top:1px solid #919191;
+	border-bottom:1px solid #919191;
+
+}
+
+/******************************/
+#footer {
+	height:200px;
+	background:#181818;
+	position:relative;
+	bottom:0;
+}
+
+#f_link {
+	position:absolute;
+	left:50px;
+	top:50px;
+}
+#f_link1 {
+	width:110px;
+	height:22px;
+	background:url(images/sp_common_v3.png);
+	background-position:-120px -368px;
+	opacity:0.2
+}
+#f_link2 {
+	width:110px;
+	height:22px;
+	background:url(images/sp_common_v3.png);
+	background-position:-120px -310px;
+	opacity:0.2
+}
+
+#f_link1:hover {
+	opacity:1
+}
+#f_link2:hover {
+	opacity:1
+}
+
+#f_nav {
+	position:absolute;
+	left:40px;
+	top:100px;
+}
+.f_nav {
+	color:#69695c;
+	font-weight:900;
+	padding:0px 10px 0px 10px;
+	border-right:1px solid #69695c	
+}
+.f_nav:last-child {
+	border-right:0
+}
+.f_nav:hover {
+	color:white	
+}
+
+#f_copy {
+	position:absolute;
+	left:50px;
+	top:130px;
+	color:#69695c;
+	font-weight:900;
+}
+
+#f_global {
+	position:absolute;
+	right:100px;
+	top:50px;
+	color:#69695c;
+	font-weight:900;
+	width:150px
+}
+
+#f_global:hover {
+	color:white	
+}
+
+#f_global:active #f_global_hover {
+	opacity:1	
+}
+
+#f_global_hover {
+	position:absolute;
+	right:100px;
+	top:-100px;
+	width:200px;
+	height:150px;
+	background:#181818;
+	opacity:0
+}
+.f_global_hover {
+	color:#69695c;
+	font-weight:900;
+	font-size:14px;
+	padding:5px	
+}
+/******************************/
+#remote {
+	position:fixed;
+	top:350px;
+	left:30px;
+	width:10px;
+	height:110px;
+	z-index:100;	
+}
+.remote_btn {
+	width:4px;
+	height:4px;
+	border:3px solid #d1d1d1;	
+	margin-bottom:10px;	
+}
+#remote a:last-child {
+	margin-bottom:0;
+}
+.remote_btn:hover {
+	border:0;
+	width:10px;
+	height:10px;
+	background:#ffffff
+}
+
+</style>
+
+<script src="scripts/jquery.js"></script>
+<script>
+ $(document).ready(function(){
+  
+  $(".section").css("height",  $(window).height() + "px");
+
+ });
+</script>
+
+</head>
+
+<body>
+<div id="header">
+	<div id="logo"></div>
+    <div id="nav">
+    	<div id="menu1" class="menu left">NHN Ent.</div>
+        <div id="menu2" class="menu left">GAME</div>
+        <div id="menu3" class="menu left">PR</div>
+        <div id="menu4" class="menu left">IR</div>
+        <div id="menu5" class="menu left">@WORK</div>
+        <div id="menu6" class="lan left">KO</div>
+        <div id="menu7" class="lan left">EN</div>
+    </div>
+</div>
+
+<div id="section1" class="section"></div>
+<div id="section2" class="section"></div>
+<div id="section3" class="section"></div>
+<div id="section4" class="section"></div>
+<div id="section5" class="section"></div>
+<div id="section6" class="section"></div>
+<div id="section7">
+	<div id="stock">
+	<div id="stock_in">
+		<div id="stock_logo" class="sec_logo left">STOCK</div>
+		<div id="stock_title" class="sec_title left">
+			<div id="stock_title_img"></div>
+		</div>
+		<div id="stock_aticle" class="sec_aticle left">
+        	<table>
+            	<tr id="tr_up">
+                	<td class="td_up">시가(원)</td>
+                    <td class="td_up">고가(원)</td>
+                    <td class="td_up">저가(원)</td>
+                    <td class="td_up">거래량(주)</td>
+                </tr>
+                <tr id="tr_down">
+                	<td class="td_down">75,200</td>
+                    <td class="td_down">75,500</td>
+                    <td class="td_down">73,500</td>
+                    <td class="td_down">265,481</td>
+                </tr>
+            </table>
+        </div>
+	</div>
+	</div>
+	<div id="ci">
+	<div id="ci_in">
+		<div id="ci_logo" class="sec_logo left">CI</div>
+		<div id="ci_title" class="sec_title left">
+			<div id="ci_title_img"></div>
+		</div>
+		<div id="ci_aticle" class="sec_aticle left">
+			<div id="ci_aticle1"></div>
+			<div id="ci_aticle2">
+			즐거움으로 연결된 모든 가치를 이야기 합니다.<br>
+			시대와 공간, 세대를 이어주는 무한 에너지 NHN Entertainment
+			</div>
+			<div id="ci_aticle3"></div>
+		</div>	
+	</div>
+	</div>
+</div>
+
+<div id="footer">
+	<div id="f_link">
+        <div id="f_link1" class="f_link left"></div>
+        <div id="f_link2" class="f_link left"></div>
+    </div>
+    <div id="f_nav">
+        <div id="f_nav1" class="f_nav left">제휴제안</div>
+        <div id="f_nav2" class="f_nav left">기업윤리상담센터</div>
+        <div id="f_nav3" class="f_nav left">개인정보처리방침</div>
+    </div>
+    <div id="f_copy">
+    &copy;NHN Entertainment Corp. All right Reserved.
+    </div>
+    <div id="f_global">
+    GLOBAL▲
+    </div>
+    <div id="f_global_hover">
+    	<div class="f_global_hover">NHN ENT. SINGAPORE</div>
+        <div class="f_global_hover">NHN PLAYART</div>
+        <div class="f_global_hover">NHN ENT. USA</div>
+    </div>
+    
+</div>
+
+<div id="remote">
+	<a href="#section1"><div class="remote_btn"></div></a>
+    <a href="#section2"><div class="remote_btn"></div></a>
+    <a href="#section3"><div class="remote_btn"></div></a>
+    <a href="#section4"><div class="remote_btn"></div></a>
+    <a href="#section5"><div class="remote_btn"></div></a>
+    <a href="#section6"><div class="remote_btn"></div></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>jquery</title>
+<style>
+ #cm {
+	width:500px;
+	height:30px;
+	background:pink;
+	text-align:center;
+	padding-top:10px;
+	cursor:pointer 
+ }
+ #pic {
+	display:none; 
+ }
+</style>
+
+
+<script src="scripts/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#cm").click(function(){
+			$("#pic").slideToggle(1000);
+			
+	});
+	});
+	
+</script>
+</head>
+
+<body>
+	<div id="cm">Click Me!</div>
+	<div id="pic">
+    <img src="images/illust-01.gif">
+    </div>
+</body>
+</html>

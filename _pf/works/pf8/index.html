@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>현대오토에버</title>
+<style>
+*{margin:0;padding:0}
+img {vertical-align:top;border:0;}
+
+#aside {
+	position:absolute;
+	top:0;
+	bottom:0;
+
+}
+
+#aside_left {
+	position:fixed;
+	top:0;
+	bottom:0;
+	width:160px;
+	background:#eeeff3;
+	border-right:1px solid #d2d5dc;
+}
+
+#aside_right {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:161px;
+	width:114px;
+	background:#e3e4e9;
+	box-shadow:2px 2px 5px gray;
+}
+/************************/
+
+#logo {
+	position:relative;
+	top:0;
+	left:0;
+	width:160px;
+	height:84px;
+	background:url(images/Logo.gif);	
+}
+
+#nav {
+	position:relative;
+	width:160px;	
+}
+.menu_bar {
+	width:160px;
+	height:34px;
+	border-bottom:1px solid #d2d5dc;
+	background:white;
+	padding:20px 0px 0px 20px;
+}
+#korean {
+	padding-left:15px;
+}
+/************************/
+#sitemap {
+	position:absolute;
+	left:20px;
+	bottom:92px;
+	width:120px;
+	padding-bottom:15px;
+	border-bottom:1px solid #d2d5dc;
+}
+
+#copy {
+	position:absolute;
+	bottom:0;
+	width:160px;
+	padding:20px 0px 40px 20px;
+}
+/************************/
+#slider_w {
+	position:absolute;
+	left:160px;
+	width:658px;
+	height:900px;	
+}
+#slider {
+	position: relative;
+	width: 658px;
+	height: 900px;
+	overflow: hidden;
+	background: url(images/bg-visual.jpg);
+}
+
+#slider_inner {
+	position: absolute;
+	width: 2632px;
+	height: 900px;
+	top: 0;
+	left: 0;
+}
+
+.slide {
+	position: relative;
+	float: left;
+}
+/************************/
+#content {
+	position:absolute;
+	left:818px;
+	width:430px;
+	height:900px;
+}
+/************************/
+#content_nav {
+	width:409px;
+	height:80px;
+	background:#64676f;
+	padding:10px 10px 10px 11px
+}
+
+.content_menu {
+	float:left
+}
+
+.linkbar {
+	width:1px;
+	height:34px;
+	margin-left:2px;
+	margin-right:2px;
+	float:left;
+}
+/************************/
+.content_box {
+	float:left;
+	border-right:1px solid #d2d5dc;
+	border-bottom:1px solid #d2d5dc;	
+}
+</style>
+<script src="scripts/jquery.js"></script>
+<script>
+
+ $(document).ready(function(){
+  
+  var sn = 0;
+  setTimeout(slider_ani, 1000);
+
+  function slider_ani(){
+   sn++;
+   $("#slider_inner").stop().animate({
+    left: -658*sn
+   }, function(){
+   
+    if (sn == 3) {
+     $("#slider_inner").css("left", "0");
+     sn = 0;
+    }
+    setTimeout(slider_ani, 1000);
+   });
+  }
+  
+  
+ });
+
+
+</script>
+</head>
+
+<body>
+<div id="aside">
+	<div id="aside_left">
+        <div id="logo">
+        </div>
+        <div id="nav">
+            <div id="service" class="menu_bar">
+            <img src="images/gnb-1depth-01.png">
+            </div>
+            <div id="solution" class="menu_bar">
+            <img src="images/gnb-1depth-02.png">
+            </div>
+            <div id="industry" class="menu_bar">
+            <img src="images/gnb-1depth-03.png">
+            </div>
+            <div id="company" class="menu_bar">
+            <img src="images/gnb-1depth-04.png">
+            </div>
+            <div id="korean">
+            <img src="images/btn-util-02.gif">
+            </div>
+        </div>
+        <div id="sitemap">
+        <img src="images/btn-footer-util03.gif">
+        </div>
+        <div id="copy">
+        <img src="images/txt-copyright.gif">
+        </div>
+    </div>
+    <div id="aside_right">
+    </div>
+</div>
+
+<div id="slider_w">
+<div id="slider">
+    <div id="slider_inner">
+        <div class="slide"><img src="images/img-visual01.png" /></div>
+        <div class="slide"><img src="images/img-visual02.png" /></div>
+        <div class="slide"><img src="images/img-visual03.png" /></div>
+        <div class="slide"><img src="images/img-visual01.png" /></div>
+    </div>
+</div>
+</div>
+
+
+<dav id="content">
+	<div id="content_main">
+    <img src="images/img-rightMain01.gif" />
+    </div>
+    <div id="content_nav">
+    	<div id="consulting" class="content_menu">
+        <img src="images/btn-link01-off.gif"  
+        onMouseOver="this.src='images/btn-link01-on.gif';"
+		onMouseOut="this.src='images/btn-link01-off.gif';" />
+        </div>
+        <div class="linkbar">
+        <img src="images/linkbar.gif">
+        </div>
+        <div id="si" class="content_menu">
+		<img src="images/btn-link02-off.gif"  
+        onMouseOver="this.src='images/btn-link02-on.gif';"
+		onMouseOut="this.src='images/btn-link02-off.gif';" />
+        </div>
+        <div class="linkbar">
+        <img src="images/linkbar.gif">
+        </div>
+        <div id="outsourcing" class="content_menu">
+		<img src="images/btn-link03-off.gif"  
+        onMouseOver="this.src='images/btn-link03-on.gif';"
+		onMouseOut="this.src='images/btn-link03-off.gif';" />
+        </div>
+        <div id="itinfra" class="content_menu">
+        <img src="images/btn-link04-off.gif"  
+        onMouseOver="this.src='images/btn-link04-on.gif';"
+		onMouseOut="this.src='images/btn-link04-off.gif';" />
+        </div>
+        <div class="linkbar">
+        <img src="images/linkbar.gif">
+        </div>
+        <div id="convergence" class="content_menu">
+        <img src="images/btn-link05-off.gif"  
+        onMouseOver="this.src='images/btn-link05-on.gif';"
+		onMouseOut="this.src='images/btn-link05-off.gif';" />
+        </div>
+        <div class="linkbar">
+        <img src="images/linkbar.gif">
+        </div>
+        <div id="manufac" class="content_menu">
+        <img src="images/btn-link06-off.gif"  
+        onMouseOver="this.src='images/btn-link06-on.gif';"
+		onMouseOut="this.src='images/btn-link06-off.gif';" />
+        </div>        
+    </div>
+    <div id="content_down">
+    	<div class="content_box"><img src="images/en_01.jpg"></div>
+        <div class="content_box"><img src="images/en_02.jpg"></div>
+        <div class="content_box"><img src="images/en_03.jpg"></div>
+        <div class="content_box"><img src="images/en_04.jpg"></div>
+        <div class="content_box"><img src="images/en_05.jpg"></div>
+        <div class="content_box"><img src="images/en_06.jpg"></div>
+    </div>
+</div>
+
+</body>
+</html>

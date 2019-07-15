@@ -1,0 +1,80 @@
+제이커리
+
+$로 시작하고 닫음
+()로 내용 입력
+
+포지셩 레러티브가 되어야 플롯이 가능함
+
+<script src="scripts/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#cm").click(function(){
+			$("#pic").slideToggle(1000);
+			
+	});
+	});
+	
+</script>
+
+
+	$(document).ready(function(){
+		$("#slider").click(function(){
+			$("#slider_inner").animate();
+			
+	});
+	});
+
+
+
+<script src="scripts/jquery.js"></script>
+
+
+
+/****************************
+<script src="scripts/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		var sn = 0;
+		
+		$("#slider").click(function(){
+			
+			sn++;
+			
+			$("#slider_inner").animate({
+				left:-300*sn
+			});
+			
+	});
+	});
+	
+</script>
+*****************************/
+
+
+///////////////////////////////////
+160
+875
+
+380 380 380 380 380 380 
+
+
+
+
+
+ #aside {
+	 position:absolute;
+	 width:180px;
+	 top:0;
+	 bottom:0;
+	 overflow:auto;
+	 background:#323232
+
+ }
+ #asdie_inner {
+
+
+	 height:875px;
+
+
+

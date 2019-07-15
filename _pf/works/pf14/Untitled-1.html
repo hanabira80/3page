@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>무제 문서</title>
+</head>
+<style>
+*{margin:0;padding:0}
+
+#box {
+	position:relative;
+	width:500px;
+	height:500px;
+	background:pink;	
+}
+
+#box_in {
+	position:absolute;
+	top:200px;
+	left:200px;
+	width:100px;
+	height:100px;
+	background:skyblue;
+}
+#btn1 {
+	position:absolute;
+	right:0;
+	bottom:0;
+	width:100px;
+	height:100px;
+	background:purple;	
+}
+#btn2 {
+	position:absolute;
+	right:100px;
+	bottom:0;
+	width:100px;
+	height:100px;
+	background:red;	
+}
+@-webkit-keyframes arrow {
+	0% {top:200px;}
+	70% {top:300px;}
+	100% {top:200px;}
+}
+</style>
+<script src="scripts/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		$("#box_in").css("-webkit-animation","arrow infinite 2s");
+	});
+	$("#btn2").click(function(){
+		$("#box_in").remove();
+	});
+});
+</script>
+<body>
+<div id="box">
+	<div id="box_in"></div>
+    <div id="btn1"></div>
+    <div id="btn2"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+body {
+	background:#ddd;
+}
+.wrap {
+	max-width:980px;
+	margin:0 auto;
+	background:#fafafa;
+}
+.tab_btn_box {
+	font-size:0;
+	padding:0.4rem 0.4rem;
+}
+.tab_btn {
+	padding:0.4rem 0.8rem;
+	margin:0 0.4rem 0.4rem 0;
+	font-size:1rem;
+	display:inline-block;
+	vertical-align:middle;
+	border:1px solid #eee;
+	border-radius:4px;
+	color:#555;
+	background:#fff;
+	transition: all ease 0.3s;
+	cursor:pointer;
+}
+.tab_btn.on {
+	background:#64B5F6;
+	color:#fff;
+	border:1px solid #039BE5;	
+}
+.tab_btn.sp {
+	background:#F3E5F5;
+	border:1px solid #E1BEE7;
+}
+.tab_btn.sp.on {
+	background:#BA68C8;
+	border:1px solid #9C27B0;
+	color:#fff;
+}
+.tab_ctn {
+	display:none;
+	text-align:center;
+	padding:1rem 0.4rem;
+}
+.tab_ctn.on {
+	display:block;
+}
+.tab_ctn .tit {
+	padding:1rem 0 0.4rem;
+	margin:0 0 0.8rem;
+	font-size:1.6rem;
+	text-align:left;
+	font-weight:600;
+	border-bottom:2px solid #42A5F5;
+}
+.tab_ctn p {
+	text-align:left;
+	font-size:1rem;
+	line-height:1.6em;
+	padding:0.4rem 0.4rem;
+	border:1px solid #eee;
+	margin:0.4rem 0;
+	background:#fff;
+	border-radius:4px;
+}
+.tab_ctn .pic_box {
+	padding:0 0 1rem;
+	text-align:left;
+}
+.tab_ctn .pic_box img {
+	max-width:600px;
+}

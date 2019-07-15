@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>tab</title>
+<style>
+ #tabbar {
+  width: 300px;
+  height: 40px;
+  background: orange;
+ }
+ .tab {
+  float: left;
+  padding: 10px 30px;
+  cursor: pointer;
+ }
+ 
+ #tabview {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background: pink;
+ }
+ 
+ .tabview {
+  position: absolute;
+  background: yellow;
+  font-size: 50px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+ }
+ 
+</style>
+<script src="scripts/jquery.js"></script>
+<script>
+ $(document).ready(function(){
+  $(".tabview").eq(0).css("display", "block");
+  
+  $(".tab").click(function(){
+   var s =  $(this).attr("s");
+   $(".tabview").css("display", "none");
+   $(".tabview").eq(s).css("display", "block");
+  });
+  
+ });
+</script>
+</head>
+
+<body>
+<div id="tabbar">
+     <div class="tab" s="0">가</div>
+     <div class="tab" s="1">나</div>
+     <div class="tab" s="2">다</div>
+</div>
+<div id="tabview">
+     <div class="tabview">A</div>
+     <div class="tabview">B</div>
+     <div class="tabview">C</div>
+</div>
+</body>
+</html>
+[출처] 에오스 탭뷰 기본 (하이미디어컴퓨터학원 노원점 공식카페) |작성자 콘디쌤

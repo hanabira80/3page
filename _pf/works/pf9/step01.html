@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>step01</title>
+<style>
+ #result {
+ 	width:500px;
+	height:200px;
+	border:1px solid gray;
+	}
+</style>
+<script src="scripts/jquery.js"></script>
+<script>
+ $(document).ready(function(){
+	
+	$("#btn").click(function(){
+		
+		var a = 12;
+		var b = 33;
+		var c = 5;
+
+		
+		
+		$("#result").text((a+b)/c);
+
+		
+	});
+ }); 
+ 
+ // 500 \ 500+500 \ "500"+"500" \ "500"-"a" \ 55 + "*" + 55 + "=" + 55*55 \ 55 + "+" + 55 + "=" + (55+55)
+ // (2014-1980+1) + "살"\ 연산자는 숫자와 문자의 차이를 이해 + 우선순위
+ //변수 = 프로그램이 실행되는 동안 임시로 기억되는 메모리 단축어 var
+ // a = 0 오른쪽에 있는 값을 왼쪽에 넣어라
+ // 프로그램에서 같다는 의미는 ==로 사용함
+ // var a = 0; a=100; var은 한번만 선언함
+ // a++ 자신의 값에서 1을 더함
+ // a-- 자신의 값에서 1을 뺌
+ // var a = 16; var b = 51;   a + "*" + b + "=" + (a*b)
+ </script>
+
+ 
+</head>
+
+<body>
+<div><button id="btn">결과</button></div>
+<div id="result"></div>
+</body>
+</html>

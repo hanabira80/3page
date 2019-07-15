@@ -1,0 +1,598 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>현대자동차</title>
+<style>
+*{margin:0;padding:0}
+body {
+	background:url(images/bg.gif)	
+}
+/************************************/
+#remote {
+	position:absolute;
+	top:786px;
+	left:50%;
+	margin-left:480px;
+	width:47px;
+	height:409px;
+}
+
+#btn1 {
+	width:47px;
+	height:33px;
+	background:url(images/quick_menu_top.jpg);
+	cursor:pointer;	
+}
+
+#btn2 {
+	width:47px;
+	height:67px;
+	background:url(images/quick_menu00.png);
+	cursor:pointer;	
+}
+
+#btn3 {
+	width:47px;
+	height:72px;
+	background:url(images/quick_menu01.png);
+	cursor:pointer;	
+}
+
+#btn4 {
+	width:47px;
+	height:67px;
+	background:url(images/quick_menu02.png);
+	cursor:pointer;	
+}
+
+#btn5 {
+	width:47px;
+	height:71px;
+	background:url(images/quick_menu03.png);
+	cursor:pointer;	
+}
+
+#btn6 {
+	width:47px;
+	height:55px;
+	background:url(images/quick_menu04.png);
+	cursor:pointer;	
+}
+
+#btn7 {
+	width:47px;
+	height:44px;
+	background:url(images/quick_menu_bottom.jpg);
+	cursor:pointer;	
+}
+
+/************************************/
+#main {
+	height:665px;
+	background:url(images/bg_visual.jpg) center top no-repeat;
+}
+
+#main_in {
+	position:relative;
+	width:930px;
+	height:665px;
+	margin:auto;
+}
+/********************************************/
+#util {
+	position:absolute;
+	right:0;
+	top:25px;
+	height:13px;
+}
+
+#util1 {
+	float:left;
+	width:30px;
+	height:13px;
+	background:url(images/utill_menu01.png);
+	cursor:pointer;	
+}
+#util2 {
+	float:left;
+	width:38px;
+	height:13px;
+	background:url(images/utill_menu02.png);
+	cursor:pointer;	
+}
+#util3 {
+	float:left;
+	width:26px;
+	height:13px;
+	background:url(images/utill_menu04.png);
+	cursor:pointer;	
+}
+#util4 {
+	float:left;
+	width:68px;
+	height:13px;
+	background:url(images/utill_menu06.png);
+	cursor:pointer;	
+}
+#util5 {
+	float:left;
+	width:39px;
+	height:13px;
+	background:url(images/utill_menu77.png);
+	cursor:pointer;	
+}
+
+.util_sp {
+	float:left;
+	width:1px;
+	height:7px;
+	background:url(images/bul_utill_menu02.gif);
+	margin:3px 10px;
+	
+}
+/********************************************/
+#gnb {
+	position:absolute;
+	top:50px;
+	width:930px;
+	height:45px;
+	background:url(images/bg_gnb.png);
+}
+
+#logo {
+	position:absolute;
+	width:240px;
+	height:35px;
+	background:url(images/logo.gif);
+	cursor:pointer;	
+}
+
+#gnb1 {
+	position:absolute;
+	left:270px;
+	width:68px;
+	height:35px;
+	background:url(images/gnb01_out.gif);
+	cursor:pointer;	
+}
+#gnb2 {
+	position:absolute;
+	left:348px;
+	width:68px;
+	height:35px;
+	background:url(images/gnb02_out.gif);
+	cursor:pointer;	
+}
+#gnb3 {
+	position:absolute;
+	left:426px;
+	width:68px;
+	height:35px;
+	background:url(images/gnb03_out.gif);
+	cursor:pointer;	
+}
+#gnb4 {
+	position:absolute;
+	left:504px;
+	width:68px;
+	height:35px;
+	background:url(images/gnb04_out.gif);
+	cursor:pointer;	
+}
+#gnb5 {
+	position:absolute;
+	right:207px;
+	width:68px;
+	height:35px;
+	background:url(images/gnb05.gif);
+	cursor:pointer;	
+}
+#gnb6 {
+	position:absolute;
+	right:129px;
+	width:68px;
+	height:35px;
+	background:url(images/gnb06.gif);
+	cursor:pointer;	
+}
+#gnb7 {
+	position:absolute;
+	right:30px;
+	width:89px;
+	height:35px;
+	background:url(images/gnb07_out.gif);
+	cursor:pointer;	
+}
+/********************************************/
+#car {
+	position:absolute;
+	top:250px;
+	left:50px;
+	width:877px;
+	height:390px;
+	background:url(images/img_visual_car.png);
+}
+
+#main_tx {
+	position:absolute;
+	top:150px;
+	left:0;
+	width:293px;
+	height:216px;
+	background:url(images/txt_visual.png);
+		
+}
+
+/************************************/
+
+#menubar {
+	margin:auto;
+	width:930px;
+	height:100px;
+	background:url(images/menubar_bg.jpg);
+	z-index:15;
+}
+
+#menubar_up {
+	position:relative;
+	height:61px;
+}
+
+#menubar_up1 {
+	position:absolute;
+	left:30px;
+	width:262px;
+	height:61px;
+	background:url(images/20130318165952952017.png);
+	cursor:pointer;
+}
+
+#menubar_up2 {
+	position:absolute;
+	right:295px;
+	width:121px;
+	height:61px;
+	background:url(images/20130318170020922018.png);
+	cursor:pointer;	
+}
+
+#menubar_up3 {
+	position:absolute;
+	right:144px;
+	width:117px;
+	height:61px;
+	background:url(images/menu_carbrand03.png);
+	cursor:pointer;	
+}
+
+#menubar_up4 {
+	position:absolute;
+	right:30px;
+	width:84px;
+	height:61px;
+	background:url(images/menu_carbrand04.png);
+	cursor:pointer;	
+}
+/**********************************************/
+#menubar_down {
+
+	height:39px;
+}
+
+#menubar_down1 {
+	float:left;
+	width:100px;
+	height:39px;
+	background:url(images/20130419161921498016.gif);
+	margin-left:30px;	
+}
+#menubar_down2 {
+	float:left;
+	width:109px;
+	height:39px;
+	background:url(images/20130419161930640017.gif)	
+}
+#menubar_down3 {
+	float:left;
+	width:63px;
+	height:39px;
+	background:url(images/20130419161940515018.gif)	
+}
+#menubar_down4 {
+	float:left;
+	width:69px;
+	height:39px;
+	background:url(images/20130419161951731019.gif)	
+}
+#menubar_down5 {
+	float:left;
+	width:78px;
+	height:39px;
+	background:url(images/20130419161959952020.gif)	
+}
+#menubar_down6 {
+	float:left;
+	width:84px;
+	height:39px;
+	background:url(images/20130419162009172021.gif)	
+}
+#menubar_down7 {
+	float:left;
+	width:60px;
+	height:39px;
+	background:url(images/20130419162019265022.gif)	
+}
+#menubar_down8 {
+	float:left;
+	width:51px;
+	height:39px;
+	background:url(images/20130419162029967023.gif)	
+}
+#menubar_down9 {
+	float:left;
+	width:51px;
+	height:39px;
+	background:url(images/20130419162039077024.gif)	
+}
+#menubar_down10 {
+	float:left;
+	width:107px;
+	height:39px;
+	background:url(images/20130419162048936025.gif)	
+}
+#menubar_down11 {
+	float:left;
+	width:70px;
+	height:39px;
+	background:url(images/20130419162059061026.gif)	
+}
+/************************************/
+#content {
+	width:930px;
+	margin: 0 auto;	
+}
+
+
+.content {
+	border-bottom:1px solid gray;
+	position: relative;
+}
+
+#content1 {
+	width:930px;
+	height:740px;
+	background:url(images/content1.jpg)
+}
+
+#content2 {
+	width:930px;
+	height:1100px;
+	background:url(images/content2.jpg)	
+}
+
+#content3 {
+	width:930px;
+	height:1350px;
+	background:url(images/content3.jpg)	
+}
+
+#content4 {
+	width:930px;
+	height:600px;
+	background:url(images/content4.jpg)	
+}
+
+#content5 {
+	width:930px;
+	height:640px;
+	background:url(images/content5.jpg)	
+}
+
+#content6 {
+	width:930px;
+	height:700px;
+	background:url(images/content6.jpg)	
+}
+
+#content7 {
+	width:830px;
+	height: 710px;
+	padding:85px 50px;
+	background:url(images/content7.jpg)	
+}
+#reel {
+	width:840px;
+	height:415px;
+}
+
+#content8 {
+	width:930px;
+	height:750px;
+	background:url(images/content8.jpg)	
+}
+
+#content9 {
+	width:930px;
+	height:730px;
+	background:url(images/content9.jpg)	
+}
+
+#content10 {
+	width:930px;
+	height:900px;
+	background:url(images/content10.jpg)	
+}
+
+#content11 {
+	width:930px;
+	height:500px;
+	background:url(images/content11.jpg);
+	border-bottom:0;	
+}
+/**********************************/
+#footer {
+	background:url(images/footer_temp_bg.jpg)	
+}
+
+#footer_in {
+	width:950px;
+	height:248px;
+	margin:auto;
+	background:url(images/footer_temp.jpg)	
+}
+</style>
+
+<script src="scripts/jquery.js"></script>
+<script src="scripts/jquery.reel.js"></script>
+<script>
+ $(document).ready(function(){
+  
+  $(window).bind('scroll',function(e){
+      parallaxScroll();
+     });
+  
+  function parallaxScroll(){
+      var scrolled = $(window).scrollTop();
+   
+   if (scrolled > 665) {
+    $("#menubar").css("position", "fixed");
+    $("#menubar").css({top: 0, left:0, right: 0});
+   } else {
+    $("#menubar").css("position", "relative");
+
+   }
+  }
+  
+  
+  $("#reel").reel({
+      path: "images/",
+      cw: true,
+      images:["00###.jpg|1..60"] 
+    });
+  
+ });
+</script>
+<script>
+$(document).ready(function(){
+
+$('a[href^="#"]').on('click',function (e) {
+   e.preventDefault();
+   var target = this.hash,
+   $target = $(target);
+   $('html, body').stop().animate({
+    'scrollTop': $target.offset().top
+   }, 500, 'swing', function () {
+    window.location.hash = target;
+   });
+});
+});
+</script>
+<script>
+ $(document).ready(function(){
+  
+  $(window).bind('scroll',function(e){
+      parallaxScroll();
+     });
+  
+  function parallaxScroll(){
+      var scrolled = $(window).scrollTop();
+   
+   if (scrolled > 665) {
+    	$("#remote").css({position: "fixed", top: "120px"});
+    	
+   } else {
+    	$("#remote").css("position", "absolute");
+		$("#remote").css("top", "785px");
+   }
+  }
+ });
+</script>
+
+
+</head>
+
+<body>
+<div id="main">
+	<div id="main_bg">
+        <div id="main_in">
+            <div id="util">
+            	<div id="util1"></div>
+                <div class="util_sp"></div>
+                <div id="util2"></div>
+                <div class="util_sp"></div>
+                <div id="util3"></div>
+                <div class="util_sp"></div>
+                <div id="util4"></div>
+                <div class="util_sp"></div>
+                <div id="util5"></div>
+            </div>
+            <div id="gnb">
+				<div id="logo"></div>
+				<div id="gnb1"></div>
+				<div id="gnb2"></div>
+				<div id="gnb3"></div>
+				<div id="gnb4"></div>
+				<div id="gnb5"></div>
+				<div id="gnb6"></div>
+				<div id="gnb7"></div>
+			</div>
+            <div id="car"></div>
+            <div id="main_tx"></div> 
+        </div>
+	</div>        
+</div>
+<div id="menubar">
+	<div id="menubar_up">
+    	<div id="menubar_up1"></div>
+        <div id="menubar_up2"></div>
+        <div id="menubar_up3"></div>
+        <div id="menubar_up4"></div>
+    </div>
+    <div id="menubar_down">
+    	<a href="#content1"><div id="menubar_down1"></div></a>
+        <a href="#content2"><div id="menubar_down2"></div></a>
+        <a href="#content3"><div id="menubar_down3"></div></a>
+        <a href="#content4"><div id="menubar_down4"></div></a>
+        <a href="#content5"><div id="menubar_down5"></div></a>
+        <a href="#content6"><div id="menubar_down6"></div></a>
+        <a href="#content7"><div id="menubar_down7"></div></a>
+        <a href="#content8"><div id="menubar_down8"></div></a>
+        <a href="#content9"><div id="menubar_down9"></div></a>
+        <a href="#content10"><div id="menubar_down10"></div></a>
+        <a href="#content11"><div id="menubar_down11"></div></a>
+    </div>
+</div>
+
+
+
+<div id="content">
+        <div id="content1" class="content"></div>
+        <div id="content2" class="content"></div>
+        <div id="content3" class="content"></div>
+        <div id="content4" class="content"></div>
+        <div id="content5" class="content"></div>
+        <div id="content6" class="content"></div>
+        <div id="content7" class="content"><img id="reel" src="images/00001.jpg"></div>
+        <div id="content8" class="content"></div>
+        <div id="content9" class="content"></div>
+        <div id="content10" class="content"></div>
+        <div id="content11" class="content"></div>
+</div>
+
+<div id="footer">
+	<div id="footer_in">
+    </div>
+</div>
+
+<div id="remote">
+	<div id="btn1"></div>
+	<div id="btn2"></div>
+    <div id="btn3"></div>
+    <div id="btn4"></div>
+    <div id="btn5"></div>
+    <div id="btn6"></div>
+    <div id="btn7"></div>
+</div>
+</body>
+</html>

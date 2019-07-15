@@ -1,0 +1,675 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>디자인 배틀</title>
+<style>
+*{margin:0;padding:0}
+body {
+	background:url(images/top_bg_index.gif)
+}
+.cp {
+	cursor:pointer	
+}
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+/**********************************************/
+#header {
+	width:950px;
+	margin:auto;
+}
+/**********************************************/
+#logo_bar {
+	position:relative;
+	width:950px;
+	height:156px;	
+}
+
+#logo {
+	position:absolute;
+	left:0;
+	top:30px;
+	width:249px;
+	height:119px;
+	background-image:url(images/logo_B.png);
+		
+}
+#search {
+	position:absolute;
+	left:280px;
+	top:65px;
+	width:420px;
+	height:33px;
+	background-image:url(images/search_bg.jpg)
+}
+
+.search {
+	position:absolute;
+	top:5px;
+	left:3px;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	color:orange
+}
+
+#search_btn {
+	position:absolute;
+	top:-9px;
+	right:0;
+	width:97px;
+	height:51px;
+	background-image:url(images/search_bt2.png);
+		
+}
+
+#radio {
+	position:absolute;
+	right:0;
+	top:50px;
+	width:228px;
+	height:64px;
+	background-image:url(images/t03.png)
+}
+/**************************************************/
+#menu_bar {
+	width:950px;	
+}
+#menu {
+	position:relative;
+	height:40px;
+}
+#menu_sitemap {
+	position:absolute;
+	top:7px;
+	right:70px;	
+	width:69px;
+	height:25px;
+	background:url(images/sitemap.gif)
+}
+
+#menu_pinterest {
+	position:absolute;
+	top:-11px;
+	right:0;
+	width:65px;
+	height:89px;
+	background:url(images/pinterest.png)
+}
+
+.menu {
+	height:40px;
+	color:white;
+	padding:11px 12px;
+	float:left;
+	font-weight:900;
+	font-size:14px;
+	cursor:pointer;	
+}
+.menu_sp {
+	height:16px;
+	width:1px;
+	background:white;
+	float:left;
+	margin:11px 3px;
+}
+.menu:hover {
+	background:white;
+	color:#aa9a88;
+}
+/****************************/
+#sub {
+	height:35px;
+	position:relative;
+}
+.sub {
+	position:absolute;
+	display:none;	
+}
+
+.item {
+	float:left;
+	font-size:12px;
+	padding:0 12px;
+	color:#aa9a88;
+	border:1px solid transparent;
+	margin-top:9px;
+	cursor:pointer;	
+}
+
+.item_sp {
+	height:12px;
+	width:1px;
+	background:#aa9a88;
+	float:left;
+	margin:11px 3px;
+}
+
+.item:hover {
+	background:#fafafa;
+	border:1px solid #dcdcdc;
+	color:orange;
+}
+/************************************/
+
+#content {
+	position:relative;
+	width:948px;
+	height:821px;
+	margin:auto;
+	margin-top:1px;
+	border-right:1px solid #dcdcdc;
+	border-left:1px solid #dcdcdc;
+}
+
+#content_tl {
+	position:absolute;
+	top:0;
+	left:0;
+	width:275px;
+	height:466px;
+	background-image:url(images/nanum01.jpg)
+}
+#content_tc_u {
+	position:absolute;
+	top:0;
+	left:275px;
+	width:425px;
+	height:215px;
+	background-image:url(images/34.jpg)
+}
+#today_logo {
+	position:absolute;
+	width:43px;
+	height:44px;
+	background-image:url(images/box_today.png);
+}
+#content_tc_d {
+	position:absolute;
+	top:215px;
+	left:275px;
+	width:425px;
+	height:251px;
+	background-image:url(images/temp1.jpg)
+}
+/*****************************************/
+#content_tr {
+	position:absolute;
+	top:0;
+	right:0;
+	width:248px;
+	height:215px;
+	background:#fafafa;
+}
+#id {
+	position:absolute;
+	top:10px;
+	left:10px;
+}
+#pass {
+	position:absolute;
+	top:40px;
+	left:10px;
+}
+#log_in {
+	position:absolute;
+	right:10px;
+	top:10px;
+	width:60px;
+	height:60px;
+	background:url(images/outlogin_button.gif)
+}
+#checkbox {
+	position:absolute;
+	top:80px;
+	left:10px;
+}
+#log_tx {
+	position:absolute;
+	top:80px;
+	left:30px;
+	color:#dcdcdc;
+	font-size:12px;
+}
+#log_sp {
+	position:absolute;
+	top:80px;
+	left:168px;
+	width:1px;
+	height:12px;
+	background:#dcdcdc;
+}
+#log_join {
+	position:absolute;
+	top:80px;
+	left:183px;
+	color:#dcdcdc;
+	font-weight:900;
+	font-size:12px;
+}
+/*****************************************/
+#content_ml {
+	position:absolute;
+	top:466px;
+	left:0;
+	width:275px;
+	height:205px;
+	overflow:hidden;
+}
+#content_ml_inner {
+	position:absolute;
+	width:1100px;
+	height:205px;
+}
+.content_ml_slide {
+	float:left;
+		
+}
+#content_mr {
+	position:absolute;
+	top:466px;
+	left:275px;
+	width:673px;
+	height:205px;
+	background-image:url(images/temp2.jpg);	
+}
+
+#content_b {
+	position:absolute;
+	bottom:0;
+	width:948px;
+	height:148px;
+	background:url(images/top_c1.gif)
+}
+/*****************************************/
+#sitemap {
+	width:950px;
+	margin:auto;
+	height:300px;
+	background:pink;
+}
+/*****************************************/
+#footer {
+	height:252px;
+}
+/*****************************************/
+ #banner {
+  position: relative;
+  width: 888px;
+  height: 65px;
+  overflow: hidden;
+  float: left;
+ }
+
+ #f_slider {
+  position: relative;
+  width: 950px;
+  height: 65px;
+  margin: auto;
+ }
+ 
+ #banner_inner {
+  position: absolute;
+  height: 65px;
+  width: 2170px;
+  left: 0;
+ }
+ 
+ .banner {
+  width: 155px;
+  height: 65px;
+  float: left;
+ }
+ 
+ #prev, #next {
+  cursor: pointer;
+  float: left;
+  height: 47px;
+  width: 31px;
+  margin-top:9px;
+ }
+ #prev {
+	background:url(images/left.gif)	 
+ }
+ #next {
+	background:url(images/right.gif)	  
+ }
+/*****************************************/
+#f_nav {
+	height:33px;
+	background:#fafafa;
+	border-top:1px solid #dcdcdc;
+	border-bottom:1px solid #dcdcdc;
+}
+#f_nav_in {
+	width:800px;
+	margin:auto;	
+}
+
+.f_nav {
+	font-size:12px;
+	float:left;
+	margin-top:9px;
+	padding:0 12px;
+	cursor:pointer
+}
+.f_nav_sp {
+	float:left;
+	width:1px;
+	height:14px;
+	background:#dcdcdc;
+	margin-top:10px;
+}
+/*****************************************/
+#f_tx {
+	width:950px;
+	font-size:12px;
+	color:gray;
+	padding:30px 0px;
+	text-align:center;
+	margin:auto;
+}
+
+#f_copy {
+	width:950px;
+	font-size:12px;
+	padding-bottom:30px;
+	text-align:center;
+	margin:auto;
+}
+</style>
+<script src="scripts/jquery.js"></script>
+<script>
+ $(document).ready(function(){
+ 
+  $(".menu").mouseenter(function(){
+  
+   var s = $(this).attr("s");
+   $(".sub").css("display", "none");
+   $(".sub").eq(s).css("display", "block");
+
+  });
+
+ });
+</script>
+<script>
+
+ $(document).ready(function(){
+  
+  var sn = 0;
+  setTimeout(slider_ani, 1000);
+
+  function slider_ani(){
+   sn++;
+   $("#content_ml_inner").stop().animate({
+    left: -275*sn
+   }, function(){
+   
+    if (sn == 3) {
+     $("#content_ml_inner").css("left", "0");
+     sn = 0;
+    }
+    setTimeout(slider_ani, 1000);
+   });
+  }
+  
+  
+ });
+
+
+</script>
+<script>
+ $(document).ready(function(){
+ 
+  var loc = 0;
+  var dir = 1;
+  var speed = 1;
+ 
+  banner_ani();
+  
+  function banner_ani() {
+   if (dir < 0) {
+    if (loc <= -1085) {
+     loc = 0;
+    }
+   } else {
+    if (loc >= 0) {
+     loc = -1085;
+    }
+   }
+   
+   loc += dir*speed;
+   $("#banner_inner").css("left",  loc +"px");
+   setTimeout(banner_ani, 10);
+  }
+  
+  $("#prev").mouseenter(function(){
+   dir = -1;
+   speed = 2;
+  });  
+  
+  $("#next").mouseenter(function(){
+   dir = 1;
+   speed = 2;
+  });  
+  $("#next, #prev").mouseleave(function(){
+   speed = 1;
+  });  
+  
+  $("#banner").mouseenter(function(){
+   speed = 0;
+  });  
+  
+  $("#banner").mouseleave(function(){
+   speed = 1;
+  });
+
+  
+  
+ 
+ });
+</script>
+
+</head>
+
+<body>
+<div id="header">
+    <div id="logo_bar">
+    	<div id="logo" class="cp"></div>
+        <div id="search">
+        	<form>
+				<input  class="search" type="text">
+            </form>
+            <div id="search_btn" class="cp">
+            </div>
+        </div>
+        <div id="radio" class="cp"></div>
+    </div>
+    <div id="menu_bar">
+    	<div id="menu">
+        	<div id="menu_sitemap" class="cp"></div>
+        	<div id="menu_pinterest" class="cp"></div>
+        	<div class="menu" s="0">Home</div>
+            <div class="menu_sp"></div>
+            <div class="menu" s="1">지식나눔</div>
+            <div class="menu_sp"></div>
+            <div class="menu" s="2">디자인거래소</div>
+            <div class="menu_sp"></div>
+            <div class="menu" s="3">오픈매거진</div>
+            <div class="menu_sp"></div>
+            <div class="menu" s="4">DB프로젝트</div>
+            <div class="menu_sp"></div>
+            <div class="menu" s="5">커뮤니티</div>
+            <div class="menu_sp"></div>
+            <div class="menu" s="6">고객센터</div>
+        </div>
+    	<div id="sub">
+        	<div class="sub">
+            	<div class="item"></div>
+            </div>
+            <div class="sub">
+            	<div class="item">오픈소스공유</div>
+                <div class="item_sp"></div>
+                <div class="item">분야별소스 즐겨찾기</div>
+                <div class="item_sp"></div>
+                <div class="item">분야별 즐겨찾기</div>
+                <div class="item_sp"></div>
+                <div class="item">사이트리뷰</div>
+                <div class="item_sp"></div>
+                <div class="item">공모전정보</div>
+                <div class="item_sp"></div>
+                <div class="item">YouTube자료실</div>
+                <div class="item_sp"></div>
+                <div class="item">지식나눔/공부방</div>
+            </div>
+            <div class="sub">
+            	<div class="item">디자인제작의뢰</div>
+                <div class="item_sp"></div>
+                <div class="item">그누보드 스킨/소스</div>
+                <div class="item_sp"></div>
+                <div class="item">디자인리사이클</div>
+            </div>
+            <div class="sub">
+            	<div class="item">오픈포스팅</div>
+                <div class="item_sp"></div>
+                <div class="item">서울디자인제단</div>
+                <div class="item_sp"></div>
+                <div class="item">서울특별시</div>
+                <div class="item_sp"></div>
+                <div class="item">디자인 공개수배/소개</div>
+            </div>
+            <div class="sub">
+            	<div class="item">오픈프로젝트</div>
+                <div class="item_sp"></div>
+                <div class="item">디자인배틀</div>
+                <div class="item_sp"></div>
+                <div class="item">디자인실명제</div>
+                <div class="item_sp"></div>
+                <div class="item">온라인전시회</div>
+                <div class="item_sp"></div>
+                <div class="item">크라우드펀딩</div>
+            </div>
+            <div class="sub">
+            	<div class="item">좋은이야기</div>
+                <div class="item_sp"></div>
+                <div class="item">버킷리스트</div>
+                <div class="item_sp"></div>
+                <div class="item">자유게시판</div>
+                <div class="item_sp"></div>
+                <div class="item">심심할때</div>
+            </div>
+            <div class="sub">
+            	<div class="item">디자인배틀소개</div>
+                <div class="item_sp"></div>
+                <div class="item">뉴스/공지</div>
+                <div class="item_sp"></div>
+                <div class="item">FAQ</div>
+                <div class="item_sp"></div>
+                <div class="item">질문/답변</div>
+                <div class="item_sp"></div>
+                <div class="item">오류/기타 신고방</div>
+                <div class="item_sp"></div>
+                <div class="item">이벤트</div>
+                <div class="item_sp"></div>
+                <div class="item">제휴/광고/기타문의</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+	<div id="content_tl"></div>
+    <div id="content_tc_u">
+    	<div id="today_logo"></div>
+    </div>
+    <div id="content_tc_d"></div>
+    <div id="content_tr">
+    	<form>
+        <input type="text" id="id">
+        </form>
+        <form>
+        <input type="text" id="pass">
+        </form>
+        <div id="log_in" class="cp"></div>
+        <form>
+        <input type="checkbox" id="checkbox">
+        </form>
+        <div id="log_tx">자동로그인/비번찾기</div>
+        <div id="log_sp"></div>
+        <div id="log_join">회원가입</div>
+    </div>
+    <div id="content_ml">
+    	<div id="content_ml_inner">
+        	<div class="content_ml_slide">
+            <img src="images/3717547977_BWh31Lu2_nanum02.jpg">
+            </div>
+            <div class="content_ml_slide">
+            <img src="images/3717547977_lTndiRgE_3717547977_Gewfj3nH_nado.jpg">
+            </div>
+            <div class="content_ml_slide">
+            <img src="images/3717547977_VFifnQMH_3717547977_LSKjm6ku_nado2.jpg">
+            </div>
+            <div class="content_ml_slide">
+            <img src="images/3717547977_BWh31Lu2_nanum02.jpg">
+            </div>
+        </div>
+    </div>
+    <div id="content_mr"></div>
+    <div id="content_b"></div>
+</div>
+<div id="sitemap"></div>
+<div id="footer">
+	<div id="f_slider">
+        <div id="prev"></div>
+        <div id="banner">
+            <div id="banner_inner">
+                <div class="banner"><img src="images/1.jpg" /></div>
+                <div class="banner"><img src="images/2.jpg" /></div>
+                <div class="banner"><img src="images/3.jpg" /></div>
+                <div class="banner"><img src="images/4.jpg" /></div>
+                <div class="banner"><img src="images/5.jpg" /></div>
+                <div class="banner"><img src="images/6.jpg" /></div>
+                <div class="banner"><img src="images/7.jpg" /></div>
+                <div class="banner"><img src="images/1.jpg" /></div>
+                <div class="banner"><img src="images/2.jpg" /></div>
+                <div class="banner"><img src="images/3.jpg" /></div>
+                <div class="banner"><img src="images/4.jpg" /></div>
+                <div class="banner"><img src="images/5.jpg" /></div>
+                <div class="banner"><img src="images/6.jpg" /></div>
+                <div class="banner"><img src="images/7.jpg" /></div>
+            </div>
+        </div>
+        <div id="next"></div>
+    </div>
+    <div id="f_nav">
+        <div id="f_nav_in">
+            <div class="f_nav">디자인배틀소개</div>
+            <div class="f_nav_sp"></div>
+            <div class="f_nav">고마운분들</div>
+            <div class="f_nav_sp"></div>
+            <div class="f_nav">이용약관</div>
+            <div class="f_nav_sp"></div>
+            <div class="f_nav">개인보호정책</div>
+            <div class="f_nav_sp"></div>
+            <div class="f_nav">제휴/광고문의</div>
+            <div class="f_nav_sp"></div>
+            <div class="f_nav">포인트정책</div>
+            <div class="f_nav_sp"></div>
+            <div class="f_nav">온라인문의</div>
+            <div class="f_nav_sp"></div>
+            <div class="f_nav">이메일주소무단수집거부</div>
+        </div>    
+    </div>
+	<div id="f_tx">
+    디자인배틀의 사전 서면 동의 없이 사이트의 일체의 정보, 콘텐츠 및 UI등을 상업적 목적으로 전재, 전송, 스크래핑 등 무단 사용할 수 없습니다.<br>
+디자인배틀은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 디자인배틀을 통하지 않은 회원간의 직접 거래에 대하여 책임을 지지 않습니다.
+    </div>
+    <div id="f_copy">
+    Copyright &copy; 2005~2013 <b>DesignBattle Co., Ltd.</b> All rights reserved.
+    </div>
+</div>
+
+</body>
+</html>

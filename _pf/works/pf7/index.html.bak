@@ -1,0 +1,859 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>알툴즈</title>
+<style>
+*{margin:0;padding:0}
+.left {float:left}
+.right {float:right}
+a {text-decoration:none}
+
+
+#header {
+	height:88px;
+	background:#24303e;
+}
+
+#business {
+	position:absolute;
+	top:0;
+	right:0;
+	width:107px;
+	height:88px;
+	background:url(images/bg_main_link_1_1.gif);
+	cursor:pointer;
+}
+
+#header_in {
+	margin:auto;
+	height:88px;
+	width:960px;
+}
+
+#logo {
+	width:111px;
+	height:69px;
+	background:url(images/h1.png);
+	cursor:pointer;
+}
+
+#doodle {
+	width:149px;
+	height:69px;
+	background:url(images/h1_doodle.gif);
+	cursor:pointer;
+}
+
+#nav {
+	position:relative;
+	height:88px;
+	width:700px;
+}
+/***************************************/
+
+#nav_gnb {
+	position:absolute;
+	right:0;
+	top:10px;
+	height:22px;
+}
+
+#gnb1 {
+	background:url(images/btn_login.png);
+	width:53px;
+	height:22px;
+	margin-right:10px;
+}
+
+#gnb3 {
+	width:10px;
+	height:17px;
+	background:url(images/spr_sns_gnb.png);
+	background-position:0 4px
+	
+}
+#gnb5 {
+	width:10px;
+	height:17px;
+	background:url(images/spr_sns_gnb.png);
+	background-position:0 -20px
+}
+#gnb7 {
+	width:15px;
+	height:17px;
+	background:url(images/spr_sns_gnb.png);
+	background-position:0 -46px
+}
+
+.gnb_ic {
+	margin-top:1px;
+	margin-left:10px;
+}
+
+.gnb_tx {
+	font-size:12px;
+	color:#989ea6;
+	margin-top:5px;
+	padding-right:10px;
+	border-right:1px solid #989ea6;
+	cursor:pointer;
+}
+#gnb8 {
+	border-right:0;
+	padding-right:0;
+}
+
+
+/*********************************/
+#nav_menu {
+	position:absolute;
+	right:0;
+	bottom:10px;
+	height:29px;
+}
+
+#menu1 {
+	margin-right:0;
+}
+#menu2 {
+	width:16px;
+	height:16px;
+	background:url(images/icon_new_gnb.png);
+	margin-top:7px;
+	margin-right:40px;
+}
+
+#menu6 {
+	width:29px;
+	height:29px;
+	background:url(images/icon_header_buy.png)
+}
+
+.menu_tx {
+	color:white;
+	margin-top:5px;
+	margin-right:40px;
+	font-weight:900;
+	cursor:pointer;
+}
+
+#menu7 {
+	margin-right:0;
+}
+
+/*********************************************/
+#main {
+	position:relative;
+	height:348px;
+	background:#ebece7;	
+}
+
+#slider_lbtn {
+	position:absolute;
+	right:50%;
+	top:0;
+	margin-right:480px;
+	width:100px;
+	height:348px;
+
+}
+#slider_lbtn:hover {
+	background:url(images/spr_btn_main_1_move.png);	
+}
+#slider_rbtn {
+	position:absolute;
+	left:50%;
+	top:0;
+	margin-left:480px;	
+	width:100px;
+	height:348px;
+
+}
+#slider_rbtn:hover {
+	background:url(images/spr_btn_main_1_move.png);	
+	background-position:-100px
+}
+
+#slider {
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-480px;
+	width:960px;
+	height:348px;
+	cursor:pointer;
+}
+
+.slide {
+	position:absolute;
+	left: 0;
+	right: 0;
+	height: 348px;
+}
+#slide1 {
+	background: url(images/altoolsweb_main_1_1.jpg) center top;
+}
+ 
+#slide2 {
+	background: url(images/altoolsweb_main_1_2.jpg) center top;
+}
+/*********************************************/
+#down {
+
+	height:64px;
+	border-top:1px solid #f3efe6	
+}
+
+#down_in {
+	width:300px;
+	margin:auto;
+	padding-top:10px
+}
+#dtx1 {
+	margin-top:10px;
+	color:#f75a0a;
+	font-weight:900;
+	width:100px
+}
+#dtx2 {
+	margin-top:10px;
+	font-weight:900;
+	width:60px
+}
+#dtx3 {
+	background:url(images/spr_btn_main_install_1.gif);
+	width:139px;
+	height:37px;
+	cursor:pointer;
+}
+#dtx3:hover {
+	background-position:0 -48px
+}
+
+/*********************************************/
+#kind {
+	height:114px;
+	border-top:1px solid #f3efe6	
+}
+#kind_in {
+	width:960px;
+	margin:auto;	
+}
+
+.kind {
+	width:63px;
+	height:90px;
+	margin-right:26px;
+	cursor:pointer;
+}
+.kind:last-child {
+	margin-right:0	
+}
+.kind_sub {
+	font-size:12px;
+	color:gray;
+	text-align:center;
+}
+#kind1 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 0
+}
+#kind2 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 -115px
+}
+#kind3 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 -230px
+}
+#kind4 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 -1159px
+}
+#kind5 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 -345px
+}
+#kind6 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 -460px
+}
+#kind7 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 -574px
+}
+#kind8 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 -689px
+}
+#kind9 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 -804px
+}
+#kind10 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 -919px
+}
+#kind11 {
+	width:63px;
+	height:70px;
+	background:url(images/spr_icon_main_al.png);
+	background-position:0 -1036px
+}
+
+/*********************************************/
+#al_web {
+	height:146px;
+	border-top:1px solid #f3efe6;
+	background:#e3eaf2	
+}
+#sub_slider {
+	position:relative;
+	margin:auto;
+	width:960px;
+	height:146px;
+	overflow:hidden;
+	cursor:pointer;
+}
+#sub_slider_inner {
+	position:absolute;
+	width:400%;
+	height:146px;
+}
+.sub_slide {
+	position:relative;
+	width:25%;
+	height:146px;
+	float:left;	
+}
+/*********************************************/
+#news {
+	height:182px;
+	border-top:1px solid #f3efe6	
+}
+
+#news_inner {
+	width:960px;
+	margin:auto;	
+}
+#news_inner_title {
+	width:960px;
+	margin:30px 0px	15px 0px
+}
+#news_inner_title_img {
+	width:129px;
+	height:17px;
+	background:url(images/main_tit_1.gif)	
+}
+.news_inner_bar {
+	width:30px;
+	height:90px;		
+}
+.news_inner_article {
+	width:300px;
+	height:90px;
+	cursor:pointer;
+}
+#news_inner_article01 {
+	background:url(images/alweb_mobile_banner_1.jpg)
+}
+#news_inner_article02 {
+	background:url(images/alweb_mobile_banner_2.jpg)
+}
+#news_inner_article03 {
+	background:url(images/alweb_mobile_banner_3.jpg)
+}
+/*********************************************/
+#section {
+	height:308px;
+	border-top:1px solid #f3efe6;
+	background:#eeeeee	
+}
+
+#section_in {
+	width:960px;
+	margin:auto;
+}
+
+#section1 {
+	width:481px;
+	height:254px;
+	background:url(images/section1.jpg);
+	cursor:pointer;
+	margin-top:24px;
+}
+
+#section2 {
+	width:479px;
+	height:259px;
+	background:url(images/section2.jpg);
+	cursor:pointer;
+	margin-top:24px;
+}
+/*********************************************/
+#blog {
+	height:156px;
+	border-top:1px solid #f3efe6;
+	background:#f8f8f8	
+}
+#blog_in {
+	width:960px;
+	margin:auto;
+}
+
+#blog1 {
+	width:480px;
+	height:92px;
+	background:url(images/blog1.jpg);
+	cursor:pointer;
+	margin-top:32px;
+}
+#blog_sp {
+	width:5px;
+}
+
+#blog2 {
+	width:475px;
+	height:92px;
+	background:url(images/blog2.jpg);
+	cursor:pointer;
+	margin-top:32px;
+}
+/*********************************************/
+#footer {
+	height:130px;
+	border-top:1px solid #f3efe6	
+}
+#footer_in {
+	width:960px;
+	margin:auto;
+}
+/*********************************************/
+#footer_logo {
+	width:121px;
+	height:79px;
+	margin-right:20px;
+	background:url(images/footer_logo.gif);
+	cursor:pointer;
+}
+/*********************************************/
+#footer_article {
+	margin-top:27px;
+	width:819px;
+}
+/*********************************************/
+#footer_article1 {
+	position:relative;
+	height:13px;
+}
+.footer_article1 {
+	padding:0 5px;
+	border-right:1px solid #f3efe6;
+	font-size:11px;
+	cursor:pointer;
+}
+
+.footer_article1:last-child {
+	border-right:0
+}
+
+#jp_us {
+	position:absolute;
+	right:0;
+	top:0;
+	width:48px;
+	height:13px;
+	background:url(images/spr_icon_lang.gif);
+	cursor:pointer;
+}
+/*********************************************/
+#footer_article2 {
+	font-size:11px;
+	margin:10px 0
+}
+
+#footer_article2 a {
+	color:red;
+}
+/*********************************************/
+.footer_article3_sp {
+	width:1px;
+	height:11px;
+	margin:0 5px;
+	background:#f3efe6
+}
+
+#footer_article3_1 {
+	width:51px;
+	height:11px;
+	background:url(images/footer_1.gif);
+	cursor:pointer;
+}
+#footer_article3_2 {
+	width:58px;
+	height:11px;
+	background:url(images/footer_2.gif);
+	cursor:pointer;
+}
+#footer_article3_3 {
+	width:27px;
+	height:11px;
+	background:url(images/footer_3.gif);
+	cursor:pointer;
+}
+#footer_article3_4 {
+	width:45px;
+	height:11px;
+	background:url(images/footer_4.gif);
+	cursor:pointer;
+}
+#footer_article3_5 {
+	width:49px;
+	height:11px;
+	background:url(images/footer_5.gif);
+	cursor:pointer;
+}
+#footer_article3_6 {
+	width:76px;
+	height:11px;
+	background:url(images/footer_6.gif);
+	cursor:pointer;
+}
+#footer_article3_7 {
+	width:88px;
+	height:11px;
+	background:url(images/footer_7.gif);
+	cursor:pointer;
+}
+#footer_article3_8 {
+	width:61px;
+	height:11px;
+	background:url(images/footer_8.gif);
+	cursor:pointer;
+}
+/*********************************************/
+</style>
+
+<script src="scripts/jquery.js"></script>
+<script>
+
+ $(document).ready(function(){
+ 
+  var op = 1;
+ 
+  $("#slider_lbtn, #slider_rbtn").click(function(){
+   $("#slide2").stop().animate({
+    opacity: !op
+   }, function(){
+    op = !op;
+   });
+  });
+ 
+ });
+
+</script>
+<script>
+
+ $(document).ready(function(){
+  
+  var sn = 0;
+  setTimeout(slider_ani, 1000);
+
+  function slider_ani(){
+   sn++;
+   $("#sub_slider_inner").stop().animate({
+    left: -960*sn
+   }, function(){
+   
+    if (sn == 3) {
+     $("#sub_slider_inner").css("left", "0");
+     sn = 0;
+    }
+    setTimeout(slider_ani, 1000);
+   });
+  }
+  
+  
+ });
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+<div id="header">
+	<div id="business"></div>
+	<div id="header_in">
+    	<div id="logo" class="left"></div>
+        <div id="doodle" class="left"></div>
+        <div id="nav" class="left">
+			<div id="nav_gnb">
+            	<div id="gnb1" class="left"></div>
+                <div id="gnb2" class="gnb_tx left">회원가입</div>
+                <div id="gnb3" class="gnb_ic left"></div>
+				<div id="gnb4" class="gnb_tx left">블로그</div>
+				<div id="gnb5" class="gnb_ic left"></div>
+				<div id="gnb6" class="gnb_tx left">페이스북</div>
+				<div id="gnb7" class="gnb_ic left"></div>
+				<div id="gnb8" class="gnb_tx left">트위터</div>
+            </div>
+			<div id="nav_menu">
+            	<div id="menu1" class="menu_tx left">다운로드</div>
+				<div id="menu2" class="menu_ic left"></div>
+				<div id="menu3" class="menu_tx left">모바일</div>
+				<div id="menu4" class="menu_tx left">알툴즈Lab</div>
+				<div id="menu5" class="menu_tx left">고객센터</div>
+				<div id="menu6" class="menu_ic left"></div>
+				<div id="menu7" class="menu_tx left">구매</div>
+            </div>
+        </div>
+    </div>
+</div>    
+<div id="main">
+	<div id="slider_lbtn"></div>
+    <div id="slider">
+		<div class="slide" id="slide1"></div>
+		<div class="slide" id="slide2"></div>
+    </div>
+    <div id="slider_rbtn"></div>
+</div>
+<div id="down">
+    	<div id="down_in">
+        	<div id="dtx1" class="left">한 번에 OK!</div>
+            <div id="dtx2" class="left">알툴즈</div>
+            <div id="dtx3" class="left"></div>
+        </div>
+</div>
+<div id="kind">
+	<div id="kind_in">
+        <div class="kind left">
+        <div id="kind1"></div>
+        <div class="kind_sub">알집</div>
+        </div>
+		<div class="kind left">
+        <div id="kind2"></div>
+        <div class="kind_sub">알씨</div>
+        </div>
+        <div class="kind left">
+        <div id="kind3"></div>
+        <div class="kind_sub">알약</div>
+        </div>
+        <div class="kind left">
+        <div id="kind4"></div>
+        <div class="kind_sub">알약 쉴드</div>
+        </div>
+        <div class="kind left">
+        <div id="kind5"></div>
+        <div class="kind_sub">알툴바</div>
+        </div>
+        <div class="kind left">
+        <div id="kind6"></div>
+        <div class="kind_sub">알송</div>
+        </div>
+        <div class="kind left">
+        <div id="kind7"></div>
+        <div class="kind_sub">알마인드</div>
+        </div>
+        <div class="kind left">
+        <div id="kind8"></div>
+        <div class="kind_sub">알캡쳐</div>
+        </div>
+        <div class="kind left">
+        <div id="kind9"></div>
+        <div class="kind_sub">알백</div>
+        </div>
+        <div class="kind left">
+        <div id="kind10"></div>
+        <div class="kind_sub">알키퍼</div>
+        </div>
+        <div class="kind left">
+        <div id="kind11"></div>
+        <div class="kind_sub">알드라이브</div>
+        </div>
+    </div>
+</div>
+<div id="al_web">
+	<div id="sub_slider">
+    	<div id="sub_slider_inner">
+            <div id="sub_slide1" class="sub_slide">
+            <img src="images/040513_BBkakao_alwebmain.jpg">
+            </div>
+            <div id="sub_slide2" class="sub_slide">
+            <img src="images/131107_960X146_altoolsnew.jpg">
+            </div>
+            <div id="sub_slide3" class="sub_slide">
+            <img src="images/140407_altoolsPM_alwebmain.jpg">
+            </div>
+            <div id="sub_slide4" class="sub_slide">
+            <img src="images/040513_BBkakao_alwebmain.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="news">
+	<div id="news_inner">
+    	<div id="news_inner_title">
+        <div id="news_inner_title_img"></div>
+        </div>
+        <div id="news_inner_article01" class="news_inner_article left"></div>
+        <div class="news_inner_bar left"></div>
+        <div id="news_inner_article02" class="news_inner_article left"></div>
+        <div class="news_inner_bar left"></div>
+        <div id="news_inner_article03" class="news_inner_article left"></div>
+    </div>
+</div>
+<div id="section">
+	<div id="section_in">
+		<div id="section1" class="left">
+		</div>
+		<div id="section2" class="left">
+		</div>
+	</div>
+<!-- 이미지처리 안할경우 사용
+	<div id="section_in">
+    	<div id="section_in_left">
+        	<div id="section_in_left_up">
+            	<div id="section_ti_up">
+                </div>
+                <div id="section_article_up">
+                </div>
+            </div>
+            <div id="section_in_left_down">
+            	<div id="section_ti_down">
+                </div>
+                <div id="section_article_down">
+                </div>
+            </div>
+        </div>
+        <div id="section_in_right">
+        	<div id="section_ti_right">
+            </div>
+            <div id="section_article_right1">
+            	<div id="section_img1">
+                </div>
+                <div id="section_tx1">
+                </div>
+            </div>
+            <div id="section_article_right2">
+            	<div id="section_img2">
+                </div>
+                <div id="section_tx2">
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+</div>
+<div id="blog">
+	<div id="blog_in">
+		<div id="blog1" class="left">
+		</div>
+		<div id="blog_sp" class="left">
+		</div>
+		<div id="blog2" class="left">
+		</div>
+	</div>
+<!-- 이미지처리 안할경우 사용
+	<div id="blog_in">
+    	<div id="blog_left">
+        	<div id="blog_left_ti">
+            </div>
+            <div id="blog_left_tx">
+            </div>
+        </div>
+    	<div id="blog_right">
+			<div id="blog_right_ti">
+            </div>
+            <div id="blog_right_tx">
+            </div>        
+        </div>
+	</div>
+-->
+</div>
+<div id="footer">
+	<div id="footer_in">
+    	<div id="footer_logo" class="left">
+        </div>
+        <div id="footer_article" class="left">
+        	<div id="footer_article1"> 
+				<div id="jp_us" class="right">
+                </div>
+            	<div class="footer_article1 left">
+                회사소개
+                </div>
+                <div class="footer_article1 left">
+                제휴문의
+                </div>
+                <div class="footer_article1 left">
+                광고문의
+                </div>
+                <div class="footer_article1 left">
+                <b>개인정보취급방침</b>
+                </div>
+                <div class="footer_article1 left">
+                Contact Us
+                </div>
+                <div class="footer_article1 left">
+                사이트맵
+                </div>
+            </div>
+            <div id="footer_article2">
+            (주)이스트소프트 서울시 서초구 반포대로 3 이스트빌딩 (우)137-867<br>
+            대표이사:김장중 사업자등록번호 : 229-81-03214 통신판매업신고번호 : 2011-서울서초-1962 TEL.1544-8209 FAX.02-882-1155 E-mail. 
+            <a href="#">altools@estsoft.com</a>
+            </div>
+            <div id="footer_article3">
+            	<div id="footer_article3_1" class="footer_article3 left">
+                </div>
+				<div class="footer_article3_sp left"></div>
+                <div id="footer_article3_2" class="footer_article3 left">
+                </div>
+				<div class="footer_article3_sp left"></div>
+                <div id="footer_article3_3" class="footer_article3 left">
+                </div>
+				<div class="footer_article3_sp left"></div>
+                <div id="footer_article3_4" class="footer_article3 left">
+                </div>
+				<div class="footer_article3_sp left"></div>
+                <div id="footer_article3_5" class="footer_article3 left">
+                </div>
+				<div class="footer_article3_sp left"></div>
+                <div id="footer_article3_6" class="footer_article3 left">
+                </div>
+				<div class="footer_article3_sp left"></div>
+                <div id="footer_article3_7" class="footer_article3 left">
+                </div>
+				<div class="footer_article3_sp left"></div>
+                <div id="footer_article3_8" class="footer_article3 left">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

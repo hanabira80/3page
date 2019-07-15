@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>stx hi</title>
+<link rel="stylesheet" href="jquery.mCustomScrollbar.css" />
+<style>
+ *{margin:0;padding:0}
+ body {
+ 	background:#d9d6cd; 
+ }
+ #contaner {
+	position:relative 
+ }
+ #aside {
+	 position:absolute;
+	 width:180px;
+	 top:0;
+	 bottom:0;
+	 overflow:auto;
+	 background:#323232;
+	 z-index:40
+
+ }
+ #asdie_inner {
+
+
+	 height:875px;
+
+
+ }
+ #content {
+	 position:absolute;
+	 left:160px;
+	 width:2000px;
+	 top:0;
+	 bottom:0
+	 
+ }
+ #content_inner {
+	 position:absolute;
+	 width:2500px;
+	 top:0;
+	 bottom:0;
+	 background:url(images/bg_main.jpg) no-repeat
+ }
+ #slider_button {
+	 position:fixed;
+	 width:140px;
+	 height:70px;
+	 right:0;
+	 top:50%;
+	 margin-top:-35px;
+	 z-index:50
+ }
+ 
+ #slider_button_left {
+	 width:70px;
+	 height:70px;
+	 background:red;
+	 float:left	
+	 
+ }
+ #slider_button_right {
+	 width:70px;
+	 height:70px;
+	 background:blue;
+	 float:left
+
+ } 
+ #business {
+	 position:absolute;
+	 width:400px;
+	 top:0;
+	 bottom:0;
+	 left:0;
+	 overflow:auto;
+	 
+	 
+
+
+ } 
+ #business_inner {
+
+
+	 height:1500px;
+
+
+	
+	
+ }
+ #company {
+	 position:absolute;
+	 width:400px;
+	 top:0;
+	 bottom:0;
+	 left:400px;
+	 overflow:auto;
+
+
+	
+ }
+ #company_inner {
+
+
+	 height:1500px;
+
+
+	
+ }
+ #pr {
+	 position:absolute;
+	 width:400px;
+	 top:0;
+	 bottom:0;
+	 left:800px;
+	 overflow:auto;
+
+
+
+	
+ }
+ #pr_inner {
+
+
+	 height:1500px;
+
+
+	
+ }
+ #ir {
+	 position:absolute;
+	 width:400px;
+	 top:0;
+	 bottom:0;
+	 left:1200px;
+	 overflow:auto;
+
+
+ }
+ #ir_inner {
+
+
+	 height:1500px;
+
+
+ }
+ #network {
+	 position:absolute;
+	 width:400px;
+	 top:0;
+	 bottom:0;
+	 left:1600px;
+	 overflow:auto;
+ 
+ 
+ }
+ #network_inner {
+
+
+	 height:1500px;
+
+ 
+ }
+
+
+</style>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/jquery_scroll.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		$("#aside, #business").mCustomScrollbar();
+		
+		
+		
+		var sn = 0;
+		
+		$("#slider_button_right").click(function(){
+			sn++;
+			$("#content_inner").animate({
+				left:-380*sn
+			});
+		});
+		$("#slider_button_left").click(function(){
+			sn--;
+			$("#content_inner").animate({
+				left:-380*sn
+			});
+		});
+	});
+	</script>
+
+
+</head>
+
+<body>
+<div id="container">
+	<div id="aside">
+    	<div id="asdie_inner">
+		<img src="images/aside.jpg">
+        </div>
+    </div>
+    <div id="content">
+    <!-------- slider ---------->
+    <div id="slider_button">
+		<div id="slider_button_left">
+        </div>
+        <div id="slider_button_right">
+        </div>
+	</div>
+	<div id="content_inner">
+        <!------- slider_inner------->
+	        <div id="business">
+            	<div id="business_inner">
+                <img src="images/ex.jpg">
+                </div>
+            </div>
+            <div id="company">
+            	<div id="company_inner">
+                <img src="images/ex.jpg">
+                </div>
+            </div>
+            <div id="pr">
+	            <div id="pr_inner">
+                <img src="images/ex.jpg">
+                </div>
+            </div>
+            <div id="ir">
+            	<div id="ir_inner">
+                <img src="images/ex.jpg">
+                </div>
+            </div>
+            <div id="network">
+	            <div id="network_inner">
+                <img src="images/ex.jpg">
+                </div>
+            </div>
+		</div>            
+    </div>
+</div>
+</body>
+</html>

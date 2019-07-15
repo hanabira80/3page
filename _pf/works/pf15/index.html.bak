@@ -1,0 +1,1030 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>부천자연생태공원</title>
+<style>
+*{margin:0;padding:0}
+/***********************************/
+#header {
+	height:86px;
+	border-bottom:1px solid #dcdcdc;	
+}
+#header_in {
+	width:990px;
+	height:86px;
+	margin:auto;
+	position:relative;	
+}
+#logo {
+	position:absolute;
+	top:29px;
+	width:238px;
+	height:47px;
+	background:url(images/logo.gif);
+	cursor:pointer;
+}
+#util {
+	position:absolute;
+	top:20px;
+	right:0;
+	width:250px;
+	height:17px;
+}
+.util {
+	font-size:12px;
+	margin-left:20px;
+	float:left;
+	cursor:pointer;	
+}
+#menu {
+	position:absolute;
+	width:600px;
+	height:17px;
+	top:50px;
+	left:350px;
+}
+.menu {
+	float:left;
+	margin-left:30px;
+	height:17px;
+	cursor:pointer;
+}
+#menu1 {
+	width:88px;	
+}
+#menu2 {
+	width:73px;	
+}
+#menu3 {
+	width:64px;	
+}
+#menu4 {
+	width:60px;	
+}
+#menu5 {
+	width:59px;	
+}
+#menu6 {
+	width:60px;	
+}
+#menu1_on {
+	width:88px;
+	height:17px;
+	background:url(images/gnb_01_on.gif)	
+}
+#menu1_off {
+	width:88px;
+	height:17px;
+	background:url(images/gnb_01_off.gif)	
+}
+#menu2_on {
+	width:73px;
+	height:17px;
+	background:url(images/gnb_02_on.gif)	
+}
+#menu2_off {
+	width:73px;
+	height:17px;
+	background:url(images/gnb_02_off.gif)	
+}
+#menu3_on {
+	width:64px;
+	height:17px;
+	background:url(images/gnb_03_on.gif)	
+}
+#menu3_off {
+	width:64px;
+	height:17px;
+	background:url(images/gnb_03_off.gif)	
+}
+#menu4_on {
+	width:60px;
+	height:17px;
+	background:url(images/gnb_04_on.gif)	
+}
+#menu4_off {
+	width:60px;
+	height:17px;
+	background:url(images/gnb_04_off.gif)	
+}
+#menu5_on {
+	width:59px;
+	height:17px;
+	background:url(images/gnb_05_on.gif)	
+}
+#menu5_off {
+	width:59px;
+	height:17px;
+	background:url(images/gnb_05_off.gif)	
+}
+#menu6_on {
+	width:60px;
+	height:17px;
+	background:url(images/gnb_06_on.gif)	
+}
+#menu6_off {
+	width:60px;
+	height:17px;
+	background:url(images/gnb_06_off.gif)	
+}
+.menu_on {
+	display:none;	
+}
+.menu_off {
+	display:block;	
+}
+.menu:hover .menu_on {
+	display:block;	
+}
+.menu:hover .menu_off {
+	display:none;	
+}
+/***********************************/
+#main {
+	height:878px;
+	position:relative;
+	border-bottom:1px solid #dcdcdc;
+}
+/***********************************/
+.main_view {
+	height:533px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	display:none;
+	opacity:0;
+}
+.main_view:first-child {
+	display:block;
+	opacity:1;
+}
+#main_view0 {
+	background:url(images/m_img1.jpg) no-repeat 50% 0%;
+}
+#main_view1 {
+	background:url(images/m_img2.jpg) no-repeat 50% 0%;
+}
+#main_view2 {
+	background:url(images/m_img3.jpg) no-repeat 50% 0%;
+}
+#main_view3 {
+	background:url(images/m_img4.jpg) no-repeat 50% 0%;
+}
+#main_view_common {
+	height:533px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.main_view_in {
+	height:533px;
+	width:990px;
+	margin:auto;
+	position:relative;
+}
+/***********************************/
+.search {
+	position:absolute;
+	top:272px;
+	left:754px;
+	width:236px;
+	height:242px;
+	background:url(images/img_search.png)	
+}
+.search_title {
+	position:absolute;
+	top:20px;
+	left:20px;
+	width:99px;
+	height:15px;
+	font-size:14px;
+	font-weight:800;	
+}
+#view0_search_title {
+	color:#098e7b;
+}
+#view1_search_title {
+	color:#6aa642;	
+}
+#view2_search_title {
+	color:#0077c0;	
+}
+#view3_search_title {
+	color:#9c6900;	
+}
+.search1 {
+	position:absolute;
+	top:50px;
+	left:20px;
+	width:99px;
+	height:12px;
+	background:url(images/btn_sea1.png);
+	cursor:pointer;	
+}
+.search2 {
+	position:absolute;
+	top:77px;
+	left:20px;
+	width:75px;
+	height:12px;
+	background:url(images/btn_sea2.png);
+	cursor:pointer;	
+}
+.search3 {
+	position:absolute;
+	top:104px;
+	left:20px;
+	width:75px;
+	height:11px;
+	background:url(images/btn_sea3.png);
+	cursor:pointer;	
+}
+.search4 {
+	position:absolute;
+	top:130px;
+	left:20px;
+	width:86px;
+	height:28px;
+	background:url(images/btn_sea4.png);
+	cursor:pointer;	
+}
+/***********************************/
+.notice {
+	position:absolute;
+	top:272px;
+	left:248px;
+	width:242px;
+	height:242px;
+	background:url(images/img_notice1.png)	
+}
+#notice_tab {
+	position:absolute;
+	top:20px;
+	left:20px;
+	width:210px;
+	height:20px;
+}
+.notice_tab {
+	width:60px;
+	height:20px;
+	float:left;
+	font-size:12px;
+	font-weight:700;
+	color:gray;
+	text-align:center;
+	cursor:pointer;
+}
+.notice_tab_sp {
+	width:2px;
+	height:11px;
+	margin:1px 5px 0px 5px;
+	float:left;
+	background:url(images/not_line.gif)	;
+}
+.notice_more{
+	width:32px;
+	height:5px;
+	float:right;
+	background:url(images/more.gif);
+	margin-top:7px;
+	cursor:pointer;
+}
+#notice_view {
+	position:absolute;
+	top:40px;
+	left:20px;
+	width:210px;
+	height:110px;
+}
+.notice_view {
+	position:absolute;
+	width:210px;
+	height:110px;	
+	display:none;
+}
+#notice_view1 {
+	background:url(images/notice_view1_temp.jpg);
+}
+#notice_view2 {
+	background:url(images/notice_view2_temp.jpg);
+
+}
+/***********************************/
+#event_slider {
+	position: absolute;
+	width: 235px;
+	height: 495px;
+	overflow: hidden;
+}
+#event_slider_inner {
+	position: absolute;
+	width: 470px;
+	height: 495px;
+}
+.event_slide {
+	position: relative;
+	float: left;
+}
+#next {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+#prev {
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	cursor: pointer;
+}
+/***********************************/
+#view0_event {
+	position:absolute;
+	top:17px;
+	width:237px;
+	height:498px;
+	background:url(images/img_event.png)	
+}
+#view0_tour {
+	position:absolute;
+	top:17px;
+	left:248px;
+	width:242px;
+	height:245px;
+	background:url(images/img_tour1.png);
+	cursor:pointer;		
+}
+
+#view0_mon {
+	position:absolute;
+	top:272px;
+	left:501px;
+	width:242px;
+	height:242px;
+	background:url(images/img_mon1.png);
+	cursor:pointer;		
+}
+/***********************************/
+#view1_event {
+	position:absolute;
+	top:17px;
+	width:237px;
+	height:498px;
+	background:url(images/img_event.png)	
+}
+#view1_tour {
+	position:absolute;
+	top:17px;
+	left:248px;
+	width:242px;
+	height:245px;
+	background:url(images/img_tour2.png);
+	cursor:pointer;		
+}
+
+#view1_mon {
+	position:absolute;
+	top:272px;
+	left:501px;
+	width:242px;
+	height:242px;
+	background:url(images/img_mon2.png);
+	cursor:pointer;		
+}
+/***********************************/
+#view2_event {
+	position:absolute;
+	top:17px;
+	width:237px;
+	height:498px;
+	background:url(images/img_event.png)	
+}
+#view2_tour {
+	position:absolute;
+	top:17px;
+	left:248px;
+	width:232px;
+	height:245px;
+	background:url(images/img_white.png);
+	cursor:pointer;
+	padding-left:10px;		
+}
+
+#view2_mon {
+	position:absolute;
+	top:272px;
+	left:501px;
+	width:232px;
+	height:242px;
+	background:url(images/img_white.png);
+	background-size:cover;
+	cursor:pointer;
+	padding-left:10px;				
+}
+/***********************************/
+#view3_event {
+	position:absolute;
+	top:17px;
+	width:237px;
+	height:498px;
+	background:url(images/img_event.png)	
+}
+#view3_tour {
+	position:absolute;
+	top:17px;
+	left:248px;
+	width:242px;
+	height:245px;
+	background:url(images/img_tour4.png);
+	cursor:pointer;		
+}
+
+#view3_mon {
+	position:absolute;
+	top:272px;
+	left:501px;
+	width:242px;
+	height:242px;
+	background:url(images/img_mon4.png);
+	cursor:pointer;		
+}
+/***********************************/
+
+
+
+/***********************************/
+.main_btn {
+	height:115px;
+	position:absolute;
+	left:0;
+	right:0;	
+}
+.main_btn_on {
+	height:115px;
+	position:absolute;
+	left:0;
+	right:0;
+	display:block;
+	cursor:pointer;
+}
+.main_btn_off {
+	height:115px;
+	position:absolute;
+	left:0;
+	right:0;
+	display:none;
+	cursor:pointer;	
+}
+#main_btn1 {
+	top:533px;
+}
+#main_btn1_on {
+	background:url(images/visual1_on.jpg) no-repeat 50% 0%;
+}
+#main_btn1_off {
+	background:url(images/visual1_off.jpg) no-repeat 50% 0%;
+}
+#main_btn2 {
+	top:648px;
+}
+#main_btn2_on {
+	background:url(images/visual2_on.jpg) no-repeat 50% 0%;
+}
+#main_btn2_off {
+	background:url(images/visual2_off.jpg) no-repeat 50% 0%;
+}
+#main_btn3 {
+	top:763px;
+}
+#main_btn3_on {
+	background:url(images/visual3_on.jpg) no-repeat 50% 0%;
+}
+#main_btn3_off {
+	background:url(images/visual3_off.jpg) no-repeat 50% 0%;
+}
+
+.main_btn_in {
+	height:115px;
+	width:990px;
+	margin:auto;
+}
+/***********************************/
+#footer {
+	height:61px;
+}
+#footer_in {
+	position:relative;
+	width:990px;
+	height:61px;
+	margin:auto;	
+}
+#footer_logo {
+	position:absolute;
+	top:20px;
+	width:74px;
+	height:39px;
+	background:url(images/f_logo.gif)	
+}
+#footer_menu {
+	position:absolute;
+	top:20px;
+	left:94px;
+	width:326px;
+	height:11px;
+}
+#footer_address {
+	position:absolute;
+	top:41px;
+	left:94px;
+	width:299px;
+	height:23px;
+	background:url(images/copy.gif)
+}
+#footer_viewer {
+	position:absolute;
+	top:20px;
+	left:440px;
+	width:110px;
+	height:16px;
+}
+/***********************************/
+.footer_menu {
+	height:11px;
+	float:left;
+	cursor:pointer;
+}
+#footer_menu1 {
+	width:87px;
+	background:url(images/foot_1.gif)
+}
+#footer_menu2 {
+	width:103px;
+	background:url(images/foot_2.gif)
+}
+#footer_menu3 {
+	width:72px;
+	background:url(images/foot_3.gif)
+}
+#footer_menu4 {
+	width:64px;
+	background:url(images/foot_4.gif)
+}
+/***********************************/
+.footer_viewer{
+	width:16px;
+	height:16px;
+	float:left;
+	cursor:pointer;
+	margin-right:5px;
+}
+#footer_viewer1 {
+	background:url(images/foot_5.gif)	
+}
+#footer_viewer2 {
+	background:url(images/foot_6.gif)	
+}
+#footer_viewer3 {
+	background:url(images/foot_7.gif)	
+}
+#footer_viewer4 {
+	background:url(images/foot_8.gif)	
+}
+#footer_viewer5 {
+	background:url(images/foot_9.gif)	
+}
+/***********************************/
+#menu_sub {
+	position:absolute;
+	top:87px;
+	left:0;
+	right:0;
+	height:30px;
+	border-bottom:2px solid #92c845;
+	background:white;
+	display:none;
+}
+.menu_sub {
+	display:none;
+}
+#menu_sub_in {
+	position:relative;
+	width:990px;
+	height:30px;
+	margin:auto;
+}
+#menu_sub1 {
+	position:absolute;
+	left:360px;
+	width:600px;
+	height:30px;
+}
+#menu_sub2 {
+	position:absolute;
+	left:360px;
+	width:600px;
+	height:30px;
+}
+#menu_sub3 {
+	position:absolute;
+	left:360px;
+	width:600px;
+	height:30px;
+}
+#menu_sub4 {
+	position:absolute;
+	left:550px;
+	width:400px;
+	height:30px;
+}
+#menu_sub5 {
+	position:absolute;
+	left:150px;
+	width:800px;
+	height:30px;
+}
+#menu_sub6 {
+	position:absolute;
+	right:20px;
+	width:250px;
+	height:30px;
+}
+.menu_sub_dt {
+	height:30px;
+	margin-left:20px;
+	float:left;
+	font-size:13px;
+	font-weight:700;
+	color:#616e08;
+	padding-top:7px;
+	cursor:pointer;
+}
+.menu_sub_dt:hover {
+	text-decoration:underline;
+	color:#555;
+}
+/***********************************/
+</style>
+<script src="scripts/jquery.js"></script>
+<script>
+$(document).ready(function(){
+		
+	$(".main_btn, #logo").click(function(){
+		
+		var a =  this.("a");
+		
+		a = parseInt(a);
+		
+		$(".main_view").css("display", "none");
+		$(".main_view").css("opacity", "0");
+		$(".main_btn_on").css("display", "none");
+		$(".main_btn_off").css("display", "block");
+		$("#common_search").css("opacity","0");
+		$("#common_search").stop().animate({
+			opacity:1
+		});
+		
+		$(".main_view").eq(a).css("display", "block");
+		$(".main_view").eq(a).stop().animate({
+			opacity:1
+			});
+		$(".main_btn_on").eq(a-1).css("display", "block");
+		$(".main_btn_off").eq(a-1).css("display", "none");
+				
+		if (a == 0) {
+			$(".main_btn_on").css("display", "block");
+			$(".main_btn_off").css("display", "none");
+	    };
+		
+		$(".notice").eq(a).css("backgroundImage","url(images/img_notice"+ (a+1) +".png)");
+	});
+
+
+	$(".notice_view").eq(0).css("display", "block");
+	$(".notice_tab").click(function(){
+		var b =  $(this).attr("b");
+		$(".notice_view").css("display", "none");
+		$(".notice_view").eq(b).css("display", "block");
+	});
+	
+	
+	$(".menu").mouseenter(function(){
+		var c = $(this).attr("c");
+		$("#menu_sub").css("display", "block");
+		$(".menu_sub").css("display", "none");
+		$(".menu_sub").eq(c).css("display", "block");
+	});
+	
+	$("#menu_sub").mouseleave(function(){
+		$("#menu_sub").css("display", "none");
+		$(".menu_sub").css("display", "none");
+	});
+
+	
+	$("#next").click(function(){
+		$("#event_slider_inner").css("left", 0);
+		$("#event_slider_inner").stop().animate({
+			left: -235
+		});
+	}); 
+
+	$("#prev").click(function(){
+		$("#event_slider_inner").css("left", "-235px");
+		$("#event_slider_inner").stop().animate({
+			left: 0
+		}, function(){
+			setTimeout(event_slider_ani, 1000);
+		});
+
+	});  
+
+
+	setTimeout(event_slider_ani, 1000);
+	function event_slider_ani() {
+		$("#event_slider_inner").css("left", 0);
+		$("#event_slider_inner").stop().animate({
+			left: -235
+		}, function(){
+			setTimeout(event_slider_ani, 1000);
+		});
+	}
+	
+
+	
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+	<div id="header_in">
+    	<div id="logo" a="0"></div>
+		<div id="util">
+        	<div id="util1" class="util">홈</div>
+            <div id="util2" class="util">로그인</div>
+            <div id="util3" class="util">회원가입</div>
+            <div id="util4" class="util">사이트맵</div>
+        </div>    
+		<div id="menu">
+        	<div id="menu1" class="menu" c="0">
+            	<div id="menu1_on" class="menu_on"></div>
+                <div id="menu1_off" class="menu_off"></div>
+            </div>
+            <div id="menu2" class="menu" c="1">
+            	<div id="menu2_on" class="menu_on"></div>
+                <div id="menu2_off" class="menu_off"></div>
+            </div>
+            <div id="menu3" class="menu" c="2">
+            	<div id="menu3_on" class="menu_on"></div>
+                <div id="menu3_off" class="menu_off"></div>
+            </div>
+            <div id="menu4" class="menu" c="3">
+            	<div id="menu4_on" class="menu_on"></div>
+                <div id="menu4_off" class="menu_off"></div>
+            </div>
+            <div id="menu5" class="menu" c="4">
+            	<div id="menu5_on" class="menu_on"></div>
+                <div id="menu5_off" class="menu_off"></div>
+            </div>
+            <div id="menu6" class="menu" c="5">
+            	<div id="menu6_on" class="menu_on"></div>
+                <div id="menu6_off" class="menu_off"></div>
+            </div>
+        </div>
+	</div>
+</div>
+
+<div id="main">
+	<div id="main_view0" class="main_view">
+    	<div class="main_view_in">
+        	<div id="view0_event" class="event">
+            	<div id="event_slider">
+					<div id="event_slider_inner">
+						<div class="event_slide"><img src="images/imgload.png" /></div>
+						<div class="event_slide"><img src="images/imgload.png" /></div>
+					</div>
+					<div id="prev"><img src="images/btn_prev_c.gif" /></div>
+					<div id="next"><img src="images/btn_next_c.gif" /></div>
+				</div>
+			</div>
+            <div id="view0_tour" class="tour"></div>
+            <div id="view0_mon" class="mon"></div>
+            <div class="notice">
+            	<div id="notice_tab">
+                	<div class="notice_tab view0_notice_tab view0_notice_tab_sel" b="0">공지사항</div>
+                    <div class="notice_tab_sp"></div>
+                    <div class="notice_tab view0_notice_tab" b="1">전시행사</div>
+                    <div class="notice_more"></div>
+                </div>
+                <div id="notice_view">
+                	<div id="notice_view1" class="notice_view"></div>
+                    <div id="notice_view2" class="notice_view"></div>
+                </div>            
+            </div>
+			<div class="search">
+            	<div id="view0_search_title" class="search_title">빠른서비스</div>
+                <div class="search1"></div>
+                <div class="search2"></div>
+                <div class="search3"></div>
+                <div class="search4"></div>
+            </div>
+		</div>
+	</div>
+    <div id="main_view1" class="main_view">
+    	<div class="main_view_in">
+        	<div id="view1_event" class="event">
+            	<div id="event_slider">
+					<div id="event_slider_inner">
+						<div class="event_slide"><img src="images/imgload.png" /></div>
+						<div class="event_slide"><img src="images/imgload.png" /></div>
+					</div>
+					<div id="prev"><img src="images/btn_prev_c.gif" /></div>
+					<div id="next"><img src="images/btn_next_c.gif" /></div>
+				</div>
+            </div>
+            <div id="view1_tour" class="tour"></div>
+            <div id="view1_mon" class="mon"></div>
+			<div class="notice">
+            	<div id="notice_tab">
+                	<div class="notice_tab view1_notice_tab view1_notice_tab_sel" b="0">공지사항</div>
+                    <div class="notice_tab_sp"></div>
+                    <div class="notice_tab view1_notice_tab" b="1">전시행사</div>
+                    <div class="notice_more"></div>
+                </div>
+                <div id="notice_view">
+                	<div id="notice_view1" class="notice_view"></div>
+                    <div id="notice_view2" class="notice_view"></div>
+                </div>            
+            </div>
+			<div class="search">
+            	<div id="view1_search_title" class="search_title">빠른서비스</div>
+                <div class="search1"></div>
+                <div class="search2"></div>
+                <div class="search3"></div>
+                <div class="search4"></div>
+            </div>
+        </div>
+	</div>
+    <div id="main_view2" class="main_view">
+    	<div class="main_view_in">
+        	<div id="view2_event" class="event">
+            	<div id="event_slider">
+					<div id="event_slider_inner">
+						<div class="event_slide"><img src="images/imgload.png" /></div>
+						<div class="event_slide"><img src="images/imgload.png" /></div>
+					</div>
+					<div id="prev"><img src="images/btn_prev_c.gif" /></div>
+					<div id="next"><img src="images/btn_next_c.gif" /></div>
+				</div>
+            </div>
+            <div id="view2_tour" class="tour">
+            <img src="images/img_tour3.png"/>
+            </div>
+            <div id="view2_mon" class="mon">
+            <img src="images/img_mon3.png"/>
+            </div>
+        	<div class="notice">
+            	<div id="notice_tab">
+                	<div class="notice_tab view3_notice_tab view2_notice_tab_sel" b="0">공지사항</div>
+                    <div class="notice_tab_sp"></div>
+                    <div class="notice_tab view3_notice_tab" b="1">전시행사</div>
+                    <div class="notice_more"></div>
+                </div>
+                <div id="notice_view">
+                	<div id="notice_view1" class="notice_view"></div>
+                    <div id="notice_view2" class="notice_view"></div>
+                </div>            
+            </div>
+			<div class="search">
+            	<div id="view2_search_title" class="search_title">빠른서비스</div>
+                <div class="search1"></div>
+                <div class="search2"></div>
+                <div class="search3"></div>
+                <div class="search4"></div>
+            </div>
+        </div>
+	</div>
+    <div id="main_view3" class="main_view">
+    	<div class="main_view_in">
+        	<div id="view3_event" class="event">
+            	<div id="event_slider">
+					<div id="event_slider_inner">
+						<div class="event_slide"><img src="images/imgload.png" /></div>
+						<div class="event_slide"><img src="images/imgload.png" /></div>
+					</div>
+					<div id="prev"><img src="images/btn_prev_c.gif" /></div>
+					<div id="next"><img src="images/btn_next_c.gif" /></div>
+				</div>
+            </div>
+            <div id="view3_tour" class="tour"></div>
+            <div id="view3_mon" class="mon"></div>
+        	<div class="notice">
+            	<div id="notice_tab">
+                	<div class="notice_tab view3_notice_tab view3_notice_tab_sel" b="0">공지사항</div>
+                    <div class="notice_tab_sp"></div>
+                    <div class="notice_tab view3_notice_tab" b="1">전시행사</div>
+                    <div class="notice_more"></div>
+                </div>
+                <div id="notice_view">
+                	<div id="notice_view1" class="notice_view"></div>
+                    <div id="notice_view2" class="notice_view"></div>
+                </div>            
+            </div>
+			<div class="search">
+            	<div id="view3_search_title" class="search_title">빠른서비스</div>
+                <div class="search1"></div>
+                <div class="search2"></div>
+                <div class="search3"></div>
+                <div class="search4"></div>
+            </div>
+        </div>
+	</div>
+    
+    <div id="main_btn1" class="main_btn" a="1">
+    	<div id="main_btn1_on" class="main_btn_on"></div>
+        <div id="main_btn1_off" class="main_btn_off"></div>
+	</div>
+    <div id="main_btn2" class="main_btn" a="2">
+    	<div id="main_btn2_on" class="main_btn_on"></div>
+        <div id="main_btn2_off" class="main_btn_off"></div>
+	</div>
+    <div id="main_btn3" class="main_btn" a="3">
+		<div id="main_btn3_on" class="main_btn_on"></div>
+        <div id="main_btn3_off" class="main_btn_off"></div>
+	</div>
+</div>
+
+<div id="footer">
+	<div id="footer_in">
+    	<div id="footer_logo"></div>
+        <div id="footer_menu">
+        	<div id="footer_menu1" class="footer_menu"></div>
+            <div id="footer_menu2" class="footer_menu"></div>
+            <div id="footer_menu3" class="footer_menu"></div>
+            <div id="footer_menu4" class="footer_menu"></div>
+        </div>
+        <div id="footer_address"></div>
+        <div id="footer_viewer">
+        	<div id="footer_viewer1" class="footer_viewer"></div>
+            <div id="footer_viewer2" class="footer_viewer"></div>
+            <div id="footer_viewer3" class="footer_viewer"></div>
+            <div id="footer_viewer4" class="footer_viewer"></div>
+            <div id="footer_viewer5" class="footer_viewer"></div>
+        </div>
+	</div>
+</div>
+
+<div id="menu_sub">
+	<div id="menu_sub_in">
+    	<div id="menu_sub1" class="menu_sub">
+        	<div class="menu_sub_dt">인사말</div>
+            <div class="menu_sub_dt">걸어온길</div>
+            <div class="menu_sub_dt">찾아오시는길</div>
+            <div class="menu_sub_dt">이용안내</div>
+            <div class="menu_sub_dt">자주묻는질문</div>
+            <div class="menu_sub_dt">이것만은지켜주세요</div>
+        </div>
+        <div id="menu_sub2" class="menu_sub">
+        	<div class="menu_sub_dt">자연생태공원</div>
+            <div class="menu_sub_dt">식물원</div>
+            <div class="menu_sub_dt">자연생태박물관</div>
+            <div class="menu_sub_dt">무릉도원수목원</div>
+            <div class="menu_sub_dt">어린이동물원</div>
+            <div class="menu_sub_dt">기타관람시설</div>
+        </div>
+        <div id="menu_sub3" class="menu_sub">
+        	<div class="menu_sub_dt">관람료안내</div>
+            <div class="menu_sub_dt">주차요금안내</div>
+            <div class="menu_sub_dt">단쳬관람예약</div>
+            <div class="menu_sub_dt">체험학습예약</div>
+            <div class="menu_sub_dt">전시행사</div>
+            <div class="menu_sub_dt">상영프로그램</div>
+        </div>
+        <div id="menu_sub4" class="menu_sub">
+        	<div class="menu_sub_dt">공지사항</div>
+            <div class="menu_sub_dt">포토갤러리</div>
+            <div class="menu_sub_dt">건의및제안</div>
+            <div class="menu_sub_dt">분실물센터</div>
+        </div>
+        <div id="menu_sub5" class="menu_sub">
+        	<div class="menu_sub_dt">식물원자료실</div>
+            <div class="menu_sub_dt">박물관자료실</div>
+            <div class="menu_sub_dt">수목원자료실</div>
+            <div class="menu_sub_dt">농경유물자료실</div>
+            <div class="menu_sub_dt">동물원자료실</div>
+            <div class="menu_sub_dt">활동지</div>
+            <div class="menu_sub_dt">관계법령</div>
+            <div class="menu_sub_dt">주변관람시설</div>
+        </div>
+        <div id="menu_sub6" class="menu_sub">
+        	<div class="menu_sub_dt">자원봉사활동소개</div>
+            <div class="menu_sub_dt">봉사자게시판</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

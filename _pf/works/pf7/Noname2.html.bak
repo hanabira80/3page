@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+<style>
+#up {
+	position:relative;
+	width:200px;
+	height:200px;
+	background:pink;
+}
+
+#down {
+	position:relative;
+	width:200px;
+	height:200px;
+	background:skyblue;
+}
+
+#down1 {
+	position:absolute;
+	right:0;
+	top:0;
+	width:50px;
+	height:50px;
+	background:red;
+}
+#down2 {
+	position:absolute;
+	margin:auto;
+	left:50px;
+	width:50px;
+	height:50px;
+	background:blue;
+}
+
+</style>
+
+ </head>
+ <body>
+ <div id="up"></div>
+ <div id="down">
+	<div id="down1"></div>
+	<div id="down2"></div>
+
+</div>
+  
+ </body>
+</html>

@@ -1,0 +1,51 @@
+1. 버튼 클릭시 텍스트 출력
+
+<script>
+ $(document).ready(function(){
+	
+	$("#btn").click(function(){
+		
+		$("#result").text("Hellow, Kim!");
+		
+	});
+ });
+ </script>
+
+
+---------------------------------------------------------------------
+
+2. 박스 클릭시 아래 박스에 이미지 출력(트렌지션)
+
+<script>
+	$(document).ready(function(){
+		$("#cm").click(function(){
+			$("#pic").slideToggle(1000);
+			
+	});
+	});
+	
+</script>
+
+---------------------------------------------------------------------
+
+
+3. 이미지 슬라이드 
+
+<script src="scripts/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		var sn = 0;
+		
+		$("#button").click(function(){
+			
+			sn++;
+			
+			$("#slider_inner").animate({
+				left:-300*sn
+			});
+			
+	});
+	});
+	
+</script>

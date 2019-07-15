@@ -1,0 +1,750 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>캐논 EOS</title>
+
+<style>
+*{margin:0;padding:0}
+#header {
+	position:fixed;
+	left:0;
+	right:0;
+	background:#b6c0c8;
+	height:50px;
+	z-index:100	
+}
+#header_in {
+	width:950px;
+	position:relative;
+	margin:auto;
+	height:60px;
+}
+#event_go {
+	position:absolute;
+	top:4px;
+	left:20px;
+	width:237px;
+	height:42px;
+	background:url(images/btn_event_go.png);
+	cursor:pointer;
+}
+#logo {
+	position:absolute;
+	top:15px;
+	left:450px;
+	width:95px;
+	height:21px;
+	background:url(images/logo.png);
+	cursor:pointer;
+}
+#util {
+	position:absolute;
+	top:20px;
+	right:20px;
+	width:256px;
+	height:10px;
+}
+.util {
+	float:left;
+	height:10px;
+	cursor:pointer;
+	margin-left:10px;		
+}
+#util1 {
+	width:29px;
+	background:url(images/btn_main.png);
+}
+#util2 {
+	width:38px;
+	background:url(images/btn_login.png);
+}
+#util3 {
+	width:47px;
+	background:url(images/btn_info.png);
+}
+#util4 {
+	width:47px;
+	background:url(images/btn_review.png);
+}
+#util5 {
+	width:45px;
+	position:relative;
+}
+#util5_on {
+	position:absolute;
+	width:41px;
+	height:10px;
+	background:url(images/btn_sound_on.png);
+	display:none;
+}
+#util5_off {
+	position:absolute;
+	width:45px;
+	height:10px;
+	background:url(images/btn_sound_off.png);
+	display:block;
+}
+#baloon {
+	position:absolute;
+	top:15px;
+	left:135px;
+	width:68px;
+	height:25px;
+	background:url(images/coming_over.png);
+	opacity:0;
+}
+/***********************************/
+.mouse_btn {
+	position:absolute;
+	width:45px;
+	height:120px;
+	cursor:pointer;
+}
+#mouse {
+	width:45px;
+	height:85px;
+	background:url(images/scroll_down_img1.png)
+}
+#mouse_arrow {
+	width:18px;
+	height:14px;
+	margin-left:14px;
+	background:url(images/scroll_down_img2.png);
+	-webkit-animation:arrow infinite 1s;
+}
+@-webkit-keyframes arrow {
+	0% {margin-top:0px;}
+	70% {margin-top:20px;}
+	100% {margin-top:0px;}
+}
+/***********************************/
+.section {
+	position:relative;
+	overflow:hidden;	
+}
+.section_in {
+	position:absolute;
+	top:10%;
+	left:50%;
+	margin-left:-600px;
+	width:1200px;
+}
+/***********************************/
+#section3 {
+	background:url(images/s2.jpg) center top fixed;
+	background-size:100% 100%;	
+}
+#section5 {
+	background:url(images/s6.jpg) center top fixed;
+	background-size:100% 100%;	
+}
+#section7 {
+	background:url(images/s8.jpg) center top fixed;
+	background-size:100% 100%;	
+}
+/***********************************/
+#section1 {
+	background:url(images/bg.jpg) center top;
+	background-size:cover;
+}
+#section1_bg {
+	position:absolute;
+	top:50%;
+	margin-top:-322px;
+	left:50%;
+	margin-left:-397px;
+	width:795px;
+	height:645px;
+	background:url(images/main_copy.png);
+}
+#section1_movie {
+	position:absolute;
+	top:50%;
+	margin-top:-202px;
+	left:50%;
+	margin-left:-394px;
+	width:788px;
+	height:444px;
+	box-shadow:0px 0px 10px gray
+}
+#section1_btn {
+	top:50%;
+	left:50%;
+	margin-left:410px;
+}
+/***********************************/
+#section2 {
+	background:url(images/bg.jpg) center top;
+	background-size:cover;
+}
+#section2_img {
+	position:absolute;
+	top:50%;
+	margin-top:-176px;
+	left:50%;
+	margin-left:-503px;
+	width:503px;
+	height:353px;
+	background:url(images/s3_img.png);
+}
+#section2_txt1 {
+	position:absolute;
+	top:50%;
+	margin-top:-87px;
+	left:50%;
+	margin-left:-30px;
+	width:408px;
+	height:57px;
+	background:url(images/s3_copy_1.png);
+}
+#section2_txt2 {
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-30px;
+	width:475px;
+	height:40px;
+	background:url(images/s3_copy_2.png);
+}
+#section2_btn {
+	bottom:-50px;
+	left:50%;
+	margin-left:-23px;
+}
+#alert {
+	position:absolute;
+	height:400px;
+	width:400px;
+	background:red;
+	display:none;
+}
+/***********************************/
+#section3_btn {
+	bottom:-50px;
+	left:50%;
+	margin-left:-23px;
+}
+/***********************************/
+#section4 {
+	background:url(images/bg.jpg) center top;
+	background-size:cover;
+}
+#section4_txt {
+	position:absolute;
+	top:50%;
+	margin-top:-107px;
+	left:50%;
+	margin-left:-500px;
+	width:1000px;
+	height:107px;
+	background:url(images/s5_copy.png);
+}
+#section4_img {
+	position:absolute;
+	top:50%;
+	margin-top:-215px;
+	left:50%;
+	margin-left:-270px;
+	width:429px;
+	height:335px;
+	background:url(images/s5_img.png);
+}
+#section4_btn {
+	bottom:-50px;
+	left:50%;
+	margin-left:-23px;
+}
+/***********************************/
+#section5_btn {
+	bottom:-50px;
+	left:50%;
+	margin-left:-23px;
+}
+/***********************************/
+#section6 {
+	background:url(images/bg.jpg) center top;
+	background-size:cover;
+}
+#section6_img {
+	position:absolute;
+	top:50%;
+	margin-top:-160px;
+	left:50%;
+	margin-left:-390px;
+	width:390px;
+	height:320px;
+	background:url(images/s7_img.png);
+}
+#section6_txt1 {
+	position:absolute;
+	top:50%;
+	margin-top:-50px;
+	left:50%;
+	margin-left:30px;
+	width:389px;
+	height:39px;
+	background:url(images/s7_copy_1.png);
+}
+#section6_txt2 {
+	position:absolute;
+	top:50%;
+	margin-top:10px;
+	left:50%;
+	margin-left:30px;
+	width:285px;
+	height:102px;
+	background:url(images/s7_copy_2.png);
+}
+#section6_btn {
+	bottom:-50px;
+	left:50%;
+	margin-left:-23px;
+}
+/***********************************/
+#section7_btn {
+	bottom:-50px;
+	left:50%;
+	margin-left:-23px;
+}
+/***********************************/
+#section8 {
+	background:url(images/bg.jpg) center top;
+	background-size:cover;
+}
+#section8_img {
+	position:absolute;
+	top:50%;
+	margin-top:-176px;
+	left:50%;
+	margin-left:-503px;
+	width:503px;
+	height:353px;
+	background:url(images/s9_img.png);
+}
+#section8_txt1 {
+	position:absolute;
+	top:50%;
+	margin-top:-115px;
+	left:50%;
+	width:529px;
+	height:95px;
+	background:url(images/s9_copy_1.png);
+}
+#section8_txt2 {
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:522px;
+	height:49px;
+	background:url(images/s9_copy_2.png);
+}
+#section8_btn {
+	position:absolute;
+	bottom:0;
+	left:50%;
+	margin-left:-40px;
+	width:79px;
+	height:79px;
+	background:url(images/page_up.png);
+	cursor:pointer;
+}
+#event_btn1 {
+	position:absolute;
+	left:50%;
+	margin-left:130px;
+	top:50%;
+	margin-top:80px;
+	width:123px;
+	height:48px;
+	background:url(images/btn_check.png);
+	cursor:pointer
+}
+#event_btn2 {
+	position:absolute;
+	left:50%;
+	margin-left:260px;
+	top:50%;
+	margin-top:80px;
+	width:267px;
+	height:48px;
+	background:url(images/btn_invite.png);
+	cursor:pointer
+}
+/***********************************/
+#remote {
+	position:fixed;
+	top:50%;
+	margin-top:-106px;
+	right:10px;	
+	width:85px;
+	height:213px;
+	z-index:150;
+}
+.remote_btn {
+	position:relative;
+	width:85px;
+	height:71px;
+	cursor:pointer;
+}
+.remote_btn_off {
+	position:absolute;
+	width:85px;
+	height:71px;
+	cursor:pointer;
+}
+.remote_btn_on {
+	position:absolute;
+	width:85px;
+	height:71px;
+	display:none;
+}
+.remote_btn:hover .remote_btn_off{
+	display:none;
+}
+.remote_btn:hover .remote_btn_on{
+	display:block;
+}
+
+#remote_btn1_off {
+	background:url(images/nav1.png) 23px 28px no-repeat;
+}
+#remote_btn1_on {
+	background:url(images/nav1_on.png)	
+}
+#remote_btn2_off {
+	background:url(images/nav2.png)	 23px 28px no-repeat;
+}
+#remote_btn2_on {
+	background:url(images/nav2_on.png)	
+}
+#remote_btn3_off {
+	background:url(images/nav3.png)	 23px 28px no-repeat;
+}
+#remote_btn3_on {
+	background:url(images/nav3_on.png)	
+}
+/***********************************/
+#pop_scr {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background:white;
+	opacity:0.1;
+	display:none;
+}
+#pop_win {
+	position:absolute;
+	top:25%;
+	left:50%;
+	margin-left:-514px;
+	width:1027px;
+	height:528px;
+	overflow:hidden;
+	display:none;
+}
+.pop_win {
+	width:1027px;
+	height:528px;
+	position:absolute;
+	overflow:hidden;
+	display:none;
+}
+.pop_close {
+	position:absolute;
+	top:20px;
+	right:20px;
+	width:23px;
+	height:23px;
+	background:url(images/btn_close.png);
+	cursor:pointer;		
+}
+#pop2_close {
+	position:absolute;
+	top:20px;
+	right:145px;
+	width:23px;
+	height:23px;
+	background:url(images/btn_close.png);
+	cursor:pointer;	
+}
+#pop_win1 {
+	background:url(images/sub1.png);
+}
+#pop_win2 {
+	background:url(images/sub2.png) 125px 0px no-repeat;
+}
+#pop2_movie {
+	position:absolute;
+	left:230px;
+	top:100px;
+	width:566px;
+	height:320px;
+}
+#pop_win3 {
+	background:url(images/sub3.png);
+}
+#pop_win3_btn {
+	position:absolute;
+	width:267px;
+	height:48px;
+	bottom:90px;
+	left:90px;
+	background:url(images/btn_sub_detail.png);
+	cursor:pointer;	
+}
+/***********************************/
+
+</style>
+<script src="scripts/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	
+	
+	
+	$(".section").css("height",$(window).height()*1.1);
+	
+	$(".section_in").css("height",$(window).height()*0.8);
+	
+	
+	
+	$("#util5_off").click(function(){
+		$("#util5_off").css("display","none");
+		$("#util5_on").css("display","block");
+	});
+	
+	$("#util5_on").click(function(){
+		$("#util5_off").css("display","block");
+		$("#util5_on").css("display","none");
+	});
+
+
+
+	$("#util4").mouseenter(function(){
+		$("#baloon").stop().animate({
+			opacity : 1
+		});
+	});
+	
+	$("#util4").mouseleave(function(){
+		$("#baloon").stop().animate({
+			opacity : 0
+		});
+	});
+	
+			
+			
+	$('a[href^="#"]').on('click',function (e) {
+			e.preventDefault();
+			var target = this.hash,
+			$target = $(target);
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top
+			}, 500, 'swing', function () {
+			window.location.hash = target;
+		});
+	});
+	
+	
+	
+	$(".remote_btn").click(function(){
+		var rb =  $(this).attr("rb");
+		$("#pop_scr").css("display","block");
+		$("#pop_scr").stop().animate({
+		    opacity: 0.8
+			});
+		$("#pop_win").css("display", "block");
+		$(".pop_win").css("display", "none");
+		$(".pop_win").eq(rb).css("display", "block");
+	});
+	
+	$(".pop_close").click(function(){
+		$("#pop_win").css("display", "none");
+		$(".pop_win").css("display", "none");
+		$("#pop_scr").stop().animate({
+		    opacity: 0.1
+			},function(){
+				$("#pop_scr").css("display","none");
+			});
+	});
+	
+	
+	
+	$(window).bind('scroll',function(e){
+     parallaxScroll();
+    });
+ 
+ 
+ 
+	function parallaxScroll(){
+
+    	var scrolled = $(window).scrollTop();
+
+	    if (scrolled > 1100) {
+    	$("#alert").css("display", "block");
+	    }
+	}
+});
+</script>
+</head>
+
+
+<body>
+<div id="header">
+	<div id="header_in">
+    	<div id="event_go"></div>
+        <div id="logo"></div>
+        <div id="util">
+        	<div id="util1" class="util"></div>
+            <div id="util2" class="util"></div>
+            <div id="util3" class="util"></div>
+            <div id="util4" class="util"></div>
+            <div id="util5" class="util">
+            	<div id="util5_on"></div>
+                <div id="util5_off"></div>
+            </div>
+            <div id="baloon"></div>
+        </div>
+    </div>	
+</div>
+
+<div id="section1" class="section">
+	<div class="section_in">
+    	<div id="section1_bg"></div>
+       	<video autoplay controls id="section1_movie">
+           	<source src="images/206070789.mp4">
+       	</video>
+        <a href="#section2">
+        <div id="section1_btn" class="mouse_btn">
+        	<div id="mouse"></div>
+            <div id="mouse_arrow"></div>
+        </div>
+        </a>
+    </div>
+</div>
+
+<div id="section2" class="section">
+	<div class="section_in">
+    	<div id="section2_txt1"></div>
+        <div id="section2_txt2"></div>
+        <div id="section2_img"></div>
+        <a href="#section3">
+        <div id="section2_btn" class="mouse_btn">
+        	<div id="mouse"></div>
+            <div id="mouse_arrow"></div>
+        </div>
+        </a>
+        <div id="alert"></div>
+    </div>
+</div>
+
+<div id="section3" class="section">
+	<div class="section_in">
+    	<a href="#section4">
+        <div id="section3_btn" class="mouse_btn">
+        	<div id="mouse"></div>
+            <div id="mouse_arrow"></div>
+        </div>
+        </a>
+    </div>
+</div>
+
+<div id="section4" class="section">
+	<div class="section_in">
+    	<div id="section4_txt"></div>
+        <div id="section4_img"></div>
+        <a href="#section5">
+        <div id="section4_btn" class="mouse_btn">
+        	<div id="mouse"></div>
+            <div id="mouse_arrow"></div>
+        </div>
+        </a>
+    </div>
+</div>
+
+<div id="section5" class="section">
+	<div class="section_in">
+    	<a href="#section6">
+        <div id="section5_btn" class="mouse_btn">
+        	<div id="mouse"></div>
+            <div id="mouse_arrow"></div>
+        </div>
+        </a>
+    </div>
+</div>
+
+<div id="section6" class="section">
+	<div class="section_in">
+    	<div id="section6_txt1"></div>
+        <div id="section6_txt2"></div>
+        <div id="section6_img"></div>
+        <a href="#section7">
+        <div id="section6_btn" class="mouse_btn">
+        	<div id="mouse"></div>
+            <div id="mouse_arrow"></div>
+        </div>
+        </a>
+    </div>
+</div>
+
+<div id="section7" class="section">
+	<div class="section_in">
+    	<a href="#section8">
+        <div id="section7_btn" class="mouse_btn">
+        	<div id="mouse"></div>
+            <div id="mouse_arrow"></div>
+        </div>
+        </a>
+    </div>
+</div>
+
+<div id="section8" class="section">
+	<div class="section_in">
+    	<div id="section8_txt1"></div>
+        <div id="section8_txt2"></div>
+        <div id="section8_img"></div>
+        <a href="#section1">
+        <div id="section8_btn"></div>
+        </a>
+        <div id="event_btn1"></div>
+        <div id="event_btn2"></div>
+    </div>
+</div>
+
+<div id="remote">
+	<div class="remote_btn" rb="0">
+	    <div id="remote_btn1_off" class="remote_btn_off"></div>
+    	<div id="remote_btn1_on" class="remote_btn_on"></div>
+    </div>
+    <div class="remote_btn" rb="1">
+	    <div id="remote_btn2_off" class="remote_btn_off"></div>
+    	<div id="remote_btn2_on" class="remote_btn_on"></div>
+    </div>
+    <div class="remote_btn" rb="2">
+        <div id="remote_btn3_off" class="remote_btn_off"></div>
+    	<div id="remote_btn3_on" class="remote_btn_on"></div>
+    </div>
+</div>
+
+<div id="pop_scr"></div>
+<div id="pop_win">
+    <div id="pop_win1" class="pop_win">
+    	<div class="pop_close"></div>
+    </div>
+    <div id="pop_win2" class="pop_win">
+    	<div id="pop2_close" class="pop_close"></div>
+        <video controls id="pop2_movie">
+           	<source src="images/206083188.mp4">
+       	</video>
+    </div>
+    <div id="pop_win3" class="pop_win">
+    	<div class="pop_close"></div>
+        <div id="pop_win3_btn"></div>
+    </div>
+</div>    
+
+
+</body>
+</html>

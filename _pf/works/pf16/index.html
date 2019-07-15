@@ -1,0 +1,980 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>새우깡</title>
+<style>
+*{margin:0;padding:0}
+body {
+	font-family:맑은 고딕	
+}
+/******************************/
+#container {
+	background:#fffdf6;
+}
+/******************************/
+#header {
+	height:116px;
+	background:url(images/bgHeader.png) 0 0 repeat-x;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:100;
+}
+/******************************/
+#header_in {
+	width:1064px;
+	height:60px;
+	margin:auto;
+}
+#logo {
+	width:106px;
+	height:35px;
+	background:url(images/logo.png);
+	cursor:pointer;
+	float:left;
+	margin-top:20px;
+}
+#menu {
+	width:640px;
+	height:35px;
+	float:left;
+	margin:25px 100px 0px 100px;
+}
+.menu {
+	width:160px;
+	height:35px;
+	float:left;
+	background:url(images/bulGnb.png) top left no-repeat;
+	padding-top:7px;
+}
+#util {
+	width:118px;
+	height:35px;
+	float:left;
+	margin-top:35px;
+}
+.util {
+	font-size:14px;
+	color:white;
+	cursor:pointer;
+	float:left;
+	margin-left:10px;
+}
+.util:hover {
+	text-decoration:underline;
+	color:orange;	
+}
+#menu_sel {
+	display:none;	
+}
+/******************************/
+.menu_off {
+	color:white;	
+}
+
+.menu_ov {
+	display:none;
+}
+
+.menu:hover {
+	text-decoration:underline;
+	color:orange;
+}
+.menu:hover  .menu_ov {
+	display:block;
+}
+.menu:hover  .menu_off {
+	display:none;
+}
+.menu_sel {
+	text-decoration:underline;
+	color:orange;
+}
+.menu_sel  .menu_ov {
+	display:block;
+}
+.menu_sel .menu_off {
+	display:none;
+}
+/******************************/
+#content {
+	height:4000px;
+	width:1064px;
+	position:relative;
+	margin:auto;
+}
+#content_bgup {
+	height:600px;
+	background:url(images/bgMusic.gif) 50% 150px no-repeat;
+}
+#content_bgdn {
+	height:3400px;
+	background:url(images/bgContent.gif) 50% 0 repeat-y;
+}
+#content_bgmv1 {
+	position:absolute;
+	top:600px;
+	-webkit-animation: bgmvi1 infinite 5s;
+}
+#content_bgmv2 {
+	position:absolute;
+	top:1500px;
+	-webkit-animation: bgmvi2 infinite 5s;
+}
+#content_bgmv3 {
+	position:absolute;
+	top:2400px;
+	-webkit-animation: bgmvi3 infinite 5s;
+}
+#content_bgmv4 {
+	position:absolute;
+	top:3300px;
+	-webkit-animation: bgmvi4 infinite 5s;
+}
+/******************************/
+@-webkit-keyframes bgmvi1 {
+	0% {margin-top:0px;}
+	70% {margin-top:100px;}
+	100% {margin-top:0px;}
+}
+@-webkit-keyframes bgmvi2 {
+	0% {margin-top:0px;}
+	30% {margin-top:100px;}
+	100% {margin-top:0px;}
+}
+@-webkit-keyframes bgmvi3 {
+	0% {margin-top:0px;}
+	70% {margin-top:100px;}
+	100% {margin-top:0px;}
+}
+@-webkit-keyframes bgmvi4 {
+	0% {margin-top:0px;}
+	30% {margin-top:100px;}
+	100% {margin-top:0px;}
+}
+/******************************/
+#section1 {
+	width:1064px;
+	height:700px;
+	position:absolute;
+	top:0;
+}
+#section1_box1 {
+	position:absolute;
+	top:300px;;
+	width:235px;
+	height:328px;
+	background:url(images/banner-default.png);
+}
+#section1_box2 {
+	position:absolute;
+	top:100px;
+	left:229px;
+	width:605px;
+	height:41px;
+	background:url(images/titMain.png);
+}
+#section1_box3 {
+	position:absolute;
+	top:150px;
+	left:132px;
+	width:800px;
+	height:41px;
+	color:gray;
+	font-size:20px;
+}
+#section1_box4 {
+	position:absolute;
+	top:220px;
+	right:0;
+	width:235px;
+	height:200px;
+	border:1px solid #e1e1e1;
+	border-radius:15px;
+	background:white;
+	cursor:pointer;
+	background:url(images/fbook_temp.png)
+}
+#section1_box5 {
+	position:absolute;
+	top:440px;
+	right:0;
+	width:236px;
+	height:155px;
+	background:url(images/bgMovie.gif);
+	cursor:pointer;
+}
+#section1_box5_img {
+	position:absolute;
+	top:5px;
+	left:5px;
+	width:226px;
+	height:145px;
+	background:url(images/imgSample.jpg);
+}
+#section1_box5_btn{
+	position:absolute;
+	left:91px;
+	top:51px;
+	width:53px;
+	height:53px;
+	background:url(images/btnPlay.png);
+}
+#section1_box6 {
+	position:absolute;
+	top:615px;
+	right:0;
+	width:147px;
+	height:28px;
+	background:url(images/icoMovie.gif) no-repeat;
+	padding-left:35px;
+	color:#4a0b0b;
+	font-size:18px;
+	font-weight:900;
+	cursor:pointer;
+}
+#section1_box7 {
+	position:absolute;
+	top:550px;
+	left:250px;
+	width:578px;
+	height:149px;
+	background:url(images/bgSnack_ani.png);
+}
+#section1_box8 {
+	position:absolute;
+	top:300px;
+	left:230px;
+	width:277px;
+	height:341px;
+	background:url(images/pdt_rice.png);
+}
+#section1_box9 {
+	position:absolute;
+	top:300px;
+	left:550px;
+	width:282px;
+	height:338px;
+	background:url(images/pdt_hot.png);
+}
+#section1_box10 {
+	position:absolute;
+	top:200px;;
+	left:369px;
+	width:326px;
+	height:450px;
+	background:url(images/pdt_basic.png);
+}
+#section1_box11 {
+	position:absolute;
+	top:450px;
+	left:300px;
+	width:512px;
+	height:195px;
+	background:url(images/bgSnack_real.png);
+}
+
+/******************************/
+#section2 {
+	width:1064px;
+	height:700px;
+	position:absolute;
+	top:700px;
+}
+
+.section_title {
+	position:absolute;
+	top:200px;
+	right:700px;
+}
+
+.section_txt {
+	position:absolute;
+	right:700px;
+	font-size:20px;
+	color:gray;
+	text-align:right;
+}
+.section_box {
+	position:absolute;
+	right:0;
+	width:236px;
+	height:113px;
+	cursor:pointer;
+}
+
+#section2_title {
+	width:281px;
+	height:84px;
+	background:url(images/titStep01.png);
+}
+#section2_txt {
+	top:304px;	
+}
+#section2_box1 {
+	background:url(images/step01_menu01Off.png);
+	top:200px;
+}
+#section2_box1:hover {
+	background:url(images/step01_menu01On.png);
+}
+#section2_box2 {
+	background:url(images/step01_menu02Off.png);
+	top:323px;
+}
+#section2_box2:hover {
+	background:url(images/step01_menu02On.png);
+}
+#section2_box3 {
+	background:url(images/step01_menu03Off.png);
+	top:446px;
+}
+#section2_box3:hover {
+	background:url(images/step01_menu03On.png);
+}
+/******************************/
+#section3 {
+	width:1064px;
+	height:700px;
+	position:absolute;
+	top:1400px;
+}
+#section3_title {
+	width:222px;
+	height:83px;
+	background:url(images/titStep02.png);
+}
+#section3_txt {
+	top:303px;	
+}
+#section3_box1 {
+	background:url(images/step02_menu01Off.png);
+	top:200px;
+}
+#section3_box1:hover {
+	background:url(images/step02_menu01On.png);
+}
+#section3_box2 {
+	background:url(images/step02_menu02Off.png);
+	top:323px;
+}
+#section3_box2:hover {
+	background:url(images/step02_menu02On.png);
+}
+
+/******************************/
+#section4 {
+	width:1064px;
+	height:700px;
+	position:absolute;
+	top:2100px;
+}
+#section4_title {
+	width:245px;
+	height:83px;
+	background:url(images/titStep03.png);
+}
+#section4_txt {
+	top:303px;	
+}
+#section4_box1 {
+	background:url(images/step03_menu01Off.png);
+	top:200px;
+}
+#section4_box1:hover {
+	background:url(images/step03_menu01On.png);
+}
+#section4_box2 {
+	background:url(images/step03_menu02Off.png);
+	top:323px;
+}
+#section4_box2:hover {
+	background:url(images/step03_menu02On.png);
+}
+
+/******************************/
+#section5 {
+	width:1064px;
+	height:700px;
+	position:absolute;
+	top:2800px;
+}
+
+#section5_title {
+	width:247px;
+	height:87px;
+	background:url(images/titStep04.png);
+}
+#section5_txt {
+	top:307px;	
+}
+#section5_box1 {
+	background:url(images/step04_menu01Off.png);
+	top:200px;
+}
+#section5_box1:hover {
+	background:url(images/step04_menu01On.png);
+}
+#section5_box2 {
+	background:url(images/step04_menu02Off.png);
+	top:323px;
+}
+#section5_box2:hover {
+	background:url(images/step04_menu02On.png);
+}
+#section5_box3 {
+	background:url(images/step04_menu03Off.png);
+	top:446px;
+}
+#section5_box3:hover {
+	background:url(images/step04_menu03On.png);
+}
+/******************************/
+#section_foot {
+	width:1064px;
+	height:500px;
+	position:absolute;
+	top:3500px;
+	background:url(images/bgStep04.png) no-repeat 50% 100%;
+}
+/******************************/
+#remote {
+	position:fixed;
+	top:350px;
+	left:50%;
+	margin-left:-532px;
+	width:44px;
+	height:207px;
+	background:url(images/remote_bg.png);
+	overflow:hidden;	
+}
+.remote_home {
+	width:44px;
+	height:43px;
+	background:url(images/remote_mainOff.png);
+	cursor:pointer;
+}
+.remote_home:hover {
+	background:url(images/remote_mainOn.png);
+}
+
+.remote_btn {
+	width:44px;
+	height:41px;
+	background:url(images/remote_btnOff.png) 50% 50% no-repeat;
+	cursor:pointer
+}
+.remote_btn:hover {
+	background:url(images/remote_btnOn.png) 50% 50% no-repeat;
+}
+
+.remote_home_sel {
+	background:url(images/remote_mainOn.png);	
+}
+
+
+#remote_btn_sel {
+	margin_top:50px;
+	background:url(images/remote_btnOn.png) 50% 50% no-repeat;
+}
+
+.remote_btn_sel {
+	background:url(images/remote_btnOn.png) 50% 50% no-repeat;	
+}
+/******************************/
+#pdt_basic {
+	position:fixed;
+	left:50%;
+	margin-left:-163px;
+	top:200px;
+	width:326px;
+	height:450px;
+	background:url(images/pdt_basic.png);
+	opacity:0;
+}
+/******************************/
+#footer {
+	position:relative;
+	height:200px;
+}
+#footer_bg {
+	position:absolute;
+	bottom:0;
+	height:205px;
+	right:0;
+	left:0;
+	background:url(images/bgBodyTop.png) 0 0 repeat-x;
+}
+#footer_in {
+	position:absolute;
+	top:35px;
+	left:50%;
+	margin-left:-350px;
+	width:700px;
+	height:165px;
+	color:#bababa;
+	font-size:13px;
+}
+.foot_sp {
+	width:3px;
+	height:13px;
+	background:url(images/bgFooterBar.png);
+	float:left;
+	margin-top:2px;
+	margin-right:5px;
+}
+/******************************/
+#link {
+	width:700px;
+	height:27px;
+}
+.link {
+	position:relative;
+	float:left;
+	padding:5px;
+	background:black;
+	margin-right:10px;
+	cursor:pointer;
+	border:2px solid transparent;
+	border-radius:5px;
+}
+.link:hover {
+	border:2px solid #4c6ea5;
+}
+#link_sub {
+	position:absolute;
+	left:-2px;
+	bottom:30px;
+	width:167px;
+	display:none;
+}
+.link_sub {
+	color:white;
+	border-bottom:1px solid #777;
+	padding:3px 0px 5px 10px;
+	background:black;
+	cursor:pointer;
+}
+
+.link_sub:hover {
+	background:orange;
+}
+/******************************/
+#no_trans {
+	width:700px;
+	height:15px;
+	margin-top:20px;
+}
+#no_trans_ico {
+	color:orange;
+	font-weight:700;
+}
+.no_trans {
+	float:left;
+	margin-right:5px;	
+}
+/******************************/
+#address {
+	width:700px;
+	height:15px;
+	margin-top:20px;
+}
+#address_ico {
+	width:10px;
+	height:15px;
+	background:url(images/icoLocation.png);
+}
+.address {
+	float:left;
+	margin-right:5px;
+}
+
+/******************************/
+#tel {
+	width:700px;
+	height:15px;
+	margin-top:10px;
+}
+#tel_ico {
+	width:13px;
+	height:13px;
+	background:url(images/icoTel.png);
+	margin-top:2px;
+}
+.tel {
+	float:left;
+	margin-right:5px;
+}
+/******************************/
+#pop_up {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background:black;
+	display: none;
+	opacity:0.2;
+	z-index:150;
+}
+#win_movie {
+	position: fixed;
+	width: 800px;
+	height: 0px;
+	left: 50%;
+	top:100px;
+	margin-left: -400px;
+	background: transparent;
+	overflow: hidden;
+	z-index:200;
+}
+#win_movie_btn {
+	position:absolute;
+	top:10px;
+	right:110px;
+	width:34px;
+	height:36px;
+	background:url(images/btnCloseMovie_main.png);
+	cursor:pointer;	
+}
+#win_movie_txt {
+	position:absolute;
+	left:100px;
+	font-size:30px;
+	color:#ff4e22;
+	font-weight:900;	
+}
+#if {
+	position: absolute;
+	top:60px;
+	left:100px;
+	background: white;
+	border: 0;
+	padding:20px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px #ff4e22;
+}
+
+</style>
+<script src="scripts/jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+	$('a[href^="#"]').on('click',function (e) {
+	   e.preventDefault();
+	   var target = this.hash,
+		   $target = $(target);
+		   $('html, body').stop().animate({
+		    'scrollTop': $target.offset().top
+		   }, 500, 'swing', function () {
+		    window.location.hash = target;
+		   });
+	});
+	
+	
+	
+	$(".remote_btn").click(function(){
+		$(".remote_btn").removeClass("remote_btn_sel");
+		$(".remote_home_sel").removeClass("remote_home_sel");
+		$(this).addClass("remote_btn_sel");
+		
+	});
+	
+	
+	
+	$(".remote_home").click(function(){
+		$(".remote_btn").removeClass("remote_btn_sel");
+		$(this).addClass("remote_home_sel");
+	});
+	
+	
+	
+	$(window).bind('scroll',function(e){
+     parallaxScroll();
+    });
+ 
+ 
+ 
+	function parallaxScroll(){
+    	var scrolled = $(window).scrollTop();
+	
+	    $("#pos").text(scrolled);
+    
+	    if (scrolled > 20) {
+    	$("#pdt_basic").css("opacity",  (scrolled-200) / 200);
+	    }
+		
+		if (scrolled < 20) {
+    	$("#pdt_basic").css("opacity", 0);
+	    }
+		}
+
+	
+	$(".menu").click(function(){
+ 		$(".menu_sel").removeClass("menu_sel");
+		$(this).addClass("menu_sel");
+  
+	});
+	
+	
+	
+	$("#logo").click(function(){
+ 		$(".menu").removeClass("menu_sel");
+		$("#menu_sel").removeClass("menu_sel");
+	});
+	
+	
+	
+	$("#section1_box5").click(function(){
+		$("#pop_up").css("display","block");
+		$("#pop_up").stop().animate({
+		    opacity: 0.6
+			}, 1000,function(){
+				$("#win_movie").stop().animate({
+					height:450,
+					top:300
+				});
+		});
+	});
+	
+	$("#win_movie_btn").click(function(){
+		$("#win_movie").stop().animate({
+			height:0,
+			top:100
+		},function(){
+			$("#pop_up").stop().animate({
+		    opacity: 0.2
+				}, 1000, function(){
+					$("#pop_up").css("display","none");	
+				});
+		});
+
+			
+	});
+	
+	
+	$("#link_ac").click(function(){
+		$("#link_sub").slideToggle()
+	});
+	
+	
+	
+	
+/*		
+    	if (scrolled >= 0 && scrolled <= 700) {
+	    $("#section2_title").css("right", (1400 - scrolled ) );
+		}
+		}
+
+*/
+});
+</script>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<div id="header_in">
+        	<a href="#section1">
+        	<div id="logo"></div>
+            </a>
+            <div id="menu">
+				<a href="#section2">
+                <div class="menu">
+                	<div class="menu_off">손이가요 새우깡</div>
+                    <div class="menu_ov">새우깡 이야기</div>
+					<div class="menu_ico"></div>
+                </div>
+                </a>
+                <a href="#section3">
+                <div class="menu">
+                	<div class="menu_off">어른손 아이손</div>
+                    <div class="menu_ov">새우깡 만들기</div>
+					<div class="menu_ico"></div>
+                </div>
+				</a>
+                <a href="#section4">
+                <div class="menu">
+                	<div class="menu_off">언제든지 새우깡</div>
+                    <div class="menu_ov">새우깡 변천사</div>
+					<div class="menu_ico"></div>
+                </div>
+				</a>
+                <a href="#section5">
+                <div class="menu">
+                	<div class="menu_off">누구든지 즐겨요</div>
+                    <div class="menu_ov">새우깡 이벤트</div>
+					<div class="menu_ico"></div>
+                </div>
+				</a>
+                <div id="menu_sel" class="menu menu_sel">
+                	<div class="menu_off"></div>
+                    <div class="menu_ov"></div>
+					<div class="menu_ico"></div>
+                </div>
+            </div>
+            <div id="util">
+            	<div id="util1" class="util">로그인</div>
+                <div id="util2" class="util">회원가입</div>
+            </div>
+        </div>
+	</div>
+	<div id="content">
+    	<div id="content_bgup"></div>
+        <div id="content_bgdn"></div>
+        <div id="content_bgmv1">
+        <img src="images/objGroup01.png"/>
+        </div>
+        <div id="content_bgmv2">
+        <img src="images/objGroup02.png"/>
+        </div>
+        <div id="content_bgmv3">
+        <img src="images/objGroup03.png"/>
+        </div>
+        <div id="content_bgmv4">
+        <img src="images/objGroup04.png"/>
+        </div>
+        <div id="section1">
+        	<div id="section1_box1"></div>
+            <div id="section1_box2"></div>
+            <div id="section1_box3">
+            온가족, 온국민이 함께 즐기는 국민스낵 새우깡은 누구에게나 친근한 즐거움입니다.
+            </div>
+        	<div id="section1_box4"></div>
+            <div id="section1_box5">
+            	<div id="section1_box5_img">
+                </div>
+                <div id="section1_box5_btn">
+                </div>
+            </div>
+            <div id="section1_box6">
+            다른 CF 보러가기
+            </div>
+            <div id="section1_box7"></div>
+            <div id="section1_box8"></div>
+            <div id="section1_box9"></div>
+            <div id="section1_box10"></div>
+            <div id="section1_box11"></div>
+        </div>
+        <div id="section2">
+        	<div id="section2_title" class="section_title"></div>
+            <div id="section2_txt" class="section_txt">
+            한번 먹기 시작하면<br>
+            끝없이 먹게 되는<br>
+            새우깡!
+            </div>
+            <div id="section2_box1" class="section_box"></div>
+            <div id="section2_box2" class="section_box"></div>
+            <div id="section2_box3" class="section_box"></div>
+        </div>
+        
+        <div id="section3">
+        	<div id="section3_title" class="section_title"></div>
+            <div id="section3_txt" class="section_txt">
+            남녀노소<br>
+			모두 좋아하는<br>
+			새우깡!
+            </div>
+            <div id="section3_box1" class="section_box"></div>
+            <div id="section3_box2" class="section_box"></div>
+        </div>
+        
+        <div id="section4">
+        	<div id="section4_title" class="section_title"></div>
+            <div id="section4_txt" class="section_txt">
+            언제든지<br>
+			어디서나<br>
+			새우깡과 함께!
+            </div>
+            <div id="section4_box1" class="section_box"></div>
+            <div id="section4_box2" class="section_box"></div>
+        </div>
+        
+        <div id="section5">
+        	<div id="section5_title" class="section_title"></div>
+            <div id="section5_txt" class="section_txt">
+            맛있는건 즐겁다!<br>
+			새우깡과 함께 즐겨요!
+            </div>
+            <div id="section5_box1" class="section_box"></div>
+            <div id="section5_box2" class="section_box"></div>
+            <div id="section5_box3" class="section_box"></div>
+        </div>
+        
+        <div id="section_foot"></div>
+        
+        <div id="remote">
+        	<a href="#section1"><div class="remote_home remote_home_sel"></div></a>
+            <a href="#section2"><div class="remote_btn"></div></a>
+            <a href="#section3"><div class="remote_btn"></div></a>
+            <a href="#section4"><div class="remote_btn"></div></a>
+            <a href="#section5"><div class="remote_btn"></div></a>
+            <a href="#section6"><div id="remote_btn_sel" class="remote_btn remote_btn_sel"></div></a>
+        </div>
+        <div id="pdt_basic"></div>
+    </div>
+
+    <div id="footer">
+    	<div id="footer_bg"></div>
+        <div id="footer_in">
+            <div id="link">
+                <div class="link">로그인</div>
+                <div class="link">회원가입</div>
+                <div class="link">개인정보취급방침</div>
+                <div class="link">이메일주소무단수집거부</div>
+                <div id="link_ac" class="link">관계사 사이트 바로가기▼
+                    <div id="link_sub">
+                        <div class="link_sub">농심홀딩스</div>
+                        <div class="link_sub">율촌화학</div>
+                        <div class="link_sub">메가마트</div>
+                        <div class="link_sub">태경농산</div>
+                        <div class="link_sub">농심엔지니어링</div>
+                        <div class="link_sub">엔디에스</div>
+                        <div class="link_sub">농심기획</div>
+                        <div class="link_sub">호텔농심</div>
+                        <div class="link_sub">농심개발</div>
+                        <div class="link_sub">농심미분</div>
+                        <div class="link_sub">율촌재단</div>
+                        <div class="link_sub">Nongshim USA</div>
+                        <div class="link_sub">Nongshim China</div>
+                        <div class="link_sub">Nongshim Japan</div>
+                    </div>
+                </div>
+            </div>
+            <div id="no_trans">
+                <div id="no_trans_ico" class="no_trans">NO TRANS FAT</div>
+                <div class="no_trans">
+                믿을 수 있는 식품 농심에서 생산되는 모든 스낵에는 인체에 해로운 트랜스지방이 없습니다.
+                </div>
+            </div>
+            <div id="address">
+                <div id="address_ico" class="address"></div>
+                <div class="address">(주)농심</div>
+                <div class="foot_sp"></div>
+                <div class="address">서울특별시 동작구 여의대방로 112 (신대방동)</div>
+                <div class="foot_sp"></div>
+                <div class="address">사업자 등록번호 : 18-81-03914</div>
+                <div class="foot_sp"></div>
+                <div class="address">대표이사 : 박 준</div>
+            </div>
+            <div id="tel">
+                <div id="tel_ico" class="tel"></div>
+                <div class="tel">TEL : 02-830-5181</div>
+                <div class="foot_sp"></div>
+                <div class="tel">Copyright (C) 2013 NONGSHIM All right reserved.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pop_up">
+</div>
+<div id="win_movie">
+	<div id="win_movie_btn"></div>
+    <div id="win_movie_txt">이종석과 함께하는 새우깡 CF</div>
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/FVeP1RngGzw" id="if"></iframe>
+</div>
+</body>
+</html>

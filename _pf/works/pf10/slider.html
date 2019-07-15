@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>slider</title>
+
+<style>
+ #slider {
+	position:relative;
+	width:300px;
+	height:300px;
+	background:skyblue;
+	margin:0 auto;
+	overflow:hidden
+ }
+ #button {
+	width:50px;
+	height:50px;
+	background:black;
+	position:absolute;
+	top:10px;
+	right:10px;
+	z-index:50
+	
+ }
+ #slider_inner {
+	position:absolute; 
+	width:1500px;
+	height:300px; 
+ }
+
+	 
+	 
+
+ #slide01 {
+	 position:relative;
+	 width:300px;
+	 height:300px;
+	 float:left;
+	background:red 
+ }
+  #slide02 {
+	  	 position:relative;
+	 width:300px;
+	 height:300px;
+	 float:left;
+	background:blue
+ }
+  #slide03 {
+	  	 position:relative;
+	 width:300px;
+	 height:300px;
+	 float:left;
+	background:yellow 
+ }
+  #slide04 {
+	  	 position:relative;
+	 width:300px;
+	 height:300px;
+	 float:left;
+	background:orange
+ }
+   #slide05 {
+	   	 position:relative;
+	 width:300px;
+	 height:300px;
+	 float:left;
+	background:violet
+ }
+</style>
+
+<script src="scripts/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		var sn = 0;
+		
+		$("#button").click(function(){
+			
+			sn++;
+			
+			$("#slider_inner").animate({
+				left:-300*sn
+			});
+			
+	});
+	});
+	
+</script>
+
+
+</head>
+
+<body>
+<div id="slider">
+<!------전체 배경으로 보여지는 역영----------------->
+	<div id="button">
+    </div>
+    <div id="slider_inner">
+    <!--------감추어진 영역--------------->
+        <div class="slide">
+        </div>
+        <!---------위에서 슬라이드 되는 역영-------------->
+        <div class="slide" id="slide01">
+        </div>
+        <div class="slide" id="slide02">
+        </div>
+        <div class="slide" id="slide03">
+        </div>
+        <div class="slide" id="slide04">
+        </div>
+        <div class="slide" id="slide05">
+        </div>
+	</div>
+</div>
+</body>
+</html>

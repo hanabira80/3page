@@ -1,0 +1,733 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>우리카드</title>
+<style>
+*{margin:0;paadding:0}
+
+body {
+	font-family:맑은 고딕	
+}
+/***************************************************/
+#popup {
+	height:445px;
+	background:url(images/bg_main_notice.gif) repeat-y 50% 0%;
+	border-bottom:1px solid #e1d7c2;
+	display:none;
+}
+#popup_img {
+	position:relative;
+	width:950px;
+	height:445px;
+	background:url(images/main_notice01.jpg);
+	margin:auto;
+}
+#popup_close {
+	position:absolute;
+	right:0;
+	bottom:15px;
+	width:150px;
+	height:20px;
+}
+#popup_close_cbox {
+	float:left;	
+}
+#popup_close_txt {
+	font-size:14px;
+	margin-left:5px;
+	float:left;	
+}
+
+#popup_close_mark {
+	width:13px;
+	height:12px;
+	background:url(images/btn_notice_close.png);
+	cursor:pointer;
+	margin-top:4px;
+	margin-left:5px;
+	float:left;
+}
+/***************************************************/
+#container {
+	background:url(images/header_bg.gif) no-repeat 50% 0%;
+}
+/***************************************************/
+#header {
+	width:950px;
+	margin:auto;
+}
+/***************************************************/
+#gnb {
+	position:relative;
+	width:950px;
+	height:80px;
+}
+#gnb_left {
+	position:absolute;
+	left:0;
+	top:30px;
+	width:680px;
+	height:34px;	
+}
+#gnb_right {
+	position:absolute;
+	left:680px;
+	top:30px;
+	width:270px;
+	height:34px;
+}
+/***************************************************/
+.btns_begin {
+	height:18px;
+	font-size:12px;	
+	padding:2px 0px 0px 3px;
+	cursor: pointer;
+	background:url(images/common.gif);
+	float:left;
+}
+.btns_end {
+	width:3px;
+	height:20px;
+	background:url(images/common.gif);
+	float:left;	
+}
+.btns2_begin {
+	height:20px;
+	font-size:12px;	
+	padding:3px 2px 0px 5px;
+	cursor: pointer;
+	background:url(images/common.gif);
+	float:left;
+}
+.btns2_end {
+	width:3px;
+	height:23px;
+	background:url(images/common.gif);
+	float:left;	
+}
+.btnm_begin {
+	height:22px;
+	font-size:13px;	
+	padding:3px 5px 0px 8px;
+	cursor: pointer;
+	background:url(images/common.gif);
+	float:left;
+}
+.btnm_end {
+	width:3px;
+	height:25px;
+	background:url(images/common.gif);
+	float:left;	
+}
+.btnb_begin {
+	height:22px;
+	font-size:13px;	
+	padding:3px 5px 0px 8px;
+	cursor: pointer;
+	background:url(images/common.gif);
+	float:left;
+}
+.btnb_end {
+	width:3px;
+	height:25px;
+	background:url(images/common.gif);
+	float:left;	
+}
+/***************************************************/
+#logo1 {
+	width:31px;
+	height:31px;
+	background:url(images/woori_s.png);
+	float:left;	
+}
+#logo2 {
+	width:89px;
+	height:24px;
+	background:url(images/cd.png);	
+	float:left;
+	margin-left:5px;
+	margin-top:3px;
+}
+/***************************************************/
+#gnb_btn1 {
+	float:left;
+	margin-left:5px;
+	margin-top:5px;
+}
+#gnb_btn1_begin {
+	background-position:left -350px;
+	color:white;
+}
+
+#gnb_btn1_end {
+	background-position:right -350px;	
+}
+#gnb_btn1_begin:hover {
+	text-decoration:underline;	
+}
+#gnb_btn2 {
+	float:left;
+	margin-left:5px;
+	margin-top:5px;
+}
+#gnb_btn2_begin {
+	background-position:left -330px;
+}
+#gnb_btn2_end {
+	background-position:right -330px;	
+}
+#gnb_btn2_begin:hover {
+	color:#0093e4;
+	text-decoration:underline
+}
+#gnb_btn3 {
+	color:white;
+	width:55px;
+	height:18px;
+	background:url(images/gnb_member.gif);
+	font-size:12px;	
+	float:left;
+	margin-left:20px;
+	padding-top:2px;
+	text-align:center;
+	margin-top:5px;
+}
+#gnb_btn3:hover {
+	background-position:left -30px;
+}
+#gnb_btn4 {
+	font-size:12px;	
+	float:left;
+	margin-left:5px;
+	padding-top:2px;
+	margin-top:5px;
+}
+#gnb_btn4:hover {
+	color:#0093e4;
+	text-decoration:underline;
+}
+/***************************************************/
+#gnb_btn5 {
+	position:absolute;
+	left:19px;
+	width:34px;
+	height:13px;
+	background:url(images/tit_ev.png);
+	cursor:pointer;
+	margin-top:10px;		
+}
+#gnb_btn6 {
+	position:absolute;
+	left:63px;
+	width:47px;
+	height:14px;
+	background:url(images/tit_ps1_cd.png);
+	cursor:pointer;
+	margin-top:10px;		
+}
+#search {
+	position:absolute;
+	left:120px;
+	width:150px;
+	height:34px;
+	background:url(images/bg_search2.png);	
+}
+#search_box {
+	position:absolute;
+	left:15px;
+	top:7px;
+	border:0;
+	outline:0;
+	width:90px;
+	color:gray;
+}
+#submit {
+	position:absolute;
+	left:120px;
+	top:7px;
+	width:19px;
+	height:18px;
+	background:url(images/submit.gif);
+	cursor:pointer;	
+}
+/***************************************************/
+#menu {
+	background:url(images/cd_all.gif);
+	width:950px;
+	height: 40px;
+}
+.menu {
+	height:33px;
+	float:left;
+	color:white;
+	padding: 7px 25px 0px 25px;
+	font-weight:900;
+	background:url(images/common_long.gif);
+	background-position:right top;
+	cursor: pointer;	
+}
+#menu7 {
+	position:relative;
+	float:left;
+	color:white;
+	padding:7px 0px 0px 40px;
+	font-weight:900;
+	cursor: pointer;	
+}
+#btn_temp {
+	position:absolute;
+	left:10px;
+	top:0;
+	width:26px;
+	height:30px;
+	background:url(images/btn_temp.jpg)	
+}
+/***************************************************/
+</style>
+
+<script src="scripts/jquery.js"></script>
+<script>
+$(document).ready(function(){
+/*
+	$("#popup").slideDown("slow");
+	$("#popup_close_mark").click(function(){
+			$("#popup").slideUp("slow");
+	});
+	
+*/	
+});
+</script>			
+			
+</head>
+
+<body>
+<div id="popup">
+	<div id="popup_img">
+        <div id="popup_close">
+			<div id="popup_close_cbox">
+				<form>
+				<input type="checkbox">
+				</form>
+			</div>
+			<div id="popup_close_txt">
+            1일간 열지 않음</div>		
+			<div id="popup_close_mark"></div>
+		</div>
+    </div>
+</div>
+
+<div id="container">
+    <div id="header">
+		<div id="gnb">
+        	<div id="gnb_left">
+                <div id="logo1"></div>
+                <div id="logo2"></div>
+                <div id="gnb_btn1">
+                    <div id="gnb_btn1_begin" class="btns_begin">개인카드</div>
+                    <div id="gnb_btn1_end" class="btns_end"></div>
+                </div>
+                <div id="gnb_btn2">    
+                    <div id="gnb_btn2_begin" class="btns_begin">기업카드</div>
+                    <div id="gnb_btn2_end" class="btns_end"></div>
+                </div>
+                <div id="gnb_btn3">로그인</div>
+                <div id="gnb_btn4">회원가입</div>
+			</div>
+            <div id="gnb_right"> 
+                <div id="gnb_btn5"></div>
+                <div id="gnb_btn6"></div>
+                <div id="search">
+                    <form>
+                    <input id="search_box" type="text">
+					</form>
+                    <div id="submit"></div>
+                </div>
+			</div> 
+        </div>
+<!--		
+        <div id="menu">
+            <div id="menu1" class="menu" a="0">나의카드</div>
+            <div id="menu2" class="menu" a="1">카드안내·신청</div>
+            <div id="menu3" class="menu" a="2">카드론·현금서비스</div>
+            <div id="menu4" class="menu" a="3">포인트</div>
+            <div id="menu5" class="menu" a="4">카드라이프</div>
+            <div id="menu6" class="menu" a="5">우리카드센터</div>
+            <div id="menu7">전체메뉴
+            	<div id="menu7_img"></div>
+	        </div>
+        </div>      
+        
+        <div id="menu_option">
+			<div id="menu_option_left">
+				<div id="home"></div>
+				<div id="menu_option_txt">개인카드</div>
+			</div>
+			
+            <div id="menu_option_right">
+				<div id="menu_option_btn1">
+					<div class="btns_begin menu_option_btn_begin">축소/확대보기</div>
+					<div class="btns_end menu_option_btn_end"></div>
+				</div>
+				<div id="menu_option_btn2">
+					<div class="btns_begin menu_option_btn_begin">마이메뉴등록</div>
+					<div class="btns_end menu_option_btn_end"></div>
+				</div>
+				<div id="menu_option_btn3">
+					<div class="btns_begin menu_option_btn_begin">화면인쇄</div>
+					<div class="btns_end menu_option_btn_end"></div>
+				</div>
+			</div>
+        </div>
+	</div>
+    
+    <div id="main">
+        <div id="main_up">
+            <div id="main_up_left">
+				<div id="slider_btn">
+					<a href ="#main_up_left_slide1">
+					<div id="slider_btn1" class="slider_btn slider_btn_sel"></div>
+					</a>
+					<a href ="#main_up_left_slide2">
+					<div id="slider_btn2" class="slider_btn"></div>
+					</a>
+					<a href ="#main_up_left_slide3">
+					<div id="slider_btn3" class="slider_btn" ></div>
+					</a>
+					<a href ="#main_up_left_slide4">
+					<div id="slider_btn4" class="slider_btn"></div>
+					</a>
+					<a href ="#main_up_left_slide5">
+					<div id="slider_btn5" class="slider_btn"></div>
+					</a>
+					<a href ="#main_up_left_slide6">
+					<div id="slider_btn6" class="slider_btn"></div>
+					</a>
+				</div>
+                <div id="main_up_left_inner">
+					<div id="main_up_left_slide1">
+                    </div>
+                    <div id="main_up_left_slide2">
+                    </div>
+                    <div id="main_up_left_slide3">
+                    </div>
+                    <div id="main_up_left_slide4">
+                    </div>
+                    <div id="main_up_left_slide5">
+                    </div>
+                    <div id="main_up_left_slide6">
+                    </div>
+					<div id="main_up_left_slide7">
+                    </div>
+				</div>
+            </div>
+			
+            <div id="main_up_sp"></div>
+            
+            <div id="main_up_right">
+				<div id="main_up_right_up">
+					<div id="main_up_right1"></div>
+					<div id="main_up_right2"></div>
+					<div id="main_up_right3"></div>
+					<div id="main_up_right4"></div>
+				</div>
+				<div id="main_up_right_down">
+					<div id="main_up_right5"></div>
+					<div id="main_up_right6"></div>
+					<div id="main_up_right7"></div>
+					<div id="main_up_right8"></div>
+				</div>
+            </div>
+        </div>
+        
+        <div id="main_down">
+            <div id="main_down_left">
+				<div id="main_down_left_title"></div>
+				<div id="main_down_left_txt">
+                언제, 어디서나 안전하고 편리하게,<br>
+                우리카드 스마트앱을 이용해 보세요!
+                </div>
+				<div id="main_down_left_btn1">
+					<div class="btnm_begin main_down_left_btn_begin">바로가기</div>
+					<div class="btnm_end main_down_left_btn_end"></div>
+				</div>
+				<div id="main_down_left_btn2">
+                	<div class="btnm_begin main_down_left_btn_begin">이벤트보기</div>
+					<div class="btnm_end main_down_left_btn_end"></div>
+				</div>
+			</div>
+			
+            <div class="main_down_sp"></div>
+            
+            <div id="main_down_center">
+				<div id="main_down_center_btn">
+         			<div class="btnm_begin main_down_center_btn_begin">바로가기</div>
+					<div class="btnm_end main_down_center_btn_end"></div>
+				</div>
+			</div>
+			
+            <div class="main_down_sp"></div>
+            
+            <div id="main_down_right">
+				<div id="tab">
+					<div class="tab tab_sel" s="0">새소식</div>
+					<div class="tab" s="1">보도자료</div>
+					<div class="tab" s="2">상품/약관공시</div>
+				</div>
+				<div id="tabview">
+					<div id="tabview1" class="tabview"></div>
+					<div id="tabview2" class="tabview"></div>
+					<div id="tabview3" class="tabview"></div>
+				</div>
+			</div>
+        </div>
+    </div>
+    
+    <div id="event">
+    	<div id="event_in">
+        	<div id="event_img">
+            	<div id="event_img1" class="event_img"></div>
+                <div id="event_img2" class="event_img"></div>
+                <div id="event_img3" class="event_img"></div>
+                <div id="event_img4" class="event_img"></div>
+                <div id="event_img5" class="event_img"></div>
+            </div>
+            
+            <div id="event_sec">
+            	<div id="event_title"></div>
+                <div id="event_article">
+                	<div id="event_article1" class="event_ico" b="0">
+                    모바일브랜드어워드 대상 수상 기념 이벤트</div>
+                    <div id="event_article2" class="event_ico" b="1">
+                    축구 스코어 맞추고, 빕스상품권 받아가세요</div>
+                    <div id="event_article3" class="event_ico" b="2">
+                    서울 프라자호텔에서 벨기에전 관람하세요!</div>
+                    <div id="event_article4" class="event_ico" b="3">
+                    우리카드와 CGV가 함께하는 영화 할인 이벤트</div>
+                    <div id="event_article5" class="event_ico" b="4">
+                    모아포인트로 할인쿠폰 사GO 천포인트 적립받GO</div>
+                </div>
+                <div id="event_btn">
+                	<div id="event_btn1">
+                    	<div class="btnb_begin" id="event_btn1_begin">바로가기</div>
+						<div class="btnb_end" id="event_btn1_end"></div>
+                    </div>
+                    <div id="event_btn2">
+                    	<div class="btnb_begin" id="event_btn2_begin">바로가기</div>
+						<div class="btnb_end" id="event_btn2_end"></div>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </div>
+    
+    <div id="kind">
+    	<div id="kind_nav">
+        	<div id="kind_nav_title"></div>
+            <div id="kind_nav_btn">
+            	<div id="kind_nav_btn_begin" class="btnm_begin">카드비교함(0)</div>
+				<div id="kind_nav_btn_end" class="btnm_end"></div>
+            </div>
+            <div id="kind_nav_ico">
+            	<div id="kind_nav_ico1" class="kind_nav_ico kind_nav_ico_sel" c="0">VVIP</div>
+                <div id="kind_nav_ico2" class="kind_nav_ico" c="1">프리미엄</div>
+                <div id="kind_nav_ico3" class="kind_nav_ico" c="2">할인형</div>
+                <div id="kind_nav_ico4" class="kind_nav_ico" c="3">포인트형</div>
+            </div>
+        </div>
+        <div id="kind_sec">
+            <div id="prev"></div>
+            <div id="kind_slider">
+                <div id="kind_slider_inner">
+                	<div id="kind_slide0" class="kind_slide">
+						<div id="kind_slide4_logo" class="kind_logo"></div>
+                        <div id="kind_slide4_cd1" class="kind_cd">
+                            <div id="kind_slide4_cdimg1" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>가득한 포인트카드</b><br>
+							주요 업종에서 높은 적립
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide4_cd2" class="kind_cd">
+                            <div id="kind_slide4_cdimg2" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>나만의 포인트카드</b><br>
+							선택 업종에서 높은 적립</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide4_cd3" class="kind_cd">
+                            <div id="kind_slide4_cdimg3" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>다모아 카드</b><br>
+							모든 업종 적립
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                    </div>
+                    <div id="kind_slide1" class="kind_slide">
+                        <div id="kind_slide1_logo" class="kind_logo"></div>
+                        <div id="kind_slide1_cd1" class="kind_cd">
+                            <div id="kind_slide1_cdimg1" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>인피니트</b><br>
+							최상위VVIP카드
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide1_cd2" class="kind_cd">
+                            <div id="kind_slide1_cdimg2" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>다이아몬드카드</b><br>
+							VVIP카드의 자부심
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide1_cd3" class="kind_cd">
+                            <div id="kind_slide1_cdimg3" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>시그니쳐카드</b><br>
+							최고의 가치를 아는 카드
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                    </div>
+                    <div id="kind_slide2" class="kind_slide">
+                        <div id="kind_slide2_logo" class="kind_logo"></div>
+                        <div id="kind_slide2_cd1" class="kind_cd">
+                            <div id="kind_slide2_cdimg1" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>블루다이아몬드</b><br>
+							[POINT]
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide2_cd2" class="kind_cd">
+                            <div id="kind_slide2_cdimg2" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>블루다이아몬드</b><br>
+							[SKYPASS]
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide2_cd3" class="kind_cd">
+                            <div id="kind_slide2_cdimg3" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>블루다이아몬드</b><br>
+							[ASIANA]
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                    </div>
+                    <div id="kind_slide3" class="kind_slide">
+                        <div id="kind_slide3_logo" class="kind_logo"></div>
+                        <div id="kind_slide3_cd1" class="kind_cd">
+                            <div id="kind_slide3_cdimg1" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>가득한 할인카드</b><br>
+							주요 업종에서 높은 할인
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide3_cd2" class="kind_cd">
+                            <div id="kind_slide3_cdimg2" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>나만의 할인카드</b><br>
+							선택 업종에서 높은 할인
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide3_cd3" class="kind_cd">
+                            <div id="kind_slide3_cdimg3" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>다모아 할인카드</b><br>
+							모든 업종 할인
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                    </div>
+                    <div id="kind_slide4" class="kind_slide">
+                        <div id="kind_slide4_logo" class="kind_logo"></div>
+                        <div id="kind_slide4_cd1" class="kind_cd">
+                            <div id="kind_slide4_cdimg1" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>가득한 포인트카드</b><br>
+							주요 업종에서 높은 적립
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide4_cd2" class="kind_cd">
+                            <div id="kind_slide4_cdimg2" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>나만의 포인트카드</b><br>
+							선택 업종에서 높은 적립</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide4_cd3" class="kind_cd">
+                            <div id="kind_slide4_cdimg3" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>다모아 카드</b><br>
+							모든 업종 적립
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+					</div>
+                    <div id="kind_slide5" class="kind_slide">
+						<div id="kind_slide1_logo" class="kind_logo"></div>
+                        <div id="kind_slide1_cd1" class="kind_cd">
+                            <div id="kind_slide1_cdimg1" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>인피니트</b><br>
+							최상위VVIP카드
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide1_cd2" class="kind_cd">
+                            <div id="kind_slide1_cdimg2" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>다이아몬드카드</b><br>
+							VVIP카드의 자부심
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                        <div id="kind_slide1_cd3" class="kind_cd">
+                            <div id="kind_slide1_cdimg3" class="kind_cd_img"></div>
+                            <div class="kind_cd_txt">
+							<b>시그니쳐카드</b><br>
+							최고의 가치를 아는 카드
+							</div>
+                            <div class="kind_cd_submit"></div>
+                            <div class="kind_cd_plus"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="next"></div>
+        </div>
+    </div>
+    
+    <div id="foot_nav"></div>
+    
+    <div id="footer"></div>
+-->    
+</div>
+
+</body>
+</html>
