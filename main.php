@@ -1,6 +1,9 @@
 <? include($_homepage_root."/include/header.php");?>
 <link href="./css/main.css" rel="stylesheet" type="text/css">
 
+<span>
+	git test
+</span>
 <section>
 	<article class="type-full-page">
 		<div class="full-page-bg"></div>
