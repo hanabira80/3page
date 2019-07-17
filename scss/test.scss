@@ -1,0 +1,11 @@
+.list {
+  width: 100px;
+  float: left;
+  border: 1px solid #aaa;
+  li {
+    color: red;
+    &:last-child {
+      margin-right: -10px
+    }
+  }
+}

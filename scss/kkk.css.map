@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,KAAK;EACZ,KAAK,EAAE,IAAI;CAImB;;AANhC,AAGE,KAHG,CAGH,EAAE,CAAC;EACD,KAAK,EAAE,KAAK;CAEc;;AAN9B,AAKI,KALC,CAGH,EAAE,AAEC,WAAW,CAAC;EACX,YAAY,EAAE,KAAK;CAAG",
+    "sources": [
+        "kkk.sass"
+    ],
+    "names": [],
+    "file": "kkk.css"
+}

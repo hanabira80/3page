@@ -1,0 +1,14 @@
+.list {
+  width: 100px;
+  float: left;
+  border: 1px solid #aaa;
+}
+
+.list li {
+  color: red;
+}
+
+.list li:last-child {
+  margin-right: -10px;
+}
+/*# sourceMappingURL=test.css.map */
